@@ -105,9 +105,15 @@
             <section class="showcase-section">
                 <h2 class="component-title" id="close-button">Example</h2>
                 <p class="component-desc">A basic example of the Close button component.</p>
-                <div class="component-demo">
-                    <p class="text-muted">Content for Close button will be added here.</p>
+                                <div class="component-demo d-flex gap-3 align-items-center">
+                    <button type="button" class="btn-close" aria-label="Close"></button>
+                    <div class="bg-dark p-3 rounded">
+                        <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+                    </div>
                 </div>
+                <div class="code-toggle" data-target="code-close-button">Show Code</div>
+                <pre class="component-code" id="code-close-button"><code>&lt;button type="button" class="btn-close" aria-label="Close"&gt;&lt;/button&gt;
+&lt;button type="button" class="btn-close btn-close-white" aria-label="Close"&gt;&lt;/button&gt;</code></pre>
             </section>
 
         </main>

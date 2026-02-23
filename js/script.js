@@ -61,4 +61,55 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // --- Copy Button for Code Blocks ---
+    const codeBlocks = document.querySelectorAll('.component-code');
+    codeBlocks.forEach(block => {
+        // Create the copy button
+        const copyBtn = document.createElement('button');
+        copyBtn.className = 'copy-btn';
+        copyBtn.textContent = 'Copy';
+        copyBtn.title = 'Copy code to clipboard';
+
+        // Append button to the pre element
+        block.appendChild(copyBtn);
+
+        // Add click event to copy text
+        copyBtn.addEventListener('click', () => {
+            // Find the <code> element inside this block to prevent copying the button text itself
+            const codeElement = block.querySelector('code');
+            const textToCopy = codeElement ? codeElement.textContent : block.textContent.replace('Copy', '').trim();
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalText = copyBtn.textContent;
+                copyBtn.textContent = 'Copied!';
+                copyBtn.classList.add('copied');
+
+                setTimeout(() => {
+                    copyBtn.textContent = originalText;
+                    copyBtn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+                copyBtn.textContent = 'Failed';
+                setTimeout(() => {
+                    copyBtn.textContent = 'Copy';
+                }, 2000);
+            });
+        });
+    });
 });
+
+    // --- Initialize Popovers ---
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+    // --- Initialize Toasts ---
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+    if (toastTrigger) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger.addEventListener('click', () => {
+            toastBootstrap.show()
+        })
+    }

@@ -104,9 +104,39 @@
             <section class="showcase-section">
                 <h2 class="component-title" id="toasts">Example</h2>
                 <p class="component-desc">A basic example of the Toasts component.</p>
-                <div class="component-demo">
-                    <p class="text-muted">Content for Toasts will be added here.</p>
+                                <div class="component-demo">
+                    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                          <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+                          <strong class="me-auto">Bootstrap</strong>
+                          <small>11 mins ago</small>
+                          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                          Hello, world! This is a toast message.
+                        </div>
+                      </div>
+                    </div>
                 </div>
+                <div class="code-toggle" data-target="code-toasts">Show Code</div>
+                <pre class="component-code" id="code-toasts"><code>&lt;button type="button" class="btn btn-primary" id="liveToastBtn"&gt;Show live toast&lt;/button&gt;
+
+&lt;div class="toast-container position-fixed bottom-0 end-0 p-3"&gt;
+  &lt;div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+    &lt;div class="toast-header"&gt;
+      &lt;img src="..." class="rounded me-2" alt="..."&gt;
+      &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+      &lt;small&gt;11 mins ago&lt;/small&gt;
+      &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="toast-body"&gt;
+      Hello, world! This is a toast message.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
             </section>
 
         </main>

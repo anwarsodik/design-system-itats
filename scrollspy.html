@@ -104,9 +104,43 @@
             <section class="showcase-section">
                 <h2 class="component-title" id="scrollspy">Example</h2>
                 <p class="component-desc">A basic example of the Scrollspy component.</p>
-                <div class="component-demo">
-                    <p class="text-muted">Content for Scrollspy will be added here.</p>
+                                <div class="component-demo">
+                    <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+                      <a class="navbar-brand" href="#">Navbar</a>
+                      <ul class="nav nav-pills">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#scrollspyHeading1">First</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#scrollspyHeading2">Second</a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded" tabindex="0" style="height: 150px; overflow-y: scroll;">
+                      <h4 id="scrollspyHeading1">First heading</h4>
+                      <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+                      <h4 id="scrollspyHeading2">Second heading</h4>
+                      <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+                    </div>
                 </div>
+                <div class="code-toggle" data-target="code-scrollspy">Show Code</div>
+                <pre class="component-code" id="code-scrollspy"><code>&lt;nav id="navbar-example2" class="navbar bg-light px-3 mb-3"&gt;
+  &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+  &lt;ul class="nav nav-pills"&gt;
+    &lt;li class="nav-item"&gt;
+      &lt;a class="nav-link" href="#scrollspyHeading1"&gt;First&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item"&gt;
+      &lt;a class="nav-link" href="#scrollspyHeading2"&gt;Second&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded" tabindex="0" style="height: 150px; overflow-y: scroll;"&gt;
+  &lt;h4 id="scrollspyHeading1"&gt;First heading&lt;/h4&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;h4 id="scrollspyHeading2"&gt;Second heading&lt;/h4&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
             </section>
 
         </main>

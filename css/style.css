@@ -408,13 +408,56 @@ h3,
     background: #1e1e1e;
     color: #d4d4d4;
     padding: 16px;
+    padding-top: 40px;
+    /* Space for the copy button */
     border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
     font-family: var(--bs-font-monospace);
     font-size: 0.75rem;
     overflow-x: auto;
     display: none;
     margin-bottom: 24px;
+    position: relative;
 }
+
+.component-code::-webkit-scrollbar {
+    height: 8px;
+}
+
+.component-code::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.component-code::-webkit-scrollbar-track {
+    background-color: #2d2d2d;
+    border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--bs-font-sans-serif);
+}
+
+.copy-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.copy-btn.copied {
+    background: var(--bs-success);
+    border-color: var(--bs-success);
+}
+
 
 .component-code.show {
     display: block;

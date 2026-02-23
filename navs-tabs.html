@@ -104,9 +104,41 @@
             <section class="showcase-section">
                 <h2 class="component-title" id="navs--tabs">Example</h2>
                 <p class="component-desc">A basic example of the Navs & tabs component.</p>
-                <div class="component-demo">
-                    <p class="text-muted">Content for Navs & tabs will be added here.</p>
+                                <div class="component-demo">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content pt-3" id="myTabContent">
+                      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">This is some placeholder content for the Home tab.</div>
+                      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">This is some placeholder content for the Profile tab.</div>
+                      <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">This is some placeholder content for the Contact tab.</div>
+                    </div>
                 </div>
+                <div class="code-toggle" data-target="code-navs-tabs">Show Code</div>
+                <pre class="component-code" id="code-navs-tabs"><code>&lt;ul class="nav nav-tabs" id="myTab" role="tablist"&gt;
+  &lt;li class="nav-item" role="presentation"&gt;
+    &lt;button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"&gt;Home&lt;/button&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item" role="presentation"&gt;
+    &lt;button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"&gt;Profile&lt;/button&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item" role="presentation"&gt;
+    &lt;button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"&gt;Contact&lt;/button&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-content pt-3" id="myTabContent"&gt;
+  &lt;div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
             </section>
 
         </main>

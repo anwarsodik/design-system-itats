@@ -105,9 +105,35 @@
             <section class="showcase-section">
                 <h2 class="component-title" id="collapse">Example</h2>
                 <p class="component-desc">A basic example of the Collapse component.</p>
-                <div class="component-demo">
-                    <p class="text-muted">Content for Collapse will be added here.</p>
+                                <div class="component-demo">
+                    <p>
+                      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Link with href
+                      </a>
+                      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Button with data-bs-target
+                      </button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                      <div class="card card-body">
+                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                      </div>
+                    </div>
                 </div>
+                <div class="code-toggle" data-target="code-collapse">Show Code</div>
+                <pre class="component-code" id="code-collapse"><code>&lt;p&gt;
+  &lt;a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"&gt;
+    Link with href
+  &lt;/a&gt;
+  &lt;button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"&gt;
+    Button with data-bs-target
+  &lt;/button&gt;
+&lt;/p&gt;
+&lt;div class="collapse" id="collapseExample"&gt;
+  &lt;div class="card card-body"&gt;
+    Some placeholder content for the collapse component.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
             </section>
 
         </main>
