@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITATS Design System - Components</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .component-block {
+            margin-bottom: 24px;
+        }
+
+        .component-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .component-desc {
+            color: var(--bs-text-secondary);
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                    ITATS Design
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item-custom">Overview</a>
+                <a href="colors.html" class="nav-item-custom">Colors</a>
+                <a href="typography.html" class="nav-item-custom">Typography</a>
+                <a href="components.html" class="nav-item-custom active">Components</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Components</h1>
+            <p class="text-lead">
+                Interactive building blocks based on Bootstrap 5. Our components are designed to be compact, elegant,
+                and highly functional. Click "Show Code" to see the HTML implementation for any component.
+            </p>
+
+            <!-- Alerts -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="alerts">Alerts</h2>
+                <p class="component-desc">Contextual feedback messages for user actions.</p>
+
+                <div class="component-demo">
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                        A simple primary alert—check it out!
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        A simple success alert—check it out!
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        A simple warning alert—with potentially dangerous action.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="alert alert-danger alert-dismissible fade show mb-0" role="alert">
+                        A simple danger alert—something went wrong!
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-alerts">Show Code</div>
+                <pre class="component-code" id="code-alerts"><code>&lt;div class="alert alert-primary alert-dismissible fade show" role="alert"&gt;
+  A simple primary alert—check it out!
+  &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-success alert-dismissible fade show" role="alert"&gt;
+  A simple success alert—check it out!
+  &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Badges -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="badges">Badges</h2>
+                <p class="component-desc">Small count and labeling components.</p>
+
+                <div class="component-demo">
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="badge text-bg-primary">Primary</span>
+                        <span class="badge text-bg-secondary">Secondary</span>
+                        <span class="badge text-bg-success">Success</span>
+                        <span class="badge text-bg-danger">Danger</span>
+                        <span class="badge text-bg-warning">Warning</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <span class="badge rounded-pill text-bg-primary">Primary Pill</span>
+                        <span class="badge rounded-pill text-bg-secondary">Secondary Pill</span>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-badges">Show Code</div>
+                <pre class="component-code" id="code-badges"><code>&lt;!-- Standard Badges --&gt;
+&lt;span class="badge text-bg-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="badge text-bg-success"&gt;Success&lt;/span&gt;
+
+&lt;!-- Pill Badges --&gt;
+&lt;span class="badge rounded-pill text-bg-primary"&gt;Primary Pill&lt;/span&gt;</code></pre>
+            </section>
+
+            <!-- Breadcrumbs -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="breadcrumbs">Breadcrumbs</h2>
+                <p class="component-desc">Navigational hierarchy representation.</p>
+
+                <div class="component-demo">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-light p-2 rounded mb-0">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="code-toggle" data-target="code-breadcrumbs">Show Code</div>
+                <pre class="component-code" id="code-breadcrumbs"><code>&lt;nav aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb bg-light p-2 rounded"&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;Data&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+            </section>
+
+            <!-- Buttons -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="buttons">Buttons</h2>
+                <p class="component-desc">Interactive inputs for primary and secondary actions.</p>
+
+                <div class="component-demo">
+                    <div class="d-flex gap-2 align-items-center mb-3 flex-wrap">
+                        <button class="btn btn-primary">Primary</button>
+                        <button class="btn btn-accent">Accent</button>
+                        <button class="btn btn-secondary">Secondary</button>
+                        <button class="btn btn-danger">Danger</button>
+                        <button class="btn btn-outline-primary">Outline Primary</button>
+                        <button class="btn btn-primary" disabled>Disabled</button>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center flex-wrap">
+                        <button class="btn btn-sm btn-primary">Small Button</button>
+                        <button class="btn btn-primary">Regular Button</button>
+                        <button class="btn btn-lg btn-primary">Large Button</button>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-buttons">Show Code</div>
+                <pre class="component-code" id="code-buttons"><code>&lt;!-- Button Variants --&gt;
+&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-accent"&gt;Accent&lt;/button&gt;
+&lt;button class="btn btn-outline-primary"&gt;Outline Primary&lt;/button&gt;
+
+&lt;!-- Button Sizes --&gt;
+&lt;button class="btn btn-sm btn-primary"&gt;Small&lt;/button&gt;
+&lt;button class="btn btn-lg btn-primary"&gt;Large&lt;/button&gt;</code></pre>
+            </section>
+
+            <!-- Cards -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="cards">Cards</h2>
+                <p class="component-desc">Flexible content containers for data presentation.</p>
+
+                <div class="component-demo">
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-header">Faculty of Engineering</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Civil Engineering</h5>
+                                    <p class="card-text text-muted" style="font-size: 0.8125rem;">Explore our
+                                        engineering programs including Civil, Mechanical, and Electrical. Access course
+                                        materials and schedules.</p>
+                                </div>
+                                <div class="card-footer text-end">
+                                    <button class="btn btn-sm btn-outline-secondary">View Courses</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Student Portal</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted" style="font-size: 0.75rem;">Login
+                                        restricted</h6>
+                                    <p class="card-text text-muted" style="font-size: 0.8125rem;">Manage your academic
+                                        records, tuition payments, and register for upcoming classes online.</p>
+                                    <div class="mt-3">
+                                        <button class="btn btn-primary w-100">Login to Portal</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-cards">Show Code</div>
+                <pre class="component-code" id="code-cards"><code>&lt;div class="card"&gt;
+  &lt;div class="card-header"&gt;Faculty of Engineering&lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Civil Engineering&lt;/h5&gt;
+    &lt;p class="card-text text-muted"&gt;Explore our engineering programs...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer text-end"&gt;
+    &lt;button class="btn btn-sm btn-outline-secondary"&gt;View Courses&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Forms -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="forms">Forms</h2>
+                <p class="component-desc">Inputs, controls, and labels for data collection.</p>
+
+                <div class="component-demo">
+                    <div style="max-width: 400px;">
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="john.doe@itats.ac.id">
+                            <div class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Favorite Faculty</label>
+                            <select class="form-select">
+                                <option>Engineering</option>
+                                <option>Information Technology</option>
+                                <option>Design</option>
+                            </select>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault" style="font-size: 0.8125rem;">
+                                Remember me next time
+                            </label>
+                        </div>
+
+                        <button class="btn btn-primary w-100">Sign In</button>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-forms">Show Code</div>
+                <pre class="component-code" id="code-forms"><code>&lt;div class="mb-3"&gt;
+  &lt;label class="form-label"&gt;Email Address&lt;/label&gt;
+  &lt;input type="email" class="form-control" placeholder="name@example.com"&gt;
+  &lt;div class="form-text"&gt;We'll never share your email with anyone else.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="form-check mb-3"&gt;
+  &lt;input class="form-check-input" type="checkbox" id="checkId"&gt;
+  &lt;label class="form-check-label" for="checkId"&gt;Remember me&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Images -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="images">Images</h2>
+                <p class="component-desc">Responsive images, thumbnails, and figures.</p>
+
+                <div class="component-demo">
+                    <div class="row align-items-center mb-4">
+                        <div class="col-md-6">
+                            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=600&h=400"
+                                class="img-fluid rounded shadow-sm" alt="University Campus">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="text-muted" style="font-size: 0.8125rem;">Add <code>.img-fluid</code> along with
+                                <code>.rounded</code> and <code>.shadow-sm</code> to make images responsive and match
+                                our styling.</p>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-auto">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=200&h=200"
+                                class="img-thumbnail" alt="Student Portrait">
+                        </div>
+                        <div class="col-md-6">
+                            <figure class="figure">
+                                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=400&h=250"
+                                    class="figure-img img-fluid rounded bg-light" alt="Graduation Event">
+                                <figcaption class="figure-caption text-end">Graduation Ceremony 2026</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-images">Show Code</div>
+                <pre class="component-code" id="code-images"><code>&lt;!-- Responsive Image --&gt;
+&lt;img src="..." class="img-fluid rounded shadow-sm" alt="..."&gt;
+
+&lt;!-- Image Thumbnail --&gt;
+&lt;img src="..." class="img-thumbnail" alt="..."&gt;
+
+&lt;!-- Figure --&gt;
+&lt;figure class="figure"&gt;
+  &lt;img src="..." class="figure-img img-fluid rounded" alt="..."&gt;
+  &lt;figcaption class="figure-caption text-end"&gt;A caption for the above image.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+            </section>
+
+            <!-- Modals -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="modals">Modals</h2>
+                <p class="component-desc">Dialog prompts triggered by user actions, powered by Bootstrap 5.</p>
+
+                <div class="component-demo">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Launch demo modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm Action</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="font-size: 0.8125rem;">
+                                    Are you sure you want to proceed with this action? This cannot be undone.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-danger">Yes, Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-modals">Show Code</div>
+                <pre class="component-code" id="code-modals"><code>&lt;!-- Button trigger modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"&gt;
+  Launch demo modal
+&lt;/button&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog modal-dialog-centered"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h1 class="modal-title fs-5" id="exampleModalLabel"&gt;Confirm Action&lt;/h1&gt;
+        &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;...&lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Navbar -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="navbar">Navbar</h2>
+                <p class="component-desc">Responsive navigation headers.</p>
+
+                <div class="component-demo">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3 border rounded px-3">
+                        <div class="container-fluid px-0">
+                            <a class="navbar-brand text-primary fw-bold d-flex align-items-center gap-2" href="#">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                </svg>
+                                ITATS
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav1">
+                                <ul class="navbar-nav ms-auto" style="font-size: 0.8125rem;">
+                                    <li class="nav-item"><a class="nav-link active text-primary" aria-current="page"
+                                            href="#">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <nav class="navbar navbar-expand-lg bg-primary rounded px-3 mb-0" data-bs-theme="dark">
+                        <div class="container-fluid px-0">
+                            <a class="navbar-brand fw-bold" href="#">ITATS Portal</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav2" aria-controls="navbarNav2" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav2">
+                                <ul class="navbar-nav ms-auto" style="font-size: 0.8125rem;">
+                                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                            href="#">Dashboard</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="code-toggle" data-target="code-navbar">Show Code</div>
+                <pre class="component-code" id="code-navbar"><code>&lt;nav class="navbar navbar-expand-lg bg-body-tertiary border rounded px-3"&gt;
+  &lt;div class="container-fluid px-0"&gt;
+    &lt;a class="navbar-brand text-primary fw-bold" href="#"&gt;ITATS&lt;/a&gt;
+    &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+      &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+      &lt;ul class="navbar-nav ms-auto"&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link active text-primary" href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Features&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+            </section>
+
+            <!-- Pagination -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="pagination">Pagination</h2>
+                <p class="component-desc">Multi-page navigation links.</p>
+
+                <div class="component-demo">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination mb-0" style="font-size: 0.8125rem;">
+                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="code-toggle" data-target="code-pagination">Show Code</div>
+                <pre class="component-code" id="code-pagination"><code>&lt;nav aria-label="Page navigation example"&gt;
+  &lt;ul class="pagination"&gt;
+    &lt;li class="page-item disabled"&gt;&lt;a class="page-link" href="#"&gt;Previous&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            </section>
+
+            <!-- Progress -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="progress">Progress</h2>
+                <p class="component-desc">Visual progress bars for background activities.</p>
+
+                <div class="component-demo">
+                    <div class="progress mb-3" role="progressbar" aria-label="Basic example" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100" style="height: 8px;">
+                        <div class="progress-bar bg-primary" style="width: 25%"></div>
+                    </div>
+                    <div class="progress mb-3" role="progressbar" aria-label="Success example" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="100" style="height: 8px;">
+                        <div class="progress-bar bg-success" style="width: 50%"></div>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100" style="height: 8px;">
+                        <div class="progress-bar bg-accent progress-bar-striped progress-bar-animated"
+                            style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-progress">Show Code</div>
+                <pre class="component-code" id="code-progress"><code>&lt;!-- Simple Progress Bar --&gt;
+&lt;div class="progress" style="height: 8px;"&gt;
+  &lt;div class="progress-bar bg-primary" style="width: 25%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Animated Striped Progress Bar --&gt;
+&lt;div class="progress" style="height: 8px;"&gt;
+  &lt;div class="progress-bar bg-accent progress-bar-striped progress-bar-animated" style="width: 75%"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Spinners -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="spinners">Spinners</h2>
+                <p class="component-desc">Loading indicators for ongoing processes.</p>
+
+                <div class="component-demo">
+                    <div class="d-flex gap-4 align-items-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-border text-accent" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-border text-success" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-border text-danger" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+
+                        <button class="btn btn-primary" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                            <span role="status">Loading...</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-spinners">Show Code</div>
+                <pre class="component-code" id="code-spinners"><code>&lt;!-- Basic Spinner --&gt;
+&lt;div class="spinner-border text-primary" role="status"&gt;
+  &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Within a Button --&gt;
+&lt;button class="btn btn-primary" type="button" disabled&gt;
+  &lt;span class="spinner-border spinner-border-sm" aria-hidden="true"&gt;&lt;/span&gt;
+  &lt;span role="status"&gt;Loading...&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+            </section>
+
+            <!-- Tables -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="tables">Tables</h2>
+                <p class="component-desc">Styled data presentation tables.</p>
+
+                <div class="component-demo">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover mb-0" style="font-size: 0.8125rem;">
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>Administrator</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>Staff</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>Bird</td>
+                                    <td>Student</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-tables">Show Code</div>
+                <pre class="component-code" id="code-tables"><code>&lt;div class="table-responsive"&gt;
+  &lt;table class="table table-bordered table-hover"&gt;
+    &lt;thead class="table-light"&gt;
+      &lt;tr&gt;
+        &lt;th&gt;#&lt;/th&gt;
+        &lt;th&gt;First&lt;/th&gt;
+        &lt;th&gt;Last&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;Mark&lt;/td&gt;
+        &lt;td&gt;Otto&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

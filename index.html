@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITATS Design System - Overview</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                    ITATS Design
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item-custom active">Overview</a>
+                <a href="colors.html" class="nav-item-custom">Colors</a>
+                <a href="typography.html" class="nav-item-custom">Typography</a>
+                <a href="components.html" class="nav-item-custom">Components</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Design System Overview</h1>
+            <p class="text-lead">
+                Welcome to the ITATS Design System. A comprehensive guide and resource library that contains everything
+                you need to design and develop elegant, consistent web experiences.
+            </p>
+
+            <section class="showcase-section">
+                <h2>Principles</h2>
+                <div class="grid gap-4">
+                    <div>
+                        <h3>Refined Elegance</h3>
+                        <p>Our aesthetic embraces subtlety. We use smaller typography and compact UI elements to ensure
+                            interfaces appear professional, clean, and not overly bulky.</p>
+                    </div>
+                    <div>
+                        <h3>Consistent Identity</h3>
+                        <p>Grounded in the core ITATS Blue and Yellow, our palette is carefully balanced with neutral
+                            tones to create a sleek and modern look.</p>
+                    </div>
+                    <div>
+                        <h3>Accessibility First</h3>
+                        <p>Colors, typography, and interactive components are meticulously chosen to ensure legibility
+                            and ease of use for all audiences.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="showcase-section">
+                <h2>Getting Started</h2>
+                <p>This design system utilizes raw HTML and CSS. Simply link the `style.css` stylesheet to start using
+                    our utility classes, variables, and components.</p>
+
+                <div class="form-group" style="margin-top: 16px;">
+                    <label class="form-label">Include CSS</label>
+                    <input type="text" class="form-control" value='<link rel="stylesheet" href="css/style.css">'
+                        readonly>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
