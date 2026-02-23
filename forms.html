@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITATS Design System - Forms</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://portal.itats.ac.id/wp-content/uploads/2023/07/cropped-Logo-Lengkap-150x150.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .component-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .component-desc {
+            color: var(--bs-text-secondary);
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                    ITATS Design
+                </div>
+            </div>
+                        <nav class="sidebar-nav" id="sidebarNavAccordion">
+                <!-- Getting Started -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseGettingStarted" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    Getting Started
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseGettingStarted" data-bs-parent="#sidebarNavAccordion">
+                    <a href="index.html" class="nav-sub-item">Overview</a>
+                </div>
+
+                <!-- Foundations -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFoundations" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                    Foundations
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseFoundations" data-bs-parent="#sidebarNavAccordion">
+                    <a href="colors.html" class="nav-sub-item">Colors</a>
+                    <a href="typography.html" class="nav-sub-item">Typography</a>
+                </div>
+
+                <!-- Components -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseComponents" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                    Components
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseComponents" data-bs-parent="#sidebarNavAccordion">
+                    <!-- 23 Component Links -->
+                    <a href="accordion.html" class="nav-sub-item">Accordion</a>
+                    <a href="alerts.html" class="nav-sub-item">Alerts</a>
+                    <a href="badges.html" class="nav-sub-item">Badge</a>
+                    <a href="breadcrumbs.html" class="nav-sub-item">Breadcrumb</a>
+                    <a href="buttons.html" class="nav-sub-item">Buttons</a>
+                    <a href="button-group.html" class="nav-sub-item">Button group</a>
+                    <a href="cards.html" class="nav-sub-item">Card</a>
+                    <a href="carousel.html" class="nav-sub-item">Carousel</a>
+                    <a href="close-button.html" class="nav-sub-item">Close button</a>
+                    <a href="collapse.html" class="nav-sub-item">Collapse</a>
+                    <a href="dropdowns.html" class="nav-sub-item">Dropdowns</a>
+                    <a href="list-group.html" class="nav-sub-item">List group</a>
+                    <a href="modals.html" class="nav-sub-item">Modal</a>
+                    <a href="navbar.html" class="nav-sub-item">Navbar</a>
+                    <a href="navs-tabs.html" class="nav-sub-item">Navs & tabs</a>
+                    <a href="offcanvas.html" class="nav-sub-item">Offcanvas</a>
+                    <a href="pagination.html" class="nav-sub-item">Pagination</a>
+                    <a href="placeholders.html" class="nav-sub-item">Placeholders</a>
+                    <a href="popovers.html" class="nav-sub-item">Popovers</a>
+                    <a href="progress.html" class="nav-sub-item">Progress</a>
+                    <a href="scrollspy.html" class="nav-sub-item">Scrollspy</a>
+                    <a href="spinners.html" class="nav-sub-item">Spinners</a>
+                    <a href="tables.html" class="nav-sub-item">Tables</a>
+                    <a href="toasts.html" class="nav-sub-item">Toasts</a>
+                </div>
+
+                <!-- Forms -->
+                <div class="nav-group-title mb-4" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                    Forms
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse show" id="collapseForms" data-bs-parent="#sidebarNavAccordion">
+                    <a href="forms.html" class="nav-sub-item active">Forms</a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Forms</h1>
+            <p class="text-lead">
+                Examples and usage guidelines for form controls, layout options, and custom components used for data
+                collection.
+            </p>
+
+            <!-- Overview -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="overview">Overview</h2>
+                <p class="component-desc">A comprehensive example combining various form controls.</p>
+
+                <div class="component-demo">
+                    <div style="max-width: 400px;">
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="john.doe@itats.ac.id">
+                            <div class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Favorite Faculty</label>
+                            <select class="form-select">
+                                <option>Engineering</option>
+                                <option>Information Technology</option>
+                                <option>Design</option>
+                            </select>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault" style="font-size: 0.8125rem;">
+                                Remember me next time
+                            </label>
+                        </div>
+
+                        <button class="btn btn-primary w-100">Sign In</button>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-forms">Show Code</div>
+                <pre class="component-code" id="code-forms"><code>&lt;div class="mb-3"&gt;
+  &lt;label class="form-label"&gt;Email Address&lt;/label&gt;
+  &lt;input type="email" class="form-control" placeholder="name@example.com"&gt;
+  &lt;div class="form-text"&gt;We'll never share your email with anyone else.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="form-check mb-3"&gt;
+  &lt;input class="form-check-input" type="checkbox" id="checkId"&gt;
+  &lt;label class="form-check-label" for="checkId"&gt;Remember me&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Form control -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="form-control">Form control</h2>
+                <p class="component-desc">Standard textual form controls like inputs and textareas.</p>
+
+                <div class="component-demo">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Sizing</label>
+                        <input class="form-control form-control-sm mb-2" type="text" placeholder=".form-control-sm"
+                            aria-label=".form-control-sm example">
+                        <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"
+                            aria-label=".form-control-lg example">
+                    </div>
+                    <div>
+                        <label class="form-label">Disabled & Readonly</label>
+                        <input class="form-control mb-2" type="text" placeholder="Disabled input"
+                            aria-label="Disabled input example" disabled>
+                        <input class="form-control" type="text" value="Readonly input here..."
+                            aria-label="readonly input example" readonly>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-form-control">Show Code</div>
+                <pre class="component-code" id="code-form-control"><code>&lt;div class="mb-3"&gt;
+  &lt;label for="exampleInput1" class="form-label"&gt;Email address&lt;/label&gt;
+  &lt;input type="email" class="form-control" id="exampleInput1" placeholder="name@example.com"&gt;
+&lt;/div&gt;
+&lt;div class="mb-3"&gt;
+  &lt;label for="exampleTextarea1" class="form-label"&gt;Example textarea&lt;/label&gt;
+  &lt;textarea class="form-control" id="exampleTextarea1" rows="3"&gt;&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Select -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="select">Select</h2>
+                <p class="component-desc">Custom <code>&lt;select&gt;</code> menus.</p>
+
+                <div class="component-demo">
+                    <select class="form-select mb-3" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+
+                    <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+                        <option selected>Small select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+
+                    <select class="form-select mb-3" aria-label="Disabled select example" disabled>
+                        <option selected>Disabled select menu</option>
+                    </select>
+                </div>
+                <div class="code-toggle" data-target="code-select">Show Code</div>
+                <pre class="component-code" id="code-select"><code>&lt;select class="form-select" aria-label="Default select example"&gt;
+  &lt;option selected&gt;Open this select menu&lt;/option&gt;
+  &lt;option value="1"&gt;One&lt;/option&gt;
+  &lt;option value="2"&gt;Two&lt;/option&gt;
+  &lt;option value="3"&gt;Three&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+            </section>
+
+            <!-- Checks & radios -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="checks-radios">Checks & radios</h2>
+                <p class="component-desc">Checkboxes and radios for selecting choices.</p>
+
+                <div class="component-demo" style="font-size: 0.8125rem;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6 class="mb-2">Checkboxes</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">Default checkbox</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" checked>
+                                <label class="form-check-label" for="defaultCheck2">Checked checkbox</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="disabledCheck" disabled>
+                                <label class="form-check-label" for="disabledCheck">Disabled checkbox</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-3 mt-md-0">
+                            <h6 class="mb-2">Radios</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Default radio</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">Checked radio</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDisabled"
+                                    id="flexRadioDisabled" disabled>
+                                <label class="form-check-label" for="flexRadioDisabled">Disabled radio</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-3 mt-md-0">
+                            <h6 class="mb-2">Switches</h6>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch"
+                                    id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Default switch</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch"
+                                    id="flexSwitchCheckChecked" checked>
+                                <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch"
+                                    id="flexSwitchCheckDisabled" disabled>
+                                <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-checks">Show Code</div>
+                <pre class="component-code" id="code-checks"><code>&lt;!-- Checkbox --&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="checkbox" value="" id="defaultCheck1"&gt;
+  &lt;label class="form-check-label" for="defaultCheck1"&gt;Default checkbox&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Radio --&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"&gt;
+  &lt;label class="form-check-label" for="flexRadioDefault1"&gt;Default radio&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Switch --&gt;
+&lt;div class="form-check form-switch"&gt;
+  &lt;input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"&gt;
+  &lt;label class="form-check-label" for="flexSwitchCheckDefault"&gt;Default switch&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Range -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="range">Range</h2>
+                <p class="component-desc">Custom range controls with consistent styling.</p>
+
+                <div class="component-demo">
+                    <label for="customRange1" class="form-label">Example range</label>
+                    <input type="range" class="form-range" id="customRange1">
+
+                    <label for="disabledRange" class="form-label mt-3">Disabled range</label>
+                    <input type="range" class="form-range" id="disabledRange" disabled>
+                </div>
+                <div class="code-toggle" data-target="code-range">Show Code</div>
+                <pre class="component-code" id="code-range"><code>&lt;label for="customRange1" class="form-label"&gt;Example range&lt;/label&gt;
+&lt;input type="range" class="form-range" id="customRange1"&gt;</code></pre>
+            </section>
+
+            <!-- Input group -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="input-group">Input group</h2>
+                <p class="component-desc">Extend form controls with prepended or appended text, buttons, and more.</p>
+
+                <div class="component-demo">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Recipient's username"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2">@itats.ac.id</span>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Rp.</span>
+                        <input type="text" class="form-control" aria-label="Amount">
+                        <span class="input-group-text">.00</span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search..." aria-label="Search">
+                        <button class="btn btn-outline-primary" type="button" id="button-addon2">Search</button>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-input-group">Show Code</div>
+                <pre class="component-code" id="code-input-group"><code>&lt;div class="input-group mb-3"&gt;
+  &lt;span class="input-group-text" id="basic-addon1"&gt;@&lt;/span&gt;
+  &lt;input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"&gt;
+&lt;/div&gt;
+
+&lt;div class="input-group"&gt;
+  &lt;input type="text" class="form-control" placeholder="Search..." aria-label="Search"&gt;
+  &lt;button class="btn btn-outline-primary" type="button" id="button-addon2"&gt;Search&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Floating labels -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="floating-labels">Floating labels</h2>
+                <p class="component-desc">Animated floating labels for inputs and textareas.</p>
+
+                <div class="component-demo">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                            style="height: 100px"></textarea>
+                        <label for="floatingTextarea">Comments</label>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-floating">Show Code</div>
+                <pre class="component-code" id="code-floating"><code>&lt;div class="form-floating mb-3"&gt;
+  &lt;input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"&gt;
+  &lt;label for="floatingInput"&gt;Email address&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Layout -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="layout">Layout</h2>
+                <p class="component-desc">Using grid classes or flexbox for form layouts.</p>
+
+                <div class="component-demo">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">State</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>East Java</option>
+                                <option>Central Java</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputZip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check" style="font-size: 0.8125rem;">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Check me out
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button type="button" class="btn btn-primary">Register Account</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="code-toggle" data-target="code-layout">Show Code</div>
+                <pre class="component-code" id="code-layout"><code>&lt;form class="row g-3"&gt;
+  &lt;div class="col-md-6"&gt;
+    &lt;label for="inputEmail4" class="form-label"&gt;Email&lt;/label&gt;
+    &lt;input type="email" class="form-control" id="inputEmail4"&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-6"&gt;
+    &lt;label for="inputPassword4" class="form-label"&gt;Password&lt;/label&gt;
+    &lt;input type="password" class="form-control" id="inputPassword4"&gt;
+  &lt;/div&gt;
+  ...
+&lt;/form&gt;</code></pre>
+            </section>
+
+            <!-- Validation -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="validation">Validation</h2>
+                <p class="component-desc">Provide valuable, actionable feedback to your users with HTML5 form
+                    validation.</p>
+
+                <div class="component-demo">
+                    <form class="row g-3 needs-validation">
+                        <div class="col-md-4">
+                            <label for="validationServer01" class="form-label">First name</label>
+                            <input type="text" class="form-control is-valid" id="validationServer01" value="Mark"
+                                required>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationServer02" class="form-label">Last name</label>
+                            <input type="text" class="form-control is-valid" id="validationServer02" value="Otto"
+                                required>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationServerUsername" class="form-label">Username</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                                <input type="text" class="form-control is-invalid" id="validationServerUsername"
+                                    aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                    Please choose a username.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button class="btn btn-primary" type="button">Submit form</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="code-toggle" data-target="code-validation">Show Code</div>
+                <pre class="component-code" id="code-validation"><code>&lt;!-- Valid Input --&gt;
+&lt;input type="text" class="form-control is-valid" value="Mark" required&gt;
+&lt;div class="valid-feedback"&gt;Looks good!&lt;/div&gt;
+
+&lt;!-- Invalid Input --&gt;
+&lt;input type="text" class="form-control is-invalid" required&gt;
+&lt;div class="invalid-feedback"&gt;Please choose a username.&lt;/div&gt;</code></pre>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

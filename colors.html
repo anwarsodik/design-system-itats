@@ -26,11 +26,71 @@
                     ITATS Design
                 </div>
             </div>
-            <nav class="sidebar-nav">
-                <a href="index.html" class="nav-item-custom">Overview</a>
-                <a href="colors.html" class="nav-item-custom active">Colors</a>
-                <a href="typography.html" class="nav-item-custom">Typography</a>
-                <a href="components.html" class="nav-item-custom">Components</a>
+                        <nav class="sidebar-nav" id="sidebarNavAccordion">
+                <!-- Getting Started -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseGettingStarted" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    Getting Started
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseGettingStarted" data-bs-parent="#sidebarNavAccordion">
+                    <a href="index.html" class="nav-sub-item">Overview</a>
+                </div>
+
+                <!-- Foundations -->
+                <div class="nav-group-title" data-bs-toggle="collapse" data-bs-target="#collapseFoundations" aria-expanded="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                    Foundations
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse show" id="collapseFoundations" data-bs-parent="#sidebarNavAccordion">
+                    <a href="colors.html" class="nav-sub-item active">Colors</a>
+                    <a href="typography.html" class="nav-sub-item">Typography</a>
+                </div>
+
+                <!-- Components -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseComponents" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                    Components
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseComponents" data-bs-parent="#sidebarNavAccordion">
+                    <!-- 23 Component Links -->
+                    <a href="accordion.html" class="nav-sub-item">Accordion</a>
+                    <a href="alerts.html" class="nav-sub-item">Alerts</a>
+                    <a href="badges.html" class="nav-sub-item">Badge</a>
+                    <a href="breadcrumbs.html" class="nav-sub-item">Breadcrumb</a>
+                    <a href="buttons.html" class="nav-sub-item">Buttons</a>
+                    <a href="button-group.html" class="nav-sub-item">Button group</a>
+                    <a href="cards.html" class="nav-sub-item">Card</a>
+                    <a href="carousel.html" class="nav-sub-item">Carousel</a>
+                    <a href="close-button.html" class="nav-sub-item">Close button</a>
+                    <a href="collapse.html" class="nav-sub-item">Collapse</a>
+                    <a href="dropdowns.html" class="nav-sub-item">Dropdowns</a>
+                    <a href="list-group.html" class="nav-sub-item">List group</a>
+                    <a href="modals.html" class="nav-sub-item">Modal</a>
+                    <a href="navbar.html" class="nav-sub-item">Navbar</a>
+                    <a href="navs-tabs.html" class="nav-sub-item">Navs & tabs</a>
+                    <a href="offcanvas.html" class="nav-sub-item">Offcanvas</a>
+                    <a href="pagination.html" class="nav-sub-item">Pagination</a>
+                    <a href="placeholders.html" class="nav-sub-item">Placeholders</a>
+                    <a href="popovers.html" class="nav-sub-item">Popovers</a>
+                    <a href="progress.html" class="nav-sub-item">Progress</a>
+                    <a href="scrollspy.html" class="nav-sub-item">Scrollspy</a>
+                    <a href="spinners.html" class="nav-sub-item">Spinners</a>
+                    <a href="tables.html" class="nav-sub-item">Tables</a>
+                    <a href="toasts.html" class="nav-sub-item">Toasts</a>
+                </div>
+
+                <!-- Forms -->
+                <div class="nav-group-title collapsed mb-4" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                    Forms
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseForms" data-bs-parent="#sidebarNavAccordion">
+                    <a href="forms.html" class="nav-sub-item">Forms</a>
+                </div>
             </nav>
         </aside>
 

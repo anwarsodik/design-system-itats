@@ -14,23 +14,38 @@ This design system utilizes raw HTML, CSS, and Bootstrap 5 to provide a simple y
 
 ## 🚀 Getting Started
 
-To use the ITATS Design System in your project, simply include Bootstrap 5 and link our custom `style.css` stylesheet.
+There are a few ways to include the ITATS Design System in your project. Since our system relies on Bootstrap 5 as its core foundation, **you must include Bootstrap 5 beforehand**.
+
+### 1. Download Source Files
+You can download the entire repository containing the CSS, JS, and HTML Documentations here:
+- **[Download Reference / Templates (.ZIP)](https://github.com/anwarsodik/design-system-itats/archive/refs/heads/main.zip)**
+
+### 2. Include via CDN (jsDelivr)
+If you want to quickly integrate the design system without hosting the files yourself, you can use our CDN links via jsDelivr. Just add these tags into your HTML `<head>`:
 
 ```html
-<!-- Include Bootstrap 5 CSS -->
+<!-- 1. Include Bootstrap 5 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Include ITATS Design System CSS -->
-<link rel="stylesheet" href="css/style.css">
+<!-- 2. Include ITATS Design System CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/anwarsodik/design-system-itats@main/css/style.css">
 ```
 
-For interactive components, don't forget to include the Bootstrap 5 JS bundle and our custom script:
+For interactive components, also include the JS scripts right before your closing `</body>` tag:
 
 ```html
-<!-- Include Bootstrap 5 JS Bundle -->
+<!-- 1. Include Bootstrap 5 JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Include ITATS custom scripts -->
+<!-- 2. Include ITATS Custom Scripts -->
+<script src="https://cdn.jsdelivr.net/gh/anwarsodik/design-system-itats@main/js/script.js"></script>
+```
+
+### 3. Local Usage
+If you have downloaded the files locally, host them in your project structure:
+
+```html
+<link rel="stylesheet" href="css/style.css">
 <script src="js/script.js"></script>
 ```
 
