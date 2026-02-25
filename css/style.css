@@ -50,6 +50,12 @@
     --bs-box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --bs-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     --bs-box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+
+    /* Dropdowns */
+    --bs-dropdown-link-hover-bg: var(--bs-primary-light);
+    --bs-dropdown-link-hover-color: var(--bs-primary);
+    --bs-dropdown-link-active-bg: var(--bs-primary-light);
+    --bs-dropdown-link-active-color: var(--bs-primary);
 }
 
 body {
@@ -483,6 +489,29 @@ h3,
 .code-toggle:hover {
     background: var(--bs-border-color);
     color: var(--bs-text-primary);
+}
+
+/* Dropdowns */
+.dropdown-menu {
+    border: 1px solid var(--bs-border-color-dark);
+    box-shadow: var(--bs-box-shadow);
+}
+
+.dropdown-item {
+    font-size: 0.8125rem;
+    color: var(--bs-text-secondary);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: var(--bs-dropdown-link-hover-color);
+    background-color: var(--bs-dropdown-link-hover-bg);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: var(--bs-dropdown-link-active-color);
+    background-color: var(--bs-dropdown-link-active-bg);
 }
 
 /* Colors Showcase blocks */
