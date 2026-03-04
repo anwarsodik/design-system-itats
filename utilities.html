@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITATS Design System - Utilities</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://portal.itats.ac.id/wp-content/uploads/2023/07/cropped-Logo-Lengkap-150x150.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .util-box {
+            background-color: var(--bs-primary-light);
+            border: 1px solid var(--bs-primary);
+            color: var(--bs-primary);
+            border-radius: var(--bs-border-radius-sm);
+            font-size: 0.8125rem;
+            padding: .25rem .5rem;
+            text-align: center;
+        }
+        .util-row {
+            min-height: 80px;
+            background-color: #f1f5f9;
+            border-radius: var(--bs-border-radius);
+            padding: .5rem;
+        }
+        .swatch {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            border-radius: var(--bs-border-radius-sm);
+            border: 1px solid rgba(0,0,0,.1);
+            vertical-align: middle;
+            margin-right: .25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                    ITATS Design
+                </div>
+            </div>
+            <nav class="sidebar-nav" id="sidebarNavAccordion">
+                <!-- Getting Started -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseGettingStarted" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    Getting Started
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseGettingStarted" data-bs-parent="#sidebarNavAccordion">
+                    <a href="index.html" class="nav-sub-item">Overview</a>
+                </div>
+
+                <!-- Foundations -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFoundations" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                    Foundations
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseFoundations" data-bs-parent="#sidebarNavAccordion">
+                    <a href="colors.html" class="nav-sub-item">Colors</a>
+                    <a href="typography.html" class="nav-sub-item">Typography</a>
+                </div>
+
+                <!-- Layout -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseLayout" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="9" x2="9" y2="21"/></svg>
+                    Layout
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseLayout" data-bs-parent="#sidebarNavAccordion">
+                    <a href="grid.html" class="nav-sub-item">Grid system</a>
+                    <a href="stacks.html" class="nav-sub-item">Stacks</a>
+                    <a href="ratio.html" class="nav-sub-item">Ratio</a>
+                </div>
+
+                <!-- Components -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseComponents" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                    Components
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseComponents" data-bs-parent="#sidebarNavAccordion">
+                    <a href="accordion.html" class="nav-sub-item">Accordion</a>
+                    <a href="alerts.html" class="nav-sub-item">Alerts</a>
+                    <a href="badges.html" class="nav-sub-item">Badge</a>
+                    <a href="breadcrumbs.html" class="nav-sub-item">Breadcrumb</a>
+                    <a href="buttons.html" class="nav-sub-item">Buttons</a>
+                    <a href="button-group.html" class="nav-sub-item">Button group</a>
+                    <a href="cards.html" class="nav-sub-item">Card</a>
+                    <a href="carousel.html" class="nav-sub-item">Carousel</a>
+                    <a href="close-button.html" class="nav-sub-item">Close button</a>
+                    <a href="collapse.html" class="nav-sub-item">Collapse</a>
+                    <a href="dropdowns.html" class="nav-sub-item">Dropdowns</a>
+                    <a href="list-group.html" class="nav-sub-item">List group</a>
+                    <a href="modals.html" class="nav-sub-item">Modal</a>
+                    <a href="navbar.html" class="nav-sub-item">Navbar</a>
+                    <a href="navs-tabs.html" class="nav-sub-item">Navs & tabs</a>
+                    <a href="offcanvas.html" class="nav-sub-item">Offcanvas</a>
+                    <a href="pagination.html" class="nav-sub-item">Pagination</a>
+                    <a href="placeholders.html" class="nav-sub-item">Placeholders</a>
+                    <a href="popovers.html" class="nav-sub-item">Popovers</a>
+                    <a href="progress.html" class="nav-sub-item">Progress</a>
+                    <a href="scrollspy.html" class="nav-sub-item">Scrollspy</a>
+                    <a href="spinners.html" class="nav-sub-item">Spinners</a>
+                    <a href="tables.html" class="nav-sub-item">Tables</a>
+                    <a href="toasts.html" class="nav-sub-item">Toasts</a>
+                    <a href="tooltips.html" class="nav-sub-item">Tooltips</a>
+                </div>
+
+                <!-- Content -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseContent" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    Content
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseContent" data-bs-parent="#sidebarNavAccordion">
+                    <a href="images.html" class="nav-sub-item">Images</a>
+                    <a href="figures.html" class="nav-sub-item">Figures</a>
+                </div>
+
+                <!-- Forms -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                    Forms
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseForms" data-bs-parent="#sidebarNavAccordion">
+                    <a href="forms.html" class="nav-sub-item">Forms</a>
+                </div>
+
+                <!-- Utilities -->
+                <div class="nav-group-title mb-4" data-bs-toggle="collapse" data-bs-target="#collapseUtilities" aria-expanded="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+                    Utilities
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse show" id="collapseUtilities" data-bs-parent="#sidebarNavAccordion">
+                    <a href="utilities.html" class="nav-sub-item active">Utilities</a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Utilities</h1>
+            <p class="text-lead">
+                Bootstrap utilities are single-purpose classes that allow you to quickly apply common CSS properties
+                without writing custom styles. Covers spacing, display, flex, colors, and more.
+            </p>
+
+            <!-- Spacing -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="spacing">Spacing</h2>
+                <p class="component-desc">Use <code>m-{n}</code> for margin and <code>p-{n}</code> for padding. Add directional suffix: <code>t</code> top, <code>b</code> bottom, <code>s</code> start, <code>e</code> end, <code>x</code> horizontal, <code>y</code> vertical. Scale: 0–5, auto.</p>
+                <div class="component-demo">
+                    <div class="d-flex flex-wrap gap-2 align-items-end">
+                        <div class="util-box p-1">p-1</div>
+                        <div class="util-box p-2">p-2</div>
+                        <div class="util-box p-3">p-3</div>
+                        <div class="util-box p-4">p-4</div>
+                        <div class="util-box p-5">p-5</div>
+                    </div>
+                    <hr class="my-3">
+                    <div class="d-flex flex-wrap gap-2 align-items-start">
+                        <div class="util-box mt-0">mt-0</div>
+                        <div class="util-box mt-2">mt-2</div>
+                        <div class="util-box mt-4">mt-4</div>
+                        <div class="util-box mx-3">mx-3</div>
+                        <div class="util-box my-2">my-2</div>
+                        <div class="util-box ms-auto">ms-auto</div>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-spacing">Show Code</div>
+                <pre class="component-code" id="code-spacing"><code>&lt;!-- Padding --&gt;
+&lt;div class="p-3"&gt;Padding all sides&lt;/div&gt;
+&lt;div class="px-4"&gt;Padding horizontal&lt;/div&gt;
+&lt;div class="py-2"&gt;Padding vertical&lt;/div&gt;
+&lt;div class="pt-1 pb-3"&gt;Top & bottom&lt;/div&gt;
+
+&lt;!-- Margin --&gt;
+&lt;div class="m-3"&gt;Margin all sides&lt;/div&gt;
+&lt;div class="mx-auto"&gt;Center horizontally&lt;/div&gt;
+&lt;div class="mt-4 mb-2"&gt;Top & bottom margin&lt;/div&gt;
+&lt;div class="ms-auto"&gt;Push to right&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Display -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="display">Display</h2>
+                <p class="component-desc">Quickly and responsively toggle the display value with <code>d-{value}</code>. Add breakpoint: <code>d-{bp}-{value}</code>.</p>
+                <div class="component-demo">
+                    <div class="d-flex gap-2 flex-wrap mb-2">
+                        <span class="util-box d-inline">d-inline</span>
+                        <div class="util-box d-inline-block">d-inline-block</div>
+                        <div class="util-box d-block">d-block</div>
+                        <div class="util-box d-flex align-items-center">d-flex</div>
+                        <div class="util-box d-inline-flex align-items-center">d-inline-flex</div>
+                    </div>
+                    <p class="text-muted small mt-2 mb-0">Responsive: <code>d-none d-md-block</code> hides element on mobile, shows on md+</p>
+                </div>
+                <div class="code-toggle" data-target="code-display">Show Code</div>
+                <pre class="component-code" id="code-display"><code>&lt;div class="d-none"&gt;Hidden&lt;/div&gt;
+&lt;div class="d-block"&gt;Block&lt;/div&gt;
+&lt;div class="d-inline"&gt;Inline&lt;/div&gt;
+&lt;div class="d-inline-block"&gt;Inline-block&lt;/div&gt;
+&lt;div class="d-flex"&gt;Flex&lt;/div&gt;
+&lt;div class="d-inline-flex"&gt;Inline-flex&lt;/div&gt;
+&lt;div class="d-grid"&gt;Grid&lt;/div&gt;
+
+&lt;!-- Responsive visibility --&gt;
+&lt;div class="d-none d-md-block"&gt;Hidden on mobile, visible on md+&lt;/div&gt;
+&lt;div class="d-block d-lg-none"&gt;Visible on mobile, hidden on lg+&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Flexbox -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="flex">Flexbox</h2>
+                <p class="component-desc">A complete set of flex utilities for direction, wrapping, alignment, and ordering.</p>
+                <div class="component-demo">
+                    <p class="text-muted small mb-1">flex-row / flex-column</p>
+                    <div class="d-flex flex-row gap-2 mb-3">
+                        <div class="util-box">1</div>
+                        <div class="util-box">2</div>
+                        <div class="util-box">3</div>
+                    </div>
+                    <p class="text-muted small mb-1">justify-content-between</p>
+                    <div class="d-flex justify-content-between mb-3 util-row">
+                        <div class="util-box">Start</div>
+                        <div class="util-box">Center</div>
+                        <div class="util-box">End</div>
+                    </div>
+                    <p class="text-muted small mb-1">align-items-center</p>
+                    <div class="d-flex align-items-center gap-2 mb-3 util-row">
+                        <div class="util-box" style="height:2rem">Short</div>
+                        <div class="util-box" style="height:4rem">Taller</div>
+                        <div class="util-box" style="height:3rem">Medium</div>
+                    </div>
+                    <p class="text-muted small mb-1">gap-{n}</p>
+                    <div class="d-flex gap-4">
+                        <div class="util-box">gap-4</div>
+                        <div class="util-box">gap-4</div>
+                        <div class="util-box">gap-4</div>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-flex">Show Code</div>
+                <pre class="component-code" id="code-flex"><code>&lt;!-- Direction --&gt;
+&lt;div class="d-flex flex-row"&gt;...&lt;/div&gt;
+&lt;div class="d-flex flex-column"&gt;...&lt;/div&gt;
+
+&lt;!-- Justify Content --&gt;
+&lt;div class="d-flex justify-content-start"&gt;...&lt;/div&gt;
+&lt;div class="d-flex justify-content-center"&gt;...&lt;/div&gt;
+&lt;div class="d-flex justify-content-end"&gt;...&lt;/div&gt;
+&lt;div class="d-flex justify-content-between"&gt;...&lt;/div&gt;
+&lt;div class="d-flex justify-content-around"&gt;...&lt;/div&gt;
+&lt;div class="d-flex justify-content-evenly"&gt;...&lt;/div&gt;
+
+&lt;!-- Align Items --&gt;
+&lt;div class="d-flex align-items-start"&gt;...&lt;/div&gt;
+&lt;div class="d-flex align-items-center"&gt;...&lt;/div&gt;
+&lt;div class="d-flex align-items-end"&gt;...&lt;/div&gt;
+
+&lt;!-- Wrap --&gt;
+&lt;div class="d-flex flex-wrap"&gt;...&lt;/div&gt;
+&lt;div class="d-flex flex-nowrap"&gt;...&lt;/div&gt;
+
+&lt;!-- Gap --&gt;
+&lt;div class="d-flex gap-2"&gt;...&lt;/div&gt;
+&lt;div class="d-flex gap-4"&gt;...&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Colors & Backgrounds -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="colors">Colors & Backgrounds</h2>
+                <p class="component-desc">Apply text and background colors using utility classes.</p>
+                <div class="component-demo">
+                    <p class="text-muted small mb-2">Text colors</p>
+                    <div class="d-flex flex-wrap gap-3 mb-3">
+                        <span class="text-primary fw-medium">text-primary</span>
+                        <span class="text-secondary">text-secondary</span>
+                        <span class="text-success">text-success</span>
+                        <span class="text-danger">text-danger</span>
+                        <span class="text-warning">text-warning</span>
+                        <span class="text-info">text-info</span>
+                        <span class="text-muted">text-muted</span>
+                        <span class="bg-dark text-white px-1 rounded-1">text-white</span>
+                    </div>
+                    <p class="text-muted small mb-2">Background colors</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="bg-primary text-white px-2 py-1 rounded-1 small">bg-primary</span>
+                        <span class="bg-secondary text-white px-2 py-1 rounded-1 small">bg-secondary</span>
+                        <span class="bg-success text-white px-2 py-1 rounded-1 small">bg-success</span>
+                        <span class="bg-danger text-white px-2 py-1 rounded-1 small">bg-danger</span>
+                        <span class="bg-warning text-dark px-2 py-1 rounded-1 small">bg-warning</span>
+                        <span class="bg-info text-dark px-2 py-1 rounded-1 small">bg-info</span>
+                        <span class="bg-light text-dark px-2 py-1 rounded-1 small border">bg-light</span>
+                        <span class="bg-dark text-white px-2 py-1 rounded-1 small">bg-dark</span>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-colors">Show Code</div>
+                <pre class="component-code" id="code-colors"><code>&lt;!-- Text colors --&gt;
+&lt;p class="text-primary"&gt;Primary text&lt;/p&gt;
+&lt;p class="text-danger"&gt;Danger text&lt;/p&gt;
+&lt;p class="text-muted"&gt;Muted text&lt;/p&gt;
+
+&lt;!-- Background colors --&gt;
+&lt;div class="bg-primary text-white"&gt;Primary background&lt;/div&gt;
+&lt;div class="bg-light"&gt;Light background&lt;/div&gt;
+&lt;div class="bg-dark text-white"&gt;Dark background&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Text utilities -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="text">Text Utilities</h2>
+                <p class="component-desc">Utilities for text alignment, wrapping, weight, style, and more.</p>
+                <div class="component-demo">
+                    <p class="text-start">text-start (left-aligned)</p>
+                    <p class="text-center">text-center (centered)</p>
+                    <p class="text-end">text-end (right-aligned)</p>
+                    <hr>
+                    <p class="fw-bold">fw-bold — Bold text</p>
+                    <p class="fw-semibold">fw-semibold — Semi-bold text</p>
+                    <p class="fw-normal">fw-normal — Normal text</p>
+                    <p class="fw-light">fw-light — Light text</p>
+                    <hr>
+                    <p class="fst-italic">fst-italic — Italic text</p>
+                    <p class="text-decoration-underline">text-decoration-underline</p>
+                    <p class="text-uppercase">text-uppercase</p>
+                    <p class="text-lowercase">TEXT-LOWERCASE</p>
+                    <p class="text-capitalize">text capitalize words</p>
+                    <p class="text-truncate" style="max-width:200px">text-truncate — very long text that will be truncated</p>
+                </div>
+                <div class="code-toggle" data-target="code-text">Show Code</div>
+                <pre class="component-code" id="code-text"><code>&lt;!-- Alignment --&gt;
+&lt;p class="text-start"&gt;Left aligned&lt;/p&gt;
+&lt;p class="text-center"&gt;Centered&lt;/p&gt;
+&lt;p class="text-end"&gt;Right aligned&lt;/p&gt;
+
+&lt;!-- Weight --&gt;
+&lt;p class="fw-bold"&gt;Bold&lt;/p&gt;
+&lt;p class="fw-semibold"&gt;Semibold&lt;/p&gt;
+&lt;p class="fw-normal"&gt;Normal&lt;/p&gt;
+&lt;p class="fw-light"&gt;Light&lt;/p&gt;
+
+&lt;!-- Transform --&gt;
+&lt;p class="text-uppercase"&gt;Uppercase&lt;/p&gt;
+&lt;p class="text-lowercase"&gt;Lowercase&lt;/p&gt;
+&lt;p class="text-capitalize"&gt;Capitalize&lt;/p&gt;
+
+&lt;!-- Truncate --&gt;
+&lt;p class="text-truncate" style="max-width: 200px;"&gt;Long text...&lt;/p&gt;</code></pre>
+            </section>
+
+            <!-- Borders & Rounded -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="borders">Borders & Rounded</h2>
+                <p class="component-desc">Add or remove borders and control border radius with utility classes.</p>
+                <div class="component-demo">
+                    <p class="text-muted small mb-2">Borders</p>
+                    <div class="d-flex flex-wrap gap-3 mb-3">
+                        <div class="util-box border p-2">border</div>
+                        <div class="util-box border-top p-2">border-top</div>
+                        <div class="util-box border-bottom p-2">border-bottom</div>
+                        <div class="util-box border-start p-2">border-start</div>
+                        <div class="util-box border-end p-2">border-end</div>
+                        <div class="util-box border border-primary p-2">border-primary</div>
+                        <div class="util-box border border-danger p-2">border-danger</div>
+                    </div>
+                    <p class="text-muted small mb-2">Border Radius</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="util-box rounded-0 p-2">rounded-0</div>
+                        <div class="util-box rounded-1 p-2">rounded-1</div>
+                        <div class="util-box rounded p-2">rounded</div>
+                        <div class="util-box rounded-3 p-2">rounded-3</div>
+                        <div class="util-box rounded-pill px-3 p-2">rounded-pill</div>
+                        <div class="util-box rounded-circle p-3">circle</div>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-borders">Show Code</div>
+                <pre class="component-code" id="code-borders"><code>&lt;!-- Borders --&gt;
+&lt;div class="border"&gt;All borders&lt;/div&gt;
+&lt;div class="border-top"&gt;Top only&lt;/div&gt;
+&lt;div class="border-0"&gt;No border&lt;/div&gt;
+&lt;div class="border border-primary"&gt;Primary border&lt;/div&gt;
+
+&lt;!-- Border radius --&gt;
+&lt;div class="rounded"&gt;Default radius&lt;/div&gt;
+&lt;div class="rounded-0"&gt;No radius&lt;/div&gt;
+&lt;div class="rounded-pill"&gt;Pill shape&lt;/div&gt;
+&lt;div class="rounded-circle"&gt;Circle&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Shadows & Opacity -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="shadows">Shadows & Opacity</h2>
+                <p class="component-desc">Apply shadows and opacity levels with utility classes.</p>
+                <div class="component-demo">
+                    <p class="text-muted small mb-2">Shadows</p>
+                    <div class="d-flex flex-wrap gap-4 mb-4">
+                        <div class="bg-white border rounded p-3 shadow-none">shadow-none</div>
+                        <div class="bg-white border rounded p-3 shadow-sm">shadow-sm</div>
+                        <div class="bg-white border rounded p-3 shadow">shadow</div>
+                        <div class="bg-white border rounded p-3 shadow-lg">shadow-lg</div>
+                    </div>
+                    <p class="text-muted small mb-2">Opacity</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="util-box opacity-100">opacity-100</div>
+                        <div class="util-box opacity-75">opacity-75</div>
+                        <div class="util-box opacity-50">opacity-50</div>
+                        <div class="util-box opacity-25">opacity-25</div>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-shadows">Show Code</div>
+                <pre class="component-code" id="code-shadows"><code>&lt;!-- Shadows --&gt;
+&lt;div class="shadow-none"&gt;No shadow&lt;/div&gt;
+&lt;div class="shadow-sm"&gt;Small shadow&lt;/div&gt;
+&lt;div class="shadow"&gt;Default shadow&lt;/div&gt;
+&lt;div class="shadow-lg"&gt;Large shadow&lt;/div&gt;
+
+&lt;!-- Opacity --&gt;
+&lt;div class="opacity-100"&gt;100%&lt;/div&gt;
+&lt;div class="opacity-75"&gt;75%&lt;/div&gt;
+&lt;div class="opacity-50"&gt;50%&lt;/div&gt;
+&lt;div class="opacity-25"&gt;25%&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- Width & Height -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="sizing">Sizing</h2>
+                <p class="component-desc">Set width and height using percentage-based or viewport-based utility classes.</p>
+                <div class="component-demo">
+                    <p class="text-muted small mb-2">Width utilities</p>
+                    <div class="util-box w-25 mb-2">w-25</div>
+                    <div class="util-box w-50 mb-2">w-50</div>
+                    <div class="util-box w-75 mb-2">w-75</div>
+                    <div class="util-box w-100 mb-2">w-100</div>
+                    <div class="util-box w-auto">w-auto</div>
+                </div>
+                <div class="code-toggle" data-target="code-sizing">Show Code</div>
+                <pre class="component-code" id="code-sizing"><code>&lt;!-- Width --&gt;
+&lt;div class="w-25"&gt;25%&lt;/div&gt;
+&lt;div class="w-50"&gt;50%&lt;/div&gt;
+&lt;div class="w-75"&gt;75%&lt;/div&gt;
+&lt;div class="w-100"&gt;100%&lt;/div&gt;
+&lt;div class="w-auto"&gt;Auto&lt;/div&gt;
+&lt;div class="mw-100"&gt;Max-width 100%&lt;/div&gt;
+
+&lt;!-- Height --&gt;
+&lt;div class="h-25"&gt;25%&lt;/div&gt;
+&lt;div class="h-50"&gt;50%&lt;/div&gt;
+&lt;div class="h-100"&gt;100%&lt;/div&gt;
+&lt;div class="mh-100"&gt;Max-height 100%&lt;/div&gt;
+
+&lt;!-- Viewport units --&gt;
+&lt;div class="min-vw-100"&gt;Min viewport width&lt;/div&gt;
+&lt;div class="min-vh-100"&gt;Min viewport height&lt;/div&gt;</code></pre>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -4,21 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITATS Design System - Accordion</title>
-    <link rel="icon" type="image/x-icon" href="https://portal.itats.ac.id/wp-content/uploads/2023/07/cropped-Logo-Lengkap-150x150.png">
+    <title>ITATS Design System - Tooltips</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://portal.itats.ac.id/wp-content/uploads/2023/07/cropped-Logo-Lengkap-150x150.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .component-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .component-desc {
-            color: var(--bs-text-secondary);
-            margin-bottom: 24px;
-        }
-    </style>
 </head>
 
 <body>
@@ -36,7 +26,7 @@
                     ITATS Design
                 </div>
             </div>
-                        <nav class="sidebar-nav" id="sidebarNavAccordion">
+            <nav class="sidebar-nav" id="sidebarNavAccordion">
                 <!-- Getting Started -->
                 <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseGettingStarted" aria-expanded="false">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
@@ -77,8 +67,7 @@
                     <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </div>
                 <div class="collapse show" id="collapseComponents" data-bs-parent="#sidebarNavAccordion">
-                    <!-- 23 Component Links -->
-                    <a href="accordion.html" class="nav-sub-item active">Accordion</a>
+                    <a href="accordion.html" class="nav-sub-item">Accordion</a>
                     <a href="alerts.html" class="nav-sub-item">Alerts</a>
                     <a href="badges.html" class="nav-sub-item">Badge</a>
                     <a href="breadcrumbs.html" class="nav-sub-item">Breadcrumb</a>
@@ -102,17 +91,7 @@
                     <a href="spinners.html" class="nav-sub-item">Spinners</a>
                     <a href="tables.html" class="nav-sub-item">Tables</a>
                     <a href="toasts.html" class="nav-sub-item">Toasts</a>
-                    <a href="tooltips.html" class="nav-sub-item">Tooltips</a>
-                </div>
-
-                <!-- Forms -->
-                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-                    Forms
-                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </div>
-                <div class="collapse" id="collapseForms" data-bs-parent="#sidebarNavAccordion">
-                    <a href="forms.html" class="nav-sub-item">Forms</a>
+                    <a href="tooltips.html" class="nav-sub-item active">Tooltips</a>
                 </div>
 
                 <!-- Content -->
@@ -125,6 +104,17 @@
                     <a href="images.html" class="nav-sub-item">Images</a>
                     <a href="figures.html" class="nav-sub-item">Figures</a>
                 </div>
+
+                <!-- Forms -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                    Forms
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseForms" data-bs-parent="#sidebarNavAccordion">
+                    <a href="forms.html" class="nav-sub-item">Forms</a>
+                </div>
+
                 <!-- Utilities -->
                 <div class="nav-group-title collapsed mb-4" data-bs-toggle="collapse" data-bs-target="#collapseUtilities" aria-expanded="false">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
@@ -139,61 +129,146 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <h1>Accordion</h1>
+            <h1>Tooltips</h1>
             <p class="text-lead">
-                Build vertically collapsing accordions in combination with the Collapse JavaScript plugin.
+                Tooltips display brief, informative text when users hover over or focus an element.
+                Unlike Popovers, they have no header or body structure — just a simple label.
             </p>
 
+            <!-- Basic Tooltips -->
             <section class="showcase-section">
-                <h2 class="component-title" id="accordion">Example</h2>
-                <p class="component-desc">Click the accordions below to expand/collapse the accordion content.</p>
-
+                <h2 class="component-title" id="basic">Basic Tooltips</h2>
+                <p class="component-desc">Add <code>data-bs-toggle="tooltip"</code> and <code>title</code> attributes to any element. Tooltips require JavaScript initialization.</p>
                 <div class="component-demo">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Accordion Item #1
-                            </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element.
-                            </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Accordion Item #2
-                            </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
-                            </div>
-                            </div>
-                        </div>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" title="This is a tooltip!">
+                            Hover me
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" title="Another tooltip here">
+                            Hover me too
+                        </button>
+                        <a href="#" class="btn btn-outline-primary" data-bs-toggle="tooltip" title="Tooltip on a link">
+                            Link with tooltip
+                        </a>
                     </div>
                 </div>
-                <div class="code-toggle" data-target="code-accordion">Show Code</div>
-                <pre class="component-code" id="code-accordion"><code>&lt;div class="accordion" id="accordionExample"&gt;
-  &lt;div class="accordion-item"&gt;
-    &lt;h2 class="accordion-header"&gt;
-      &lt;button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt;
-        Accordion Item #1
-      &lt;/button&gt;
-    &lt;/h2&gt;
-    &lt;div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample"&gt;
-      &lt;div class="accordion-body"&gt;...&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+                <div class="code-toggle" data-target="code-basic">Show Code</div>
+                <pre class="component-code" id="code-basic"><code>&lt;!-- Tooltips require JavaScript initialization --&gt;
+&lt;button type="button" class="btn btn-primary"
+  data-bs-toggle="tooltip"
+  title="This is a tooltip!"&gt;
+  Hover me
+&lt;/button&gt;
+
+&lt;!-- Initialize all tooltips on the page --&gt;
+&lt;script&gt;
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  const tooltipList = [...tooltipTriggerList].map(el =&gt; new bootstrap.Tooltip(el));
+&lt;/script&gt;</code></pre>
             </section>
+
+            <!-- Placement -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="placement">Placement</h2>
+                <p class="component-desc">Use <code>data-bs-placement</code> to position tooltips on top, right, bottom, or left.</p>
+                <div class="component-demo">
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button type="button" class="btn btn-outline-primary"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                            Top
+                        </button>
+                        <button type="button" class="btn btn-outline-primary"
+                            data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+                            Right
+                        </button>
+                        <button type="button" class="btn btn-outline-primary"
+                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+                            Bottom
+                        </button>
+                        <button type="button" class="btn btn-outline-primary"
+                            data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+                            Left
+                        </button>
+                    </div>
+                </div>
+                <div class="code-toggle" data-target="code-placement">Show Code</div>
+                <pre class="component-code" id="code-placement"><code>&lt;button data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"&gt;Top&lt;/button&gt;
+&lt;button data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right"&gt;Right&lt;/button&gt;
+&lt;button data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom"&gt;Bottom&lt;/button&gt;
+&lt;button data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left"&gt;Left&lt;/button&gt;</code></pre>
+            </section>
+
+            <!-- HTML Tooltips -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="html">HTML Content</h2>
+                <p class="component-desc">Add <code>data-bs-html="true"</code> to allow HTML inside tooltips.</p>
+                <div class="component-demo">
+                    <button type="button" class="btn btn-accent"
+                        data-bs-toggle="tooltip" data-bs-html="true"
+                        title="&lt;strong&gt;Bold text&lt;/strong&gt; and &lt;em&gt;italic&lt;/em&gt;">
+                        Tooltip with HTML
+                    </button>
+                </div>
+                <div class="code-toggle" data-target="code-html">Show Code</div>
+                <pre class="component-code" id="code-html"><code>&lt;button type="button" class="btn btn-accent"
+  data-bs-toggle="tooltip"
+  data-bs-html="true"
+  title="&lt;strong&gt;Bold text&lt;/strong&gt; and &lt;em&gt;italic&lt;/em&gt;"&gt;
+  Tooltip with HTML
+&lt;/button&gt;</code></pre>
+            </section>
+
+            <!-- Disabled elements -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="disabled">Disabled Elements</h2>
+                <p class="component-desc">Disabled elements can't be hovered. Wrap them in a <code>&lt;span&gt;</code> to enable tooltips.</p>
+                <div class="component-demo">
+                    <span data-bs-toggle="tooltip" title="Disabled button tooltip">
+                        <button class="btn btn-primary" disabled style="pointer-events: none;">Disabled Button</button>
+                    </span>
+                </div>
+                <div class="code-toggle" data-target="code-disabled">Show Code</div>
+                <pre class="component-code" id="code-disabled"><code>&lt;!-- Wrap disabled elements in a span --&gt;
+&lt;span data-bs-toggle="tooltip" title="Disabled button tooltip"&gt;
+  &lt;button class="btn btn-primary" disabled style="pointer-events: none;"&gt;
+    Disabled Button
+  &lt;/button&gt;
+&lt;/span&gt;</code></pre>
+            </section>
+
+            <!-- Tooltip vs Popover -->
+            <section class="showcase-section">
+                <h2 class="component-title" id="comparison">Tooltip vs Popover</h2>
+                <p class="component-desc">Know when to use each component.</p>
+                <div class="component-demo">
+                    <table class="table table-bordered table-sm" style="font-size: 0.8125rem;">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Tooltip</th>
+                                <th>Popover</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Trigger</td><td>Hover / Focus</td><td>Click</td></tr>
+                            <tr><td>Has title</td><td>No</td><td>Yes</td></tr>
+                            <tr><td>Has body content</td><td>No</td><td>Yes</td></tr>
+                            <tr><td>Best for</td><td>Short labels</td><td>Detailed descriptions</td></tr>
+                            <tr><td>Dismiss on click outside</td><td>Auto on mouse leave</td><td>Yes (with dismiss option)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
         </main>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+    </script>
 </body>
+
 </html>
