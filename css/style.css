@@ -52,10 +52,10 @@
     --bs-box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 
     /* Dropdowns */
-    --bs-dropdown-link-hover-bg: var(--bs-primary-light);
-    --bs-dropdown-link-hover-color: var(--bs-primary);
-    --bs-dropdown-link-active-bg: var(--bs-primary-light);
-    --bs-dropdown-link-active-color: var(--bs-primary);
+    --bs-dropdown-link-hover-bg: var(--bs-primary);
+    --bs-dropdown-link-hover-color: #ffffff;
+    --bs-dropdown-link-active-bg: var(--bs-primary-hover);
+    --bs-dropdown-link-active-color: #ffffff;
 
     /* Services Brand Colors */
     --itats-brand-internet: #0078D4;
