@@ -43,6 +43,51 @@ document.addEventListener('DOMContentLoaded', () => {
         card.title = 'Click to copy hex code';
     });
 
+    // --- Copy Services Brand Hex ---
+    const serviceItems = document.querySelectorAll('.col-md-6 > .d-flex.align-items-center');
+    serviceItems.forEach(item => {
+        const hexSpan = item.querySelector('.text-muted');
+        if (hexSpan && hexSpan.textContent.startsWith('#')) {
+            item.style.cursor = 'pointer';
+            item.title = 'Click to copy hex code';
+            
+            // Add subtle hover effect padding wrapper
+            item.style.transition = 'all 0.2s ease';
+            item.style.padding = '6px';
+            item.style.marginLeft = '-6px';
+            item.style.borderRadius = '6px';
+            
+            item.addEventListener('mouseenter', () => {
+                item.style.backgroundColor = 'rgba(0,0,0,0.04)';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.backgroundColor = 'transparent';
+            });
+
+            item.addEventListener('click', () => {
+                const hex = hexSpan.dataset.originalHex || hexSpan.textContent;
+                if (hexSpan.textContent === 'Copied!') return;
+                
+                // Store original hex to dataset
+                if(!hexSpan.dataset.originalHex) {
+                    hexSpan.dataset.originalHex = hex;
+                }
+                
+                navigator.clipboard.writeText(hex).then(() => {
+                    hexSpan.textContent = 'Copied!';
+                    hexSpan.classList.remove('text-muted');
+                    hexSpan.classList.add('text-success', 'fw-bold');
+                    
+                    setTimeout(() => {
+                        hexSpan.textContent = hex;
+                        hexSpan.classList.add('text-muted');
+                        hexSpan.classList.remove('text-success', 'fw-bold');
+                    }, 1500);
+                });
+            });
+        }
+    });
+
     // --- Code Blocks Toggle ---
     const codeToggles = document.querySelectorAll('.code-toggle');
     codeToggles.forEach(toggle => {
