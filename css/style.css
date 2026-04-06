@@ -56,6 +56,58 @@
     --bs-dropdown-link-hover-color: var(--bs-primary);
     --bs-dropdown-link-active-bg: var(--bs-primary-light);
     --bs-dropdown-link-active-color: var(--bs-primary);
+
+    /* Services Brand Colors */
+    --itats-brand-internet: #0078D4;
+    --itats-brand-internet-secondary: #00b4f0;
+    --itats-brand-sim: #06469E;
+    --itats-brand-sim-secondary: #0a65cc;
+    --itats-brand-btfeeder: #D83B01;
+    --itats-brand-btfeeder-secondary: #ff8c00;
+    --itats-brand-email: #EA4300;
+    --itats-brand-email-secondary: #ff6a00;
+    --itats-brand-neofeeder: #008272;
+    --itats-brand-neofeeder-secondary: #00a896;
+    --itats-brand-microsoft: #00A4EF;
+    --itats-brand-microsoft-secondary: #50c8ff;
+    --itats-brand-sister: #CA5010;
+    --itats-brand-sister-secondary: #f07b32;
+    --itats-brand-pmb: #E3008C;
+    --itats-brand-pmb-secondary: #ff5ebc;
+    --itats-brand-portal: #042a5e;
+    --itats-brand-portal-secondary: #06469e;
+    --itats-brand-web: #0958c2;
+    --itats-brand-web-secondary: #1879ec;
+    --itats-brand-wisuda: #5C2D91;
+    --itats-brand-wisuda-secondary: #8c4dc8;
+    --itats-brand-simpeg: #00B294;
+    --itats-brand-simpeg-secondary: #00d9b4;
+    --itats-brand-shortener: #FFB900;
+    --itats-brand-shortener-secondary: #ffd54f;
+    --itats-brand-api: #8764B8;
+    --itats-brand-api-secondary: #ad8ce0;
+    --itats-brand-aset: #7A7574;
+    --itats-brand-aset-secondary: #a39e9d;
+    --itats-brand-keuangan: #0c7cba;
+    --itats-brand-keuangan-secondary: #169de8;
+    --itats-brand-perpustakaan: #254b77;
+    --itats-brand-perpustakaan-secondary: #3c73b3;
+    --itats-brand-ejurnal: #B4009E;
+    --itats-brand-ejurnal-secondary: #e54cd0;
+    --itats-brand-classroom: #126ee2;
+    --itats-brand-classroom-secondary: #4392f1;
+    --itats-brand-elibrary: #C239B3;
+    --itats-brand-elibrary-secondary: #e76edb;
+    --itats-brand-mbkm: #E81123;
+    --itats-brand-mbkm-secondary: #ff4757;
+    --itats-brand-tugasakhir: #004E8C;
+    --itats-brand-tugasakhir-secondary: #0072c4;
+    --itats-brand-languagetest: #0067B8;
+    --itats-brand-languagetest-secondary: #2890e8;
+    --itats-brand-simlppm: #498205;
+    --itats-brand-simlppm-secondary: #6cb314;
+    --itats-brand-adminclassroom: #333333;
+    --itats-brand-adminclassroom-secondary: #666666;
 }
 
 body {
