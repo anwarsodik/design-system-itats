@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="HWMyZz8erAZ6y0w8u7G7IvJ7Mus8gVU4mFOCmpKm">
+    <title>Dashboard - The Bale Hinggil Residence Admin</title>
+    <link rel="icon" type="image/png" href="https://balehinggil.hotelify.id/images/logo.png">
+    <link rel="apple-touch-icon" href="https://balehinggil.hotelify.id/images/logo.png">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <script>
+        window._adminReadyQueue = [];
+        window.runWhenJqueryReady = function(fn) {
+            if (typeof window.$ !== 'undefined') {
+                fn();
+                return;
+            }
+            window._adminReadyQueue.push(fn);
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="preload" as="style" href="https://balehinggil.hotelify.id/build/assets/app-_vqBeA7I.css" /><link rel="modulepreload" as="script" href="https://balehinggil.hotelify.id/build/assets/app-BsCzD8Fs.js" /><link rel="modulepreload" as="script" href="https://balehinggil.hotelify.id/build/assets/index-42ANG6Sg.js" /><link rel="modulepreload" as="script" href="https://balehinggil.hotelify.id/build/assets/admin-BG6RwMJT.js" /><link rel="modulepreload" as="script" href="https://balehinggil.hotelify.id/build/assets/jquery.module-gMJouFOB.js" /><link rel="stylesheet" href="https://balehinggil.hotelify.id/build/assets/app-_vqBeA7I.css" /><script type="module" src="https://balehinggil.hotelify.id/build/assets/app-BsCzD8Fs.js"></script><script type="module" src="https://balehinggil.hotelify.id/build/assets/admin-BG6RwMJT.js"></script>    
+    <style>
+    :root {
+        /* Brand blues */
+        --admin-primary: #1e5fa8;
+        --admin-primary-hover: #2186c4;
+        --admin-primary-pressed: #153d6b;
+
+        /* Semantic roles (override these when changing palette) */
+        --admin-btn-primary-bg: var(--admin-primary);
+        --admin-btn-primary-hover-bg: var(--admin-primary-hover);
+        --admin-btn-primary-text: #ffffff;
+
+        --admin-btn-secondary-bg: var(--admin-section);
+        --admin-btn-secondary-hover-bg: var(--admin-border);
+        --admin-btn-secondary-text: var(--admin-primary-pressed);
+        --admin-btn-secondary-border: var(--admin-border);
+
+        /* Background & Surface */
+        --admin-bg: #ffffff;
+        --admin-card: #f4f9fc;
+        --admin-section: #e8f4fc;
+        --admin-badge-bg: #c8e4f4;
+        --admin-row-hover: #f0f7fc;
+
+        /* Text */
+        --admin-text: #111111;
+        --admin-text-secondary: #333333;
+        --admin-text-muted: #666666;
+        --admin-text-disabled: #999999;
+
+        /* Border */
+        --admin-border: #c8e4f4;
+        --admin-border-card: #b8d8f0;
+
+        /* Status (standar umum: sukses hijau, gagal merah) */
+        --admin-success: #16A34A;
+        --admin-error: #DC2626;
+        --admin-warning: #D97706; /* caution / peringatan */
+        --admin-info: #2B90D9;
+
+        /* Alerts / badges (background + text) */
+        --admin-success-bg: #F0FDF4;
+        --admin-success-text: #166534;
+        --admin-success-border: #BBF7D0;
+
+        --admin-warning-bg: #FFF7ED;
+        --admin-warning-text: #9A3412;
+        --admin-warning-border: #FED7AA;
+
+        --admin-error-bg: #FEF2F2;
+        --admin-error-text: #991B1B;
+        --admin-error-border: #FECACA;
+
+        --admin-info-bg: #EFF6FF;
+        --admin-info-text: #1D4ED8;
+        --admin-info-border: #BFDBFE;
+    }
+
+    /* Common helpers (use in admin blades to avoid hardcoded colors) */
+    .admin-card {
+        background: var(--admin-card);
+        border: 1px solid var(--admin-border);
+        border-radius: 1rem;
+    }
+
+    /* Buttons */
+    .admin-btn-primary { background: var(--admin-btn-primary-bg); color: var(--admin-btn-primary-text); }
+    .admin-btn-primary:hover { background: var(--admin-btn-primary-hover-bg); }
+
+    .admin-btn-soft,
+    .admin-btn-secondary {
+        background: var(--admin-btn-secondary-bg);
+        color: var(--admin-btn-secondary-text);
+        border: 1px solid var(--admin-btn-secondary-border);
+    }
+    .admin-btn-soft:hover,
+    .admin-btn-secondary:hover {
+        background: var(--admin-btn-secondary-hover-bg);
+    }
+
+    .admin-focus-ring:focus,
+    .admin-focus-ring:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(30, 95, 168, 0.18);
+        border-color: var(--admin-primary);
+    }
+
+    /* Form controls */
+    .admin-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--admin-primary-pressed);
+    }
+    .admin-input,
+    .admin-select,
+    .admin-textarea {
+        width: 100%;
+        border-radius: 0.75rem;
+        border: 1px solid var(--admin-border);
+        background: #fff;
+        color: var(--admin-text);
+        font-size: 0.875rem;
+        transition: box-shadow .15s ease, border-color .15s ease, background-color .15s ease;
+    }
+    .admin-input,
+    .admin-select { padding: 0.625rem 0.75rem; }
+    .admin-textarea { padding: 0.625rem 0.75rem; min-height: 110px; resize: vertical; }
+    .admin-input::placeholder,
+    .admin-textarea::placeholder { color: var(--admin-text-muted); }
+    .admin-input:focus,
+    .admin-select:focus,
+    .admin-textarea:focus {
+        outline: none;
+        border-color: var(--admin-primary);
+        box-shadow: 0 0 0 3px rgba(30, 95, 168, 0.15);
+    }
+    .admin-check {
+        color: var(--admin-primary);
+        border-color: var(--admin-border);
+    }
+    .admin-check:focus,
+    .admin-check:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(30, 95, 168, 0.15);
+    }
+    .admin-help-text { color: var(--admin-text-muted); font-size: 0.75rem; }
+    .admin-error-text { color: var(--admin-error-text); font-size: 0.75rem; font-weight: 500; }
+
+    /* Alerts */
+    .admin-alert { border-radius: 0.75rem; border: 1px solid var(--admin-border); background: var(--admin-card); color: var(--admin-text-secondary); }
+    .admin-alert-success { background: var(--admin-success-bg); border-color: var(--admin-success-border); color: var(--admin-success-text); }
+    .admin-alert-warning { background: var(--admin-warning-bg); border-color: var(--admin-warning-border); color: var(--admin-warning-text); }
+    .admin-alert-error { background: var(--admin-error-bg); border-color: var(--admin-error-border); color: var(--admin-error-text); }
+    .admin-alert-info { background: var(--admin-info-bg); border-color: var(--admin-info-border); color: var(--admin-info-text); }
+
+    /* “Selectable card” pattern used by several admin screens */
+    .admin-choice-card {
+        border-color: var(--admin-border);
+        background: #fff;
+        color: var(--admin-text-secondary);
+    }
+    .peer:checked ~ .admin-choice-card {
+        border-color: var(--admin-primary);
+        background: var(--admin-section);
+        color: var(--admin-primary-pressed);
+    }
+</style>
+
+    <style>
+        /* Sidebar active indicator animation */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-4px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .nav-active {
+            animation: slideIn 0.15s ease-out;
+        }
+
+        /* Sidebar top accent */
+        aside::before {
+            content: '';
+            display: block;
+            height: 3px;
+            background: var(--admin-primary);
+        }
+
+        @media (min-width: 1024px) {
+            #admin-sidebar {
+                transition: width 0.2s ease, max-width 0.2s ease;
+            }
+
+            body.admin-sidebar-collapsed #admin-sidebar {
+                width: 5rem;
+                min-width: 5rem;
+                max-width: 5rem;
+            }
+
+            body.admin-sidebar-collapsed #admin-sidebar>a {
+                justify-content: center;
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+
+            body.admin-sidebar-collapsed #admin-sidebar .admin-sidebar-logo-full,
+            body.admin-sidebar-collapsed #admin-sidebar>a>div:last-child,
+            body.admin-sidebar-collapsed #admin-sidebar nav span,
+            body.admin-sidebar-collapsed #admin-sidebar nav details>summary .fa-chevron-down,
+            body.admin-sidebar-collapsed #admin-sidebar nav details>div,
+            body.admin-sidebar-collapsed #admin-sidebar nav a .ml-auto {
+                display: none !important;
+            }
+
+            body.admin-sidebar-collapsed #admin-sidebar .admin-sidebar-logo-compact {
+                display: inline-flex !important;
+            }
+
+            body.admin-sidebar-collapsed #admin-sidebar nav a,
+            body.admin-sidebar-collapsed #admin-sidebar nav details>summary,
+            body.admin-sidebar-collapsed #admin-sidebar>div a {
+                justify-content: center;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
+        }
+
+        aside nav::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        aside nav::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        aside nav::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Admin table: readable text + icon box in header + action column box */
+        .admin-table thead th {
+            color: var(--admin-text-secondary) !important;
+        }
+
+        .admin-table thead th .th-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 6px;
+            background: var(--admin-section);
+            color: var(--admin-primary);
+            margin-right: 0.35rem;
+            vertical-align: middle;
+        }
+
+        .admin-table tbody td {
+            color: var(--admin-text) !important;
+        }
+
+        .admin-table tbody td.text-muted {
+            color: var(--admin-text-muted) !important;
+        }
+
+        .admin-table .admin-action-cell {
+            background: var(--admin-card) !important;
+            border-left: 1px solid var(--admin-border);
+            vertical-align: middle;
+        }
+
+        .admin-table tbody tr:hover .admin-action-cell {
+            background: var(--admin-row-hover) !important;
+        }
+
+        /* Mobile drawer: ERP-style sidebar (banyak menu) — off-canvas + overlay */
+        @media (max-width: 1023px) {
+            body.admin-mobile-nav-open {
+                overflow: hidden;
+            }
+
+            #admin-sidebar {
+                box-shadow: 4px 0 24px rgba(0, 0, 0, 0.18);
+            }
+
+            body.admin-mobile-nav-open #admin-sidebar {
+                transform: translateX(0);
+            }
+
+            #admin-sidebar-backdrop {
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.2s ease;
+            }
+
+            body.admin-mobile-nav-open #admin-sidebar-backdrop {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
+        /* Report section: typography & spacing lebih rapat di mobile */
+        @media (max-width: 639px) {
+            main.admin-report-mobile {
+                padding: 0.75rem 0.875rem;
+                font-size: 0.8125rem;
+            }
+
+            main.admin-report-mobile .text-2xl {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+            }
+
+            main.admin-report-mobile .text-xl {
+                font-size: 1.0625rem;
+                line-height: 1.5rem;
+            }
+
+            main.admin-report-mobile .text-lg {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+
+            main.admin-report-mobile table.admin-table th,
+            main.admin-report-mobile table.admin-table td {
+                padding: 0.5rem 0.625rem;
+                font-size: 0.75rem;
+            }
+
+            main.admin-report-mobile table.admin-table .text-sm {
+                font-size: 0.75rem;
+            }
+
+            /* Tabel report tanpa class admin-table (mis. Top Performers) */
+            main.admin-report-mobile table:not(.admin-table) th,
+            main.admin-report-mobile table:not(.admin-table) td {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        /*
+         * Chart.js di mobile WebKit: jangan taruh canvas di dalam ancestor overflow-hidden + border-radius
+         * (sering render putih/kosong). Host pakai tinggi + min-height eksplisit; canvas tidak pakai h-full Tailwind.
+         */
+        .report-chart-host {
+            position: relative;
+            z-index: 0;
+            width: 100%;
+            min-width: 0;
+            min-height: 272px;
+            height: 272px;
+            box-sizing: border-box;
+            /* Layer kompositing WebKit: mengurangi canvas putih di iOS saat scroll/zoom */
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+        }
+
+        .report-chart-host>canvas {
+            display: block;
+            max-width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .report-chart-host {
+                min-height: 320px;
+                height: 320px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .report-chart-host {
+                min-height: 360px;
+                height: 360px;
+            }
+        }
+
+        /* Dashboard: chart lebih pendek; tetap eksplisit untuk WebKit mobile */
+        .report-chart-host--dashboard-donut {
+            width: 11rem;
+            height: 11rem;
+            min-height: 11rem;
+            flex-shrink: 0;
+        }
+
+        .report-chart-host--dashboard-bar {
+            min-height: 11rem;
+            height: 11rem;
+        }
+
+        @media (min-width: 640px) {
+            .report-chart-host--dashboard-bar {
+                min-height: 12rem;
+                height: 12rem;
+            }
+        }
+
+        .report-chart-host--dashboard-line {
+            min-height: 13rem;
+            height: 13rem;
+        }
+
+        @media (min-width: 640px) {
+            .report-chart-host--dashboard-line {
+                min-height: 14rem;
+                height: 14rem;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="font-sans antialiased h-screen overflow-hidden"
+    style="background-color: var(--admin-bg); color: var(--admin-text);">
+
+    
+    <div id="admin-sidebar-backdrop" class="fixed inset-0 z-40 bg-black/45 lg:hidden" aria-hidden="true"></div>
+
+    
+    <div id="admin-shell" class="flex h-full w-full min-w-0 overflow-hidden">
+
+        <aside id="admin-sidebar"
+    class="fixed inset-y-0 left-0 z-50 flex h-full w-64 max-w-[min(16rem,calc(100vw-2.5rem))] -translate-x-full transform flex-col overflow-hidden transition-transform duration-200 ease-out lg:static lg:z-auto lg:max-w-none lg:shrink-0 lg:translate-x-0"
+    style="background:var(--admin-primary); border-right: 1px solid rgba(0,0,0,0.12); box-shadow: 2px 0 12px rgba(0,0,0,0.1);"
+    data-admin-sidebar>
+
+    <a href="https://balehinggil.hotelify.id/admin" class="admin-sidebar-brand shrink-0 flex items-center px-4 py-3 transition-opacity hover:opacity-90"
+        style="border-bottom: 1px solid rgba(255,255,255,0.15);">
+        <img src="https://balehinggil.hotelify.id/images/logo.png" alt="The Bale Hinggil Residence"
+            class="admin-sidebar-logo-full h-12 w-full object-contain">
+        <div class="admin-sidebar-logo-compact hidden h-9 w-9 items-center justify-center rounded-xl shadow-sm"
+            style="background: rgba(255,255,255,0.2);">
+            <i class="fas fa-building text-white text-sm"></i>
+        </div>
+    </a>
+
+    <nav class="flex-1 min-h-0 overflow-y-auto px-3 py-3 space-y-0.5">
+                    <a href="https://balehinggil.hotelify.id/admin"
+                class="nav-active flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150"
+                style="background:rgba(255,255,255,0.2); color:#ffffff; font-weight:600;"
+                >
+                <i class="fas fa-chart-line w-4 text-center text-xs" style="color:rgba(255,255,255,0.95);"></i>
+                <span>Dashboard</span>
+                                    <span class="ml-auto w-1.5 h-1.5 rounded-full" style="background:rgba(255,255,255,0.9);"></span>
+                            </a>
+        
+                    <details class="group mt-4"
+                >
+                <summary
+                    class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium cursor-pointer list-none select-none transition-all duration-150"
+                    style="color:rgba(255,255,255,0.9);"
+                    onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';"
+                    onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';">
+                    <i class="fas fa-calendar-check w-4 text-center text-xs" style="color:rgba(255,255,255,0.9);"></i>
+                    <span>Manajemen Booking</span>
+                    <i class="fas fa-chevron-down ml-auto text-[10px] transition-transform duration-200 group-open:rotate-180"
+                        style="color:rgba(255,255,255,0.8);"></i>
+                </summary>
+                <div class="mt-0.5 ml-5 pl-3 space-y-0.5 pb-1" style="border-left: 2px solid rgba(255,255,255,0.2);">
+                                            <a href="https://balehinggil.hotelify.id/admin/bookings"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-list w-3 text-center"></i> Daftar Booking
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/checkins/walkin"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-walking w-3 text-center"></i> Check-in (walk-in)
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/checkins"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-sign-in-alt w-3 text-center"></i> Check-in
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/checkouts"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-sign-out-alt w-3 text-center"></i> Check-out
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/units/available"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-key w-3 text-center"></i> Unit Tersedia
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/bookings/refunds"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-undo w-3 text-center"></i> Refund Booking
+                        </a>
+                                    </div>
+            </details>
+        
+                    <details class="group mt-4"
+                >
+                <summary
+                    class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium cursor-pointer list-none select-none transition-all duration-150"
+                    style="color:rgba(255,255,255,0.9);"
+                    onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';"
+                    onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';">
+                    <i class="fas fa-chart-bar w-4 text-center text-xs" style="color:rgba(255,255,255,0.9);"></i>
+                    <span>Reports</span>
+                    <i class="fas fa-chevron-down ml-auto text-[10px] transition-transform duration-200 group-open:rotate-180"
+                        style="color:rgba(255,255,255,0.8);"></i>
+                </summary>
+                <div class="mt-0.5 ml-5 pl-3 space-y-0.5 pb-1" style="border-left: 2px solid rgba(255,255,255,0.2);">
+                                            <a href="https://balehinggil.hotelify.id/admin/reports/occupancy"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-bed w-3 text-center"></i> Occupancy
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/reports/finance"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-wallet w-3 text-center"></i> Finance
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/finance-audits"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-balance-scale w-3 text-center"></i> Audit Keuangan
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/reports/top-performers"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-trophy w-3 text-center"></i> Top Performers
+                        </a>
+                                    </div>
+            </details>
+        
+                    <details class="group mt-4"
+                >
+                <summary
+                    class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium cursor-pointer list-none select-none transition-all duration-150"
+                    style="color:rgba(255,255,255,0.9);"
+                    onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';"
+                    onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';">
+                    <i class="fas fa-database w-4 text-center text-xs" style="color:rgba(255,255,255,0.9);"></i>
+                    <span>Master Data</span>
+                    <i class="fas fa-chevron-down ml-auto text-[10px] transition-transform duration-200 group-open:rotate-180"
+                        style="color:rgba(255,255,255,0.8);"></i>
+                </summary>
+                <div class="mt-0.5 ml-5 pl-3 space-y-0.5 pb-1" style="border-left: 2px solid rgba(255,255,255,0.2);">
+                                            <a href="https://balehinggil.hotelify.id/admin/units"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-door-open w-3 text-center"></i> Units
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/unit-base-rates"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-tag w-3 text-center"></i> Harga Dasar Unit
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/guests"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-users w-3 text-center"></i> Guests
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/unit-types"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-th-large w-3 text-center"></i> Tipe Unit
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/unit-views"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-eye w-3 text-center"></i> View Unit
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/interior-types"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-couch w-3 text-center"></i> Interior
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/owners"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-user-tie w-3 text-center"></i> Pemilik &amp; status
+                        </a>
+                                    </div>
+            </details>
+        
+                    <details class="group mt-4"
+                >
+                <summary
+                    class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium cursor-pointer list-none select-none transition-all duration-150"
+                    style="color:rgba(255,255,255,0.9);"
+                    onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';"
+                    onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';">
+                    <i class="fas fa-tags w-4 text-center text-xs" style="color:rgba(255,255,255,0.9);"></i>
+                    <span>Harga &amp; Promo</span>
+                    <i class="fas fa-chevron-down ml-auto text-[10px] transition-transform duration-200 group-open:rotate-180"
+                        style="color:rgba(255,255,255,0.8);"></i>
+                </summary>
+                <div class="mt-0.5 ml-5 pl-3 space-y-0.5 pb-1" style="border-left: 2px solid rgba(255,255,255,0.2);">
+                                            <a href="https://balehinggil.hotelify.id/admin/promos"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-percent w-3 text-center"></i> Promo
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/additional-payments"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-receipt w-3 text-center"></i> Pajak &amp; Biaya
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/payment-types"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-wallet w-3 text-center"></i> Tipe Pembayaran
+                        </a>
+                                    </div>
+            </details>
+        
+                    <details class="group mt-4"
+                >
+                <summary
+                    class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium cursor-pointer list-none select-none transition-all duration-150"
+                    style="color:rgba(255,255,255,0.9);"
+                    onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';"
+                    onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';">
+                    <i class="fas fa-folder-open w-4 text-center text-xs" style="color:rgba(255,255,255,0.9);"></i>
+                    <span>Logs</span>
+                    <i class="fas fa-chevron-down ml-auto text-[10px] transition-transform duration-200 group-open:rotate-180"
+                        style="color:rgba(255,255,255,0.8);"></i>
+                </summary>
+                <div class="mt-0.5 ml-5 pl-3 space-y-0.5 pb-1" style="border-left: 2px solid rgba(255,255,255,0.2);">
+                                            <a href="https://balehinggil.hotelify.id/admin/invoice"
+                            class="flex items-start gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-file-invoice w-3 text-center"></i> Invoice
+                            <span class="ml-auto inline-flex items-center rounded-full px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide"
+                                style="background:#bfdbfe; color:#1e3a8a;">
+                                Gateway
+                            </span>
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/transaction-logs"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-file-invoice-dollar w-3 text-center"></i> Transaction Log
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/activity-logs"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-history w-3 text-center"></i> Activity Log
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/checkins/log"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-sign-in-alt w-3 text-center"></i> Check-in Log
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/checkouts/log"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-sign-out-alt w-3 text-center"></i> Check-out Log
+                        </a>
+                                    </div>
+            </details>
+        
+                    <details class="group mt-4" >
+                <summary
+                    class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium cursor-pointer list-none select-none transition-all duration-150"
+                    style="color:rgba(255,255,255,0.9);"
+                    onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';"
+                    onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';">
+                    <i class="fas fa-cog w-4 text-center text-xs" style="color:rgba(255,255,255,0.9);"></i>
+                    <span>Pengaturan</span>
+                    <i class="fas fa-chevron-down ml-auto text-[10px] transition-transform duration-200 group-open:rotate-180"
+                        style="color:rgba(255,255,255,0.8);"></i>
+                </summary>
+                <div class="mt-0.5 ml-5 pl-3 space-y-0.5 pb-1" style="border-left: 2px solid rgba(255,255,255,0.2);">
+                                            <a href="https://balehinggil.hotelify.id/admin/users"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-user-friends w-3 text-center"></i> User
+                        </a>
+                                                                <a href="https://balehinggil.hotelify.id/admin/roles"
+                            class="flex items-center gap-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-150"
+                            style="color:rgba(255,255,255,0.9);"
+                             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                            <i class="fas fa-user-shield w-3 text-center"></i> Role
+                        </a>
+                                    </div>
+            </details>
+        
+                    <a href="https://balehinggil.hotelify.id/admin/landing-content"
+                class="flex items-center gap-2.5 px-3 mt-2 py-2.5 rounded-lg text-sm font-medium transition-all duration-150"
+                style="color:rgba(255,255,255,0.9);"
+                 onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+                <i class="fas fa-file-alt w-4 text-center text-xs" style="color:rgba(255,255,255,0.95);"></i>
+                <span>Konten Management</span>
+                            </a>
+                <a href="https://balehinggil.hotelify.id/profile"
+            class="flex items-center gap-2.5 px-3 mt-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-150"
+            style="color:rgba(255,255,255,0.9);"
+             onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';" onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';" >
+            <i class="fas fa-user-edit w-4 text-center text-xs" style="color:rgba(255,255,255,0.95);"></i>
+            <span>Edit Profil</span>
+                    </a>
+    </nav>
+
+    <div class="shrink-0 px-3 py-3" style="border-top: 1px solid rgba(255,255,255,0.15);">
+        <a href="https://balehinggil.hotelify.id"
+            class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150"
+            style="color:rgba(255,255,255,0.9);"
+            onmouseover="this.style.background='var(--admin-primary-hover)'; this.style.color='#ffffff';"
+            onmouseout="this.style.background=''; this.style.color='rgba(255,255,255,0.9)';">
+            <i class="fas fa-external-link-alt w-4 text-center text-xs" style="color:rgba(255,255,255,0.9);"></i>
+            <span>View Site</span>
+        </a>
+    </div>
+</aside>
+
+        
+        <div class="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden">
+
+            <header class="z-30 shrink-0 shadow-sm" style="background:var(--admin-bg); border-bottom: 1px solid var(--admin-border);">
+    <div class="flex h-14 items-center gap-2 px-3 sm:gap-3 sm:px-6">
+        <button type="button" id="admin-sidebar-toggle"
+            class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border-0 text-lg transition-colors lg:hidden"
+            style="color:var(--admin-primary-pressed); background:var(--admin-card); border:1px solid var(--admin-border);"
+            aria-controls="admin-sidebar" aria-expanded="false" aria-label="Buka menu navigasi">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <button type="button" id="admin-sidebar-expand-toggle"
+            class="hidden h-10 w-10 shrink-0 items-center justify-center rounded-lg border-0 text-sm transition-colors lg:flex"
+            style="color:var(--admin-primary-pressed); background:var(--admin-card); border:1px solid var(--admin-border);"
+            aria-controls="admin-sidebar" aria-expanded="true" aria-label="Ciutkan sidebar">
+            <i class="fas fa-angles-left" aria-hidden="true"></i>
+        </button>
+
+        <div class="min-w-0 flex items-center gap-1.5 sm:gap-2">
+            <span class="hidden text-sm font-medium sm:inline" style="color:var(--admin-text-muted);">Admin</span>
+            <i class="fas fa-chevron-right hidden text-[10px] sm:inline" style="color:var(--admin-text-muted);"></i>
+            <h1 class="truncate text-xs font-bold sm:text-sm" style="color:var(--admin-text);">Dashboard</h1>
+        </div>
+
+        <div class="flex-1"></div>
+
+        <div class="hidden items-center gap-1.5 rounded-lg px-2 py-1 sm:flex sm:gap-2 sm:px-3 sm:py-1.5"
+            style="background:var(--admin-card); border:1px solid var(--admin-border);" title="Waktu Indonesia Barat (WIB)">
+            <span class="h-2 w-2 shrink-0 rounded-full"
+                style="background:var(--admin-primary); animation: wib-pulse 2s ease-in-out infinite;"></span>
+
+            <div class="flex flex-col leading-tight">
+                <span id="admin-wib-time" class="text-xs font-bold tabular-nums sm:text-sm"
+                    style="color:var(--admin-text); letter-spacing:.3px;">--:--:--</span>
+                <span id="admin-wib-date" class="hidden text-[10px] font-medium md:block"
+                    style="color:var(--admin-text-muted);">--</span>
+            </div>
+
+            <span class="hidden text-[9.5px] font-bold uppercase tracking-wider rounded px-1.5 py-0.5 md:inline"
+                style="background:var(--admin-section); color:var(--admin-primary); border:1px solid var(--admin-border);">
+                WIB
+            </span>
+        </div>
+
+        <div class="hidden h-5 w-px shrink-0 sm:block" style="background:var(--admin-border);"></div>
+
+        <div class="flex items-center gap-1 sm:gap-2">
+            <div class="flex items-center gap-1.5 rounded-full py-1.5 pl-1.5 pr-2 sm:gap-2 sm:pl-2 sm:pr-3"
+                style="background:var(--admin-card); border:1px solid var(--admin-border);">
+                <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full shadow-sm"
+                    style="background:var(--admin-primary);">
+                    <span class="text-[10px] font-bold leading-none text-white">S</span>
+                </div>
+                <span class="max-w-[4.5rem] truncate text-[11px] font-semibold leading-none sm:max-w-[10rem] sm:text-xs"
+                    style="color:var(--admin-primary-pressed);">Super Admin</span>
+            </div>
+            <div class="w-px h-5" style="background:var(--admin-border);"></div>
+            <a href="https://balehinggil.hotelify.id/profile" title="Edit Profil"
+                class="w-8 h-8 rounded-lg flex items-center justify-center text-sm transition-all duration-150"
+                style="color:var(--admin-text-secondary);"
+                onmouseover="this.style.color='var(--admin-primary)'; this.style.background='var(--admin-card)';"
+                onmouseout="this.style.color='var(--admin-text-secondary)'; this.style.background='transparent';">
+                <i class="fas fa-user-cog"></i>
+            </a>
+            <form method="POST" action="https://balehinggil.hotelify.id/logout" class="inline">
+                <input type="hidden" name="_token" value="HWMyZz8erAZ6y0w8u7G7IvJ7Mus8gVU4mFOCmpKm" autocomplete="off">                <button type="submit" title="Keluar"
+                    class="w-8 h-8 rounded-lg flex items-center justify-center text-sm transition-all duration-150 cursor-pointer border-0 bg-transparent"
+                    style="color:var(--admin-text-secondary);"
+                    onmouseover="this.style.color='var(--admin-error)'; this.style.background='#fef2f2';"
+                    onmouseout="this.style.color='var(--admin-text-secondary)'; this.style.background='transparent';">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</header>
+
+            
+            <main class="min-h-0 flex-1 overflow-y-auto p-6 "
+                style="background:var(--admin-bg);">
+
+                
+                
+                
+                
+                
+                
+                
+                
+    
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+
+        <div class="rounded-2xl p-5 flex items-center gap-4 transition-all duration-200 hover:-translate-y-0.5"
+            style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style="background:var(--admin-badge-bg);">
+                <i class="fas fa-door-open text-xl" style="color:var(--admin-primary);"></i>
+            </div>
+            <div>
+                <p class="text-[11px] font-semibold uppercase tracking-wider" style="color:#666666;">Total Units</p>
+                <p class="text-2xl font-bold mt-0.5 leading-tight" style="color:#111111;">61</p>
+                <p class="text-[11px] mt-0.5" style="color:#666666;">Unit terdaftar</p>
+            </div>
+        </div>
+
+        <div class="rounded-2xl p-5 flex items-center gap-4 transition-all duration-200 hover:-translate-y-0.5"
+            style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style="background:var(--admin-section);">
+                <i class="fas fa-key text-xl" style="color:var(--admin-primary-pressed);"></i>
+            </div>
+            <div>
+                <p class="text-[11px] font-semibold uppercase tracking-wider" style="color:#666666;">Aktif</p>
+                <p class="text-2xl font-bold mt-0.5 leading-tight" style="color:#111111;">16</p>
+                <p class="text-[11px] mt-0.5" style="color:#666666;">Unit aktif (bisa dipesan)</p>
+            </div>
+        </div>
+
+        <div class="rounded-2xl p-5 flex items-center gap-4 transition-all duration-200 hover:-translate-y-0.5"
+            style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style="background:var(--admin-badge-bg);">
+                <i class="fas fa-calendar-alt text-xl" style="color:var(--admin-primary);"></i>
+            </div>
+            <div>
+                <p class="text-[11px] font-semibold uppercase tracking-wider" style="color:#666666;">Monthly</p>
+                <p class="text-2xl font-bold mt-0.5 leading-tight" style="color:#111111;">12</p>
+                <p class="text-[11px] mt-0.5" style="color:#666666;">Sewa bulanan</p>
+            </div>
+        </div>
+
+        <div class="rounded-2xl p-5 flex items-center gap-4 transition-all duration-200 hover:-translate-y-0.5"
+            style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style="background:#fff8e1;">
+                <i class="fas fa-moon text-xl" style="color:#DD8B26;"></i>
+            </div>
+            <div>
+                <p class="text-[11px] font-semibold uppercase tracking-wider" style="color:#666666;">Daily</p>
+                <p class="text-2xl font-bold mt-0.5 leading-tight" style="color:#111111;">4</p>
+                <p class="text-[11px] mt-0.5" style="color:#666666;">Sewa harian</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+
+        <a href="https://balehinggil.hotelify.id/admin/bookings"
+            class="rounded-2xl p-5 flex items-center justify-between transition-all duration-200 hover:-translate-y-0.5 group"
+            style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+            <div>
+                <p class="text-[11px] font-semibold uppercase tracking-wider" style="color:#666666;">Total Bookings</p>
+                <p class="text-3xl font-bold mt-1 leading-tight" style="color:#111111;">2</p>
+                <p class="text-xs mt-1" style="color:#666666;">Semua waktu</p>
+            </div>
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:var(--admin-badge-bg);">
+                <i class="fas fa-calendar-check text-xl" style="color:var(--admin-primary);"></i>
+            </div>
+        </a>
+
+        <a href="https://balehinggil.hotelify.id/admin/bookings?status=pending_payment"
+            class="rounded-2xl p-5 flex items-center justify-between transition-all duration-200 hover:-translate-y-0.5 group"
+            style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+            <div>
+                <p class="text-[11px] font-semibold uppercase tracking-wider" style="color:#666666;">Pending Payment</p>
+                <p class="text-3xl font-bold mt-1 leading-tight" style="color:#111111;">0</p>
+                <p class="text-xs mt-1 font-medium" style="color:#DD8B26;">Menunggu pembayaran</p>
+            </div>
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#fff8e1;">
+                <i class="fas fa-clock text-xl" style="color:#DD8B26;"></i>
+            </div>
+        </a>
+
+        <a href="https://balehinggil.hotelify.id/admin/bookings?status=confirmed"
+            class="rounded-2xl p-5 flex items-center justify-between transition-all duration-200 hover:-translate-y-0.5 group"
+            style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+            <div>
+                <p class="text-[11px] font-semibold uppercase tracking-wider" style="color:#666666;">Confirmed</p>
+                <p class="text-3xl font-bold mt-1 leading-tight" style="color:#111111;">0
+                </p>
+                <p class="text-xs mt-1 font-medium" style="color:var(--admin-primary-pressed);">Terkonfirmasi</p>
+            </div>
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:var(--admin-badge-bg);">
+                <i class="fas fa-check-circle text-xl" style="color:var(--admin-primary);"></i>
+            </div>
+        </a>
+    </div>
+
+            
+        <div class="mb-2 flex flex-wrap items-center justify-between gap-2">
+            <h2 class="text-sm font-bold" style="color:#111111;">Ringkasan keuangan</h2>
+            <a href="https://balehinggil.hotelify.id/admin/reports/finance"
+                class="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors"
+                style="background:var(--admin-badge-bg); color:var(--admin-primary-pressed);">
+                Laporan keuangan <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            <div class="rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:-translate-y-0.5"
+                style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+                <p class="text-[11px] font-semibold uppercase tracking-wider" style="color:#666666;">Pemasukan hari ini</p>
+                <p class="text-lg sm:text-xl font-bold mt-1 leading-tight" style="color:var(--admin-primary-pressed);">Rp
+                    0</p>
+                <p class="text-[11px] mt-0.5" style="color:#666666;">Partial + full (paid_at)</p>
+            </div>
+            <div class="rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:-translate-y-0.5"
+                style="background:#fff8f8; border:1px solid #ffcdd2; box-shadow:0 1px 4px rgba(198,40,40,0.06);">
+                <p class="text-[11px] font-semibold uppercase tracking-wider" style="color:#666666;">Refund hari ini</p>
+                <p class="text-lg sm:text-xl font-bold mt-1 leading-tight" style="color:var(--admin-error-text);">Rp
+                    0</p>
+                <p class="text-[11px] mt-0.5" style="color:#666666;">Nilai absolut</p>
+            </div>
+            <div class="rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:-translate-y-0.5"
+                style="background:#F4F8FB; border:1px solid #BBDEFB; box-shadow:0 1px 4px rgba(21,101,192,0.08);">
+                <p class="text-[11px] font-semibold uppercase tracking-wider" style="color:#666666;">Adjustment hari ini</p>
+                <p class="text-lg sm:text-xl font-bold mt-1 leading-tight" style="color:#1565C0;">Rp
+                    0</p>
+                <p class="text-[11px] mt-0.5" style="color:#666666;">Manual · tercatat hari ini</p>
+            </div>
+            <div class="rounded-2xl p-4 sm:p-5 transition-all duration-200 hover:-translate-y-0.5"
+                style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+                <p class="text-[11px] font-semibold uppercase tracking-wider" style="color:#666666;">Net hari ini</p>
+                <p class="text-lg sm:text-xl font-bold mt-1 leading-tight" style="color:var(--admin-primary);">Rp
+                    0</p>
+                <p class="text-[11px] mt-0.5" style="color:#666666;">Pembayaran + adj. operasional</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+            <div class="rounded-2xl p-5 lg:col-span-1"
+                style="background:linear-gradient(180deg,var(--admin-card) 0%,#fff 100%); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+                <p class="text-[11px] font-bold uppercase tracking-wider" style="color:#666666;">Net bulan berjalan</p>
+                <p class="text-2xl font-bold mt-2 leading-tight" style="color:var(--admin-primary);">Rp
+                    391.750</p>
+                <p class="text-xs mt-3 leading-relaxed" style="color:#666666;">
+                    Pembayaran (paid_at): <strong style="color:#111;">Rp
+                        391.750</strong>
+                </p>
+                <p class="text-xs mt-1 leading-relaxed" style="color:#666666;">
+                    Adjustment buku April 2026:
+                    <strong style="color:#1565C0;">Rp
+                        0</strong>
+                </p>
+                <p class="text-[11px] mt-3 leading-snug" style="color:#888;">
+                    Bulan buku untuk penyesuaian = periode audit; harian = pembayaran by <code class="text-[10px]">paid_at</code> &amp; adjustment by <code class="text-[10px]">created_at</code>.
+                </p>
+            </div>
+            <div class="rounded-2xl p-5 lg:col-span-2"
+                style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+                <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                    <div>
+                        <h2 class="text-sm font-bold" style="color:#111111;">Net 14 hari terakhir</h2>
+                        <p class="text-xs mt-0.5" style="color:#666666;">Gabungan pembayaran + penyesuaian manual (hari entri)</p>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold"
+                        style="background:var(--admin-badge-bg); color:var(--admin-primary-pressed);">
+                        <i class="fas fa-chart-area text-[10px]"></i> Live
+                    </span>
+                </div>
+                <div id="dashboard-finance-net-host" class="report-chart-host report-chart-host--dashboard-line w-full min-w-0">
+                    <canvas id="dashboardFinanceNetChart"></canvas>
+                </div>
+            </div>
+        </div>
+    
+            
+        <div class="mb-6 rounded-2xl overflow-hidden"
+            style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+            <div class="flex flex-wrap items-center justify-between gap-3 px-5 py-4"
+                style="border-bottom:1px solid var(--admin-border); background:linear-gradient(90deg,var(--admin-section) 0%,var(--admin-card) 100%);">
+                <div class="flex items-center gap-3 min-w-0">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background:#fff59d;">
+                        <i class="fas fa-trophy text-lg" style="color:#F57F17;"></i>
+                    </div>
+                    <div class="min-w-0">
+                        <h2 class="text-sm font-bold truncate" style="color:#111111;">Top 3 marketing</h2>
+                        <p class="text-xs mt-0.5" style="color:#666666;">
+                            <span class="font-medium" style="color:var(--admin-primary-pressed);">7 hari terakhir</span>
+                            · 19 Apr – 25 Apr 2026
+                        </p>
+                        <p class="text-[11px] mt-1 leading-snug" style="color:#888888;">
+                            Urutan: jumlah booking baru (dengan <strong class="font-semibold" style="color:#555;">PIC marketing</strong>)
+                            di periode ini, lalu nilai pembayaran masuk (partial/full, <code class="text-[10px]">paid_at</code> minggu yang sama).
+                        </p>
+                    </div>
+                </div>
+                <a href="https://balehinggil.hotelify.id/admin/reports/top-performers"
+                    class="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-semibold transition-colors shrink-0"
+                    style="background:var(--admin-badge-bg); color:var(--admin-primary-pressed);">
+                    Lihat semua <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+            <div class="p-4 sm:p-5">
+                                    <div class="py-10 text-center">
+                        <i class="fas fa-user-clock text-2xl mb-2" style="color:#a5d6a7;"></i>
+                        <p class="text-sm font-medium" style="color:#555555;">Belum ada booking dengan PIC marketing di periode ini.</p>
+                        <p class="text-xs mt-1" style="color:#888888;">Pastikan kolom marketing (<code class="text-[10px]">booking_by</code>) terisi saat membuat booking.</p>
+                    </div>
+                            </div>
+        </div>
+    
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+
+        
+        <div class="rounded-2xl p-5"
+            style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h2 class="text-sm font-bold" style="color:#111111;">Distribusi Status Unit</h2>
+                    <p class="text-xs mt-0.5" style="color:#666666;">Persentase berdasarkan status sewa</p>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold"
+                    style="background:var(--admin-badge-bg); color:var(--admin-primary-pressed);">
+                    <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background:var(--admin-primary);"></span> Live
+                </span>
+            </div>
+            <div class="flex flex-col items-stretch gap-6 sm:flex-row sm:items-center">
+                <div id="dashboard-unit-chart-host" class="report-chart-host report-chart-host--dashboard-donut relative mx-auto">
+                    <canvas id="unitStatusChart"></canvas>
+                    <div class="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
+                        <span class="text-2xl font-bold" style="color:#111111;">61</span>
+                        <span class="text-[11px] font-medium" style="color:#666666;">Total</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1 space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full shrink-0" style="background:var(--admin-primary);"></span>
+                            <span class="text-xs" style="color:#333333;">Aktif</span>
+                        </div>
+                        <span class="text-xs font-bold" style="color:#111111;">16</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full shrink-0" style="background:#2B90D9;"></span>
+                            <span class="text-xs" style="color:#333333;">Monthly</span>
+                        </div>
+                        <span class="text-xs font-bold" style="color:#111111;">12</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full shrink-0" style="background:#DD8B26;"></span>
+                            <span class="text-xs" style="color:#333333;">Daily</span>
+                        </div>
+                        <span class="text-xs font-bold" style="color:#111111;">4</span>
+                    </div>
+                                        <div class="pt-2" style="border-top:1px solid var(--admin-border);">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs" style="color:#666666;">Tingkat Hunian</span>
+                            <span class="text-xs font-bold" style="color:var(--admin-primary);">
+                                74%
+                            </span>
+                        </div>
+                        <div class="mt-1.5 h-1.5 rounded-full overflow-hidden" style="background:var(--admin-badge-bg);">
+                            <div class="h-full rounded-full transition-all duration-700"
+                                style="width: 74%; background:var(--admin-primary);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rounded-2xl p-5"
+            style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h2 class="text-sm font-bold" style="color:#111111;">Ringkasan Booking</h2>
+                    <p class="text-xs mt-0.5" style="color:#666666;">Perbandingan status booking</p>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold"
+                    style="background:var(--admin-badge-bg); color:var(--admin-primary-pressed);">
+                    <i class="fas fa-chart-bar text-[10px]"></i> Overview
+                </span>
+            </div>
+            <div id="dashboard-booking-chart-host" class="report-chart-host report-chart-host--dashboard-bar w-full min-w-0">
+                <canvas id="bookingStatusChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    
+            <div class="rounded-2xl overflow-hidden mb-6"
+            style="background:var(--admin-card); border:1px solid var(--admin-border); box-shadow:0 1px 4px rgba(30,95,168,0.08);">
+            <div class="px-5 py-4 flex items-center justify-between" style="border-bottom:1px solid var(--admin-border);">
+                <div>
+                    <h2 class="text-sm font-bold" style="color:#111111;">Booking Terbaru</h2>
+                    <p class="text-xs mt-0.5" style="color:#666666;">2 transaksi terakhir
+                    </p>
+                </div>
+                <a href="https://balehinggil.hotelify.id/admin/bookings"
+                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors"
+                    style="background:var(--admin-badge-bg); color:var(--admin-primary-pressed);">
+                    Lihat Semua <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left admin-table">
+                    <thead>
+                        <tr style="background:var(--admin-section); border-bottom:1px solid var(--admin-border);">
+                            <th class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider"><span class="th-icon"><i
+                                        class="fas fa-hashtag"></i></span> No. Booking</th>
+                            <th class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider"><span class="th-icon"><i
+                                        class="fas fa-door-open"></i></span> Unit</th>
+                            <th class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider"><span class="th-icon"><i
+                                        class="fas fa-user"></i></span> Guest</th>
+                            <th class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider"><span class="th-icon"><i
+                                        class="fas fa-calculator"></i></span> Subtotal sewa</th>
+                            <th class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider"><span class="th-icon"><i
+                                        class="fas fa-money-bill-wave"></i></span> Total</th>
+                            <th class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider"><span class="th-icon"><i
+                                        class="fas fa-circle-dot"></i></span> Status</th>
+                            <th class="px-5 py-3 w-16">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                    <tr class="transition-colors last:border-0" style="border-bottom:1px solid var(--admin-border);"
+                                onmouseover="this.style.background='var(--admin-section)';"
+                                onmouseout="this.style.background='transparent';">
+                                <td class="px-5 py-3.5"><span class="text-sm font-semibold"
+                                        style="color:var(--admin-primary);">INV-26-0015-f60dad</span></td>
+                                <td class="px-5 py-3.5 text-sm" style="color:#111111;">TEST-99-99</td>
+                                <td class="px-5 py-3.5 text-sm" style="color:#111111;">GUEST TEST</td>
+                                <td class="px-5 py-3.5 text-sm" style="color:#333333;">Rp
+                                    10.000</td>
+                                <td class="px-5 py-3.5 text-sm font-semibold" style="color:#111111;">Rp
+                                    21.000</td>
+                                <td class="px-5 py-3.5">
+                                                                        <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-semibold"
+                                        style="background:var(--admin-card); color:#666666; border:1px solid var(--admin-border);">expired</span>
+                                </td>
+                                <td class="px-5 py-3.5 admin-action-cell">
+                                    <a href="https://balehinggil.hotelify.id/admin/bookings/2"
+                                        class="text-xs font-semibold transition-colors" style="color:var(--admin-primary);"
+                                        onmouseover="this.style.color='var(--admin-primary-pressed)';"
+                                        onmouseout="this.style.color='var(--admin-primary)';">
+                                        Detail
+                                    </a>
+                                </td>
+                            </tr>
+                                                    <tr class="transition-colors last:border-0" style="border-bottom:1px solid var(--admin-border);"
+                                onmouseover="this.style.background='var(--admin-section)';"
+                                onmouseout="this.style.background='transparent';">
+                                <td class="px-5 py-3.5"><span class="text-sm font-semibold"
+                                        style="color:var(--admin-primary);">INV-26-0001-928fcc</span></td>
+                                <td class="px-5 py-3.5 text-sm" style="color:#111111;">A-26-21</td>
+                                <td class="px-5 py-3.5 text-sm" style="color:#111111;">Anwar XXX</td>
+                                <td class="px-5 py-3.5 text-sm" style="color:#333333;">Rp
+                                    375.000</td>
+                                <td class="px-5 py-3.5 text-sm font-semibold" style="color:#111111;">Rp
+                                    381.250</td>
+                                <td class="px-5 py-3.5">
+                                                                        <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-semibold"
+                                        style="background:var(--admin-card); color:#333333; border:1px solid var(--admin-border);">checked out</span>
+                                </td>
+                                <td class="px-5 py-3.5 admin-action-cell">
+                                    <a href="https://balehinggil.hotelify.id/admin/bookings/1"
+                                        class="text-xs font-semibold transition-colors" style="color:var(--admin-primary);"
+                                        onmouseover="this.style.color='var(--admin-primary-pressed)';"
+                                        onmouseout="this.style.color='var(--admin-primary)';">
+                                        Detail
+                                    </a>
+                                </td>
+                            </tr>
+                                            </tbody>
+                </table>
+            </div>
+        </div>
+    
+            </main>
+        </div>
+
+    </div>
+
+    <div id="admin-confirm-modal" class="hidden fixed inset-0 z-[9999] overflow-y-auto px-4" aria-hidden="true">
+    <div class="fixed inset-0 bg-black/50 transition-opacity" id="admin-confirm-backdrop"></div>
+    <div class="flex min-h-full items-center justify-center p-4">
+        <div id="admin-confirm-dialog" class="relative w-full max-w-md rounded-2xl shadow-xl transition-all overflow-hidden"
+             style="background:#fff; border:1px solid #c8e4f4;">
+            <div class="p-6">
+                <h3 id="admin-confirm-title" class="text-lg font-bold mb-2" style="color:#0d2847;"></h3>
+                <p id="admin-confirm-message" class="text-sm leading-relaxed mb-6" style="color:#1e5fa8;"></p>
+                <div class="flex gap-3 justify-end">
+                    <button type="button" id="admin-confirm-cancel" class="px-4 py-2.5 rounded-xl text-sm font-semibold transition"
+                            style="background:#f4f9fc; color:#1e5fa8; border:1px solid #c8e4f4;">
+                        Batal
+                    </button>
+                    <button type="button" id="admin-confirm-ok" class="px-4 py-2.5 rounded-xl text-sm font-semibold transition"
+                            style="background: linear-gradient(135deg, #35B7DD, #2186C4); color:#fff; border:none;">
+                        Ya, lanjutkan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        (function() {
+            var btn = document.getElementById('admin-sidebar-toggle');
+            var expandBtn = document.getElementById('admin-sidebar-expand-toggle');
+            var backdrop = document.getElementById('admin-sidebar-backdrop');
+            var sidebar = document.getElementById('admin-sidebar');
+            if (!btn || !sidebar) return;
+
+            function isMobileNav() {
+                return window.matchMedia('(max-width: 1023px)').matches;
+            }
+
+            function setDesktopExpanded(isExpanded) {
+                document.body.classList.toggle('admin-sidebar-collapsed', !isExpanded);
+                if (!expandBtn) return;
+                expandBtn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+                expandBtn.setAttribute('aria-label', isExpanded ? 'Ciutkan sidebar' : 'Perluas sidebar');
+                expandBtn.innerHTML = isExpanded ?
+                    '<i class="fas fa-angles-left" aria-hidden="true"></i>' :
+                    '<i class="fas fa-angles-right" aria-hidden="true"></i>';
+            }
+
+            function openNav() {
+                document.body.classList.add('admin-mobile-nav-open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+
+            function closeNav() {
+                document.body.classList.remove('admin-mobile-nav-open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+
+            function toggleNav() {
+                if (document.body.classList.contains('admin-mobile-nav-open')) closeNav();
+                else openNav();
+            }
+
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleNav();
+            });
+
+            if (expandBtn) {
+                var savedState = window.localStorage ? window.localStorage.getItem('adminSidebarExpanded') : null;
+                if (savedState === '0') setDesktopExpanded(false);
+                else setDesktopExpanded(true);
+
+                expandBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var isExpanded = !document.body.classList.contains('admin-sidebar-collapsed');
+                    setDesktopExpanded(!isExpanded);
+                    if (window.localStorage) {
+                        window.localStorage.setItem('adminSidebarExpanded', !isExpanded ? '1' : '0');
+                    }
+                });
+            }
+
+            if (backdrop) {
+                backdrop.addEventListener('click', closeNav);
+            }
+
+            sidebar.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (isMobileNav()) closeNav();
+                });
+            });
+
+            // Desktop UX: ketika sidebar sedang collapsed, klik area sidebar untuk expand kembali.
+            sidebar.addEventListener('click', function() {
+                if (isMobileNav()) return;
+                if (!document.body.classList.contains('admin-sidebar-collapsed')) return;
+                setDesktopExpanded(true);
+                if (window.localStorage) {
+                    window.localStorage.setItem('adminSidebarExpanded', '1');
+                }
+            });
+
+            window.addEventListener('resize', function() {
+                if (!isMobileNav()) closeNav();
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeNav();
+            });
+        })();
+    </script>
+    <script>
+        runWhenJqueryReady(function() {
+            var tz = 'Asia/Jakarta';
+            var dtOpt = {
+                timeZone: tz,
+                weekday: 'short',
+                day: 'numeric',
+                month: 'short'
+            };
+
+            function pad(n) {
+                return String(n).padStart(2, '0');
+            }
+
+            function tick() {
+                var now = new Date();
+                var parts = new Intl.DateTimeFormat('id-ID', {
+                    timeZone: tz,
+                    hour: 'numeric',
+                    minute: 'numeric',
+                    second: 'numeric',
+                    hour12: false
+                }).formatToParts(now);
+                var get = function(t) {
+                    var p = parts.find(function(x) {
+                        return x.type === t;
+                    });
+                    return p ? p.value : '00';
+                };
+                var $elTime = $('#admin-wib-time');
+                var $elDate = $('#admin-wib-date');
+                if ($elTime.length) $elTime.html(pad(parseInt(get('hour'), 10)) + '<span class="wib-sep">:</span>' +
+                    get('minute') + '<span class="wib-sep">:</span>' + get('second'));
+                if ($elDate.length) $elDate.text(now.toLocaleDateString('id-ID', dtOpt));
+            }
+            tick();
+            setInterval(tick, 1000);
+        });
+    </script>
+        <script>
+        (function () {
+            var chartUnit = null;
+            var chartBooking = null;
+            var chartFinance = null;
+            var lifecycleWired = false;
+            var chartDefaultsApplied = false;
+
+            function resizeOne(c) {
+                if (!c) return;
+                requestAnimationFrame(function () {
+                    try { c.resize(); } catch (e) {}
+                });
+            }
+
+            function wireLifecycle() {
+                if (lifecycleWired) return;
+                lifecycleWired = true;
+                window.addEventListener('orientationchange', function () {
+                    setTimeout(function () {
+                        resizeOne(chartUnit);
+                        resizeOne(chartBooking);
+                        resizeOne(chartFinance);
+                    }, 350);
+                });
+                window.addEventListener('pageshow', function () {
+                    setTimeout(function () {
+                        resizeOne(chartUnit);
+                        resizeOne(chartBooking);
+                        resizeOne(chartFinance);
+                    }, 0);
+                });
+            }
+
+            function observeHost(host, chart) {
+                if (!host || !chart) return;
+                resizeOne(chart);
+                if (typeof ResizeObserver !== 'undefined') {
+                    new ResizeObserver(function () { resizeOne(chart); }).observe(host);
+                }
+            }
+
+            /** @returns {boolean} true = selesai / tidak perlu chart */
+            function initUnitChart() {
+                var host = document.getElementById('dashboard-unit-chart-host');
+                var canvas = document.getElementById('unitStatusChart');
+                if (!host || !canvas) return true;
+                if (host.dataset.chartInit === '1') return true;
+                if (host.clientWidth < 16 || host.clientHeight < 16) return false;
+
+                chartUnit = new Chart(canvas, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Aktif', 'Monthly', 'Daily'],
+                        datasets: [{
+                            data: [
+                                16,
+                                12,
+                                4
+                            ],
+                            backgroundColor: ['#1E5FA8', '#2B90D9', '#DD8B26'],
+                            borderColor: '#ffffff',
+                            borderWidth: 3,
+                            hoverOffset: 6,
+                        }]
+                    },
+                    options: {
+                        cutout: '72%',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: { padding: 4 },
+                        plugins: {
+                            tooltip: {
+                                backgroundColor: '#1e2d1f',
+                                padding: 10,
+                                cornerRadius: 8,
+                                titleFont: { size: 12, weight: '600' },
+                                bodyFont: { size: 12 },
+                                callbacks: {
+                                    label: function (ctx) {
+                                        var total = ctx.dataset.data.reduce(function (a, b) { return a + b; }, 0);
+                                        var pct = total > 0 ? Math.round(ctx.parsed / total * 100) : 0;
+                                        return ' ' + ctx.label + ': ' + ctx.parsed + ' unit (' + pct + '%)';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                host.dataset.chartInit = '1';
+                observeHost(host, chartUnit);
+                wireLifecycle();
+                return true;
+            }
+
+            function initBookingChart() {
+                var host = document.getElementById('dashboard-booking-chart-host');
+                var canvas = document.getElementById('bookingStatusChart');
+                if (!host || !canvas) return true;
+                if (host.dataset.chartInit === '1') return true;
+                if (host.clientWidth < 16 || host.clientHeight < 16) return false;
+
+                chartBooking = new Chart(canvas, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Total', 'Pending', 'Confirmed'],
+                        datasets: [{
+                            label: 'Jumlah',
+                            data: [
+                                2,
+                                0,
+                                0
+                            ],
+                            backgroundColor: ['#1E5FA8', '#DD8B26', '#2186C4'],
+                            borderRadius: 8,
+                            borderSkipped: false,
+                            barPercentage: 0.55,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: { padding: { top: 4, right: 4, bottom: 0, left: 4 } },
+                        scales: {
+                            x: {
+                                grid: { display: false },
+                                border: { display: false },
+                                ticks: {
+                                    font: { size: 11, weight: '600' },
+                                    color: '#666666'
+                                }
+                            },
+                            y: {
+                                beginAtZero: true,
+                                border: { display: false, dash: [4, 4] },
+                                grid: { color: '#C8E4F4' },
+                                ticks: {
+                                    font: { size: 11 },
+                                    color: '#666666',
+                                    stepSize: 1,
+                                    precision: 0
+                                }
+                            }
+                        },
+                        plugins: {
+                            tooltip: {
+                                backgroundColor: '#1e2d1f',
+                                padding: 10,
+                                cornerRadius: 8,
+                                titleFont: { size: 12, weight: '600' },
+                                bodyFont: { size: 12 },
+                                callbacks: {
+                                    label: function (ctx) {
+                                        return ' ' + ctx.parsed.y + ' booking';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                host.dataset.chartInit = '1';
+                observeHost(host, chartBooking);
+                wireLifecycle();
+                return true;
+            }
+
+                        function initFinanceChart() {
+                var host = document.getElementById('dashboard-finance-net-host');
+                var canvas = document.getElementById('dashboardFinanceNetChart');
+                if (!host || !canvas) return true;
+                if (host.dataset.chartInit === '1') return true;
+                if (host.clientWidth < 16 || host.clientHeight < 16) return false;
+
+                var finLabels = ["12 Apr","13 Apr","14 Apr","15 Apr","16 Apr","17 Apr","18 Apr","19 Apr","20 Apr","21 Apr","22 Apr","23 Apr","24 Apr","25 Apr"];
+                var finNet = [0,10500,0,0,0,0,0,0,0,0,0,0,0,0];
+                function dashFinIdr(v) {
+                    var n = Number(v) || 0;
+                    var neg = n < 0;
+                    n = Math.abs(Math.round(n));
+                    var s = n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+                    return (neg ? '−' : '') + 'Rp ' + s;
+                }
+
+                chartFinance = new Chart(canvas, {
+                    type: 'line',
+                    data: {
+                        labels: finLabels,
+                        datasets: [{
+                            label: 'Net harian',
+                            data: finNet,
+                            borderColor: '#1E5FA8',
+                            backgroundColor: 'rgba(30, 95, 168, 0.12)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.3,
+                            pointRadius: 2,
+                            pointHoverRadius: 5,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: { padding: { top: 6, right: 6, bottom: 4, left: 6 } },
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                backgroundColor: '#1e2d1f',
+                                padding: 10,
+                                cornerRadius: 8,
+                                callbacks: {
+                                    label: function (ctx) {
+                                        return ' ' + (ctx.dataset.label || 'Net') + ': ' + dashFinIdr(ctx.parsed.y);
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                grid: { display: false },
+                                ticks: { font: { size: 10 }, maxRotation: 45, color: '#666666' }
+                            },
+                            y: {
+                                beginAtZero: true,
+                                border: { display: false },
+                                grid: { color: '#C8E4F4' },
+                                ticks: {
+                                    font: { size: 10 },
+                                    color: '#666666',
+                                    callback: function (value) {
+                                        if (Math.abs(value) >= 1e6) return (value / 1e6).toFixed(1) + ' jt';
+                                        if (Math.abs(value) >= 1e3) return (value / 1e3).toFixed(0) + ' rb';
+                                        return value;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                host.dataset.chartInit = '1';
+                observeHost(host, chartFinance);
+                wireLifecycle();
+                return true;
+            }
+            
+            function tryInitAll(attempts) {
+                attempts = attempts || 0;
+                if (typeof Chart === 'undefined') {
+                    if (attempts < 80) setTimeout(function () { tryInitAll(attempts + 1); }, 50);
+                    return;
+                }
+                if (!chartDefaultsApplied) {
+                    chartDefaultsApplied = true;
+                    Chart.defaults.font.family = "'Instrument Sans', sans-serif";
+                    Chart.defaults.color = '#666666';
+                    Chart.defaults.plugins.legend.display = false;
+                }
+                var ok = true;
+                if (!initUnitChart()) ok = false;
+                if (!initBookingChart()) ok = false;
+                if (!initFinanceChart()) ok = false;
+                if (!ok && attempts < 100) setTimeout(function () { tryInitAll(attempts + 1); }, 50);
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function () {
+                    requestAnimationFrame(function () { tryInitAll(0); });
+                });
+            } else {
+                requestAnimationFrame(function () { tryInitAll(0); });
+            }
+            window.addEventListener('load', function () {
+                requestAnimationFrame(function () { tryInitAll(0); });
+            }, { once: true });
+        })();
+    </script>
+<script>
+(function() {
+    function initConfirmModal() {
+        var modal = document.getElementById('admin-confirm-modal');
+        var title = document.getElementById('admin-confirm-title');
+        var message = document.getElementById('admin-confirm-message');
+        var cancelBtn = document.getElementById('admin-confirm-cancel');
+        var okBtn = document.getElementById('admin-confirm-ok');
+        var dialog = document.getElementById('admin-confirm-dialog');
+        var backdrop = document.getElementById('admin-confirm-backdrop');
+        var currentOnConfirm = null;
+        var isAlertOnly = false;
+
+        var okStyles = {
+            default: 'background: linear-gradient(135deg, #35B7DD, #2186C4); color:#fff; border:none;',
+            orange: 'background: linear-gradient(135deg, #FFA726, #F57C00); color:#fff; border:none;',
+            blue: 'background: linear-gradient(135deg, #42A5F5, #1E88E5); color:#fff; border:none;',
+            danger: 'background: linear-gradient(135deg, #EF5350, #C62828); color:#fff; border:none;'
+        };
+
+        function applyOkButtonStyle(theme) {
+            var t = theme || 'default';
+            okBtn.setAttribute('style', 'padding: 0.625rem 1rem; border-radius: 0.75rem; font-size: 0.875rem; font-weight: 600; transition: all 0.2s; ' + (okStyles[t] || okStyles.default));
+        }
+
+        function setDialogBorder(theme) {
+            if (!dialog) return;
+            if (theme === 'orange') dialog.style.borderColor = '#ffe0b2';
+            else if (theme === 'blue') dialog.style.borderColor = '#bbdefb';
+            else if (theme === 'danger') dialog.style.borderColor = '#ffcdd2';
+            else dialog.style.borderColor = '#c8e4f4';
+        }
+
+        function open(opts) {
+            opts = opts || {};
+            isAlertOnly = false;
+            cancelBtn.classList.remove('hidden');
+            message.style.color = '#1e5fa8';
+            title.textContent = opts.title || 'Konfirmasi';
+            message.textContent = opts.message || 'Lanjutkan?';
+            okBtn.textContent = opts.confirmText || 'Ya, lanjutkan';
+            cancelBtn.textContent = opts.cancelText || 'Batal';
+            currentOnConfirm = typeof opts.onConfirm === 'function' ? opts.onConfirm : null;
+            var theme = (opts.theme || 'default');
+            applyOkButtonStyle(theme);
+            setDialogBorder(theme);
+            modal.classList.remove('hidden');
+        }
+
+        function openAlert(opts) {
+            opts = opts || {};
+            isAlertOnly = true;
+            cancelBtn.classList.add('hidden');
+            currentOnConfirm = null;
+            title.textContent = opts.title || 'Perhatian';
+            message.textContent = opts.message || '';
+            okBtn.textContent = opts.okText || 'Mengerti';
+            var theme = opts.theme || 'danger';
+            if (theme === 'danger') {
+                message.style.color = '#5d4032';
+            } else {
+                message.style.color = '#1e5fa8';
+            }
+            applyOkButtonStyle(theme);
+            setDialogBorder(theme);
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            currentOnConfirm = null;
+            isAlertOnly = false;
+            cancelBtn.classList.remove('hidden');
+            message.style.color = '#1e5fa8';
+        }
+        cancelBtn.addEventListener('click', closeModal);
+        backdrop.addEventListener('click', closeModal);
+        okBtn.addEventListener('click', function() {
+            if (!isAlertOnly && currentOnConfirm) currentOnConfirm();
+            closeModal();
+        });
+        window.adminConfirm = open;
+        window.adminAlert = openAlert;
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initConfirmModal);
+    } else {
+        initConfirmModal();
+    }
+})();
+</script>
+</body>
+
+</html>

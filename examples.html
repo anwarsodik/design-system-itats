@@ -1,214 +1,822 @@
 <!DOCTYPE html 5>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ITATS Design System - Overview</title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="https://portal.itats.ac.id/wp-content/uploads/2023/07/cropped-Logo-Lengkap-150x150.png"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css?v=1.1" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITATS Design System - Overview</title>
-    <link rel="icon" type="image/x-icon"
-        href="https://portal.itats.ac.id/wp-content/uploads/2023/07/cropped-Logo-Lengkap-150x150.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=1.1">
-</head>
-
-<body>
-    <div class="app-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <div class="sidebar-logo">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                        <path d="M2 17l10 5 10-5"></path>
-                        <path d="M2 12l10 5 10-5"></path>
-                    </svg>
-                    ITATS Design
-                </div>
-            </div>
-                        <nav class="sidebar-nav" id="sidebarNavAccordion">
-                <!-- Getting Started -->
-                <div class="nav-group-title" data-bs-toggle="collapse" data-bs-target="#collapseGettingStarted" aria-expanded="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                    Getting Started
-                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </div>
-                <div class="collapse show" id="collapseGettingStarted" data-bs-parent="#sidebarNavAccordion">
-                    <a href="index.html" class="nav-sub-item active">Overview</a>
-                </div>
-
-                <!-- Foundations -->
-                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFoundations" aria-expanded="false">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                    Foundations
-                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </div>
-                <div class="collapse" id="collapseFoundations" data-bs-parent="#sidebarNavAccordion">
-                    <a href="colors.html" class="nav-sub-item">Colors</a>
-                    <a href="typography.html" class="nav-sub-item">Typography</a>
-                </div>
-
-                <!-- Layout -->
-                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseLayout" aria-expanded="false">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="9" x2="9" y2="21"/></svg>
-                    Layout
-                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </div>
-                <div class="collapse" id="collapseLayout" data-bs-parent="#sidebarNavAccordion">
-                    <a href="grid.html" class="nav-sub-item">Grid system</a>
-                    <a href="stacks.html" class="nav-sub-item">Stacks</a>
-                    <a href="ratio.html" class="nav-sub-item">Ratio</a>
-                </div>
-
-                <!-- Components -->
-                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseComponents" aria-expanded="false">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                    Components
-                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </div>
-                <div class="collapse" id="collapseComponents" data-bs-parent="#sidebarNavAccordion">
-                    <!-- 23 Component Links -->
-                    <a href="accordion.html" class="nav-sub-item">Accordion</a>
-                    <a href="alerts.html" class="nav-sub-item">Alerts</a>
-                    <a href="badges.html" class="nav-sub-item">Badge</a>
-                    <a href="breadcrumbs.html" class="nav-sub-item">Breadcrumb</a>
-                    <a href="buttons.html" class="nav-sub-item">Buttons</a>
-                    <a href="button-group.html" class="nav-sub-item">Button group</a>
-                    <a href="cards.html" class="nav-sub-item">Card</a>
-                    <a href="carousel.html" class="nav-sub-item">Carousel</a>
-                    <a href="close-button.html" class="nav-sub-item">Close button</a>
-                    <a href="collapse.html" class="nav-sub-item">Collapse</a>
-                    <a href="dropdowns.html" class="nav-sub-item">Dropdowns</a>
-                    <a href="list-group.html" class="nav-sub-item">List group</a>
-                    <a href="modals.html" class="nav-sub-item">Modal</a>
-                    <a href="navbar.html" class="nav-sub-item">Navbar</a>
-                    <a href="navs-tabs.html" class="nav-sub-item">Navs & tabs</a>
-                    <a href="offcanvas.html" class="nav-sub-item">Offcanvas</a>
-                    <a href="pagination.html" class="nav-sub-item">Pagination</a>
-                    <a href="placeholders.html" class="nav-sub-item">Placeholders</a>
-                    <a href="popovers.html" class="nav-sub-item">Popovers</a>
-                    <a href="progress.html" class="nav-sub-item">Progress</a>
-                    <a href="scrollspy.html" class="nav-sub-item">Scrollspy</a>
-                    <a href="spinners.html" class="nav-sub-item">Spinners</a>
-                    <a href="tables.html" class="nav-sub-item">Tables</a>
-                    <a href="toasts.html" class="nav-sub-item">Toasts</a>
-                    <a href="tooltips.html" class="nav-sub-item">Tooltips</a>
-                </div>
-
-                <!-- Forms -->
-                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-                    Forms
-                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </div>
-                <div class="collapse" id="collapseForms" data-bs-parent="#sidebarNavAccordion">
-                    <a href="forms.html" class="nav-sub-item">Forms</a>
-                </div>
-
-                <!-- Content -->
-                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseContent" aria-expanded="false">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                    Content
-                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </div>
-                <div class="collapse" id="collapseContent" data-bs-parent="#sidebarNavAccordion">
-                    <a href="images.html" class="nav-sub-item">Images</a>
-                    <a href="figures.html" class="nav-sub-item">Figures</a>
-                </div>
-                <!-- Utilities -->
-                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseUtilities" aria-expanded="false">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-                    Utilities
-                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </div>
-                <div class="collapse" id="collapseUtilities" data-bs-parent="#sidebarNavAccordion">
-                    <a href="utilities.html" class="nav-sub-item">Utilities</a>
-                </div>
-
-                <!-- Examples -->
-                <div class="nav-group-title collapsed mb-4" data-bs-toggle="collapse" data-bs-target="#collapseExamples" aria-expanded="false">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary me-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                    Examples
-                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </div>
-                <div class="collapse" id="collapseExamples" data-bs-parent="#sidebarNavAccordion">
-                    <a href="examples.html" class="nav-sub-item">Overview</a>
-                    <a href="example-login.html" class="nav-sub-item">Sign-in Page</a>
-                </div>
-            </nav>
-        </aside>
-
-        <!-- Main Content -->
-        
-        <main class="main-content">
-            <h1>Examples</h1>
-            <p class="text-lead mb-4">
-                Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.
-            </p>
-
-            <h2 class="h4 border-bottom pb-2 mb-4">Snippets</h2>
-            
-            <div class="row g-4">
-                <div class="col-sm-6 col-md-4">
-                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.2s ease;">
-                        <a href="example-login.html" class="text-decoration-none">
-                            <div class="card-img-top bg-light d-flex align-items-center justify-content-center border-bottom" style="height: 180px;">
-                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--bs-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
-                                    <polyline points="10 17 15 12 10 7"></polyline>
-                                    <line x1="15" y1="12" x2="3" y2="12"></line>
-                                </svg>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title text-dark mb-1">Sign-in</h5>
-                                <p class="card-text text-muted" style="font-size: 0.875rem;">A simple, centered login form layout built with ITATS components.</p>
-                            </div>
-                        </a>
+    <body>
+        <div class="app-container">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <div class="sidebar-logo">
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                        ITATS Design
                     </div>
                 </div>
+                <nav class="sidebar-nav" id="sidebarNavAccordion">
+                    <!-- Getting Started -->
+                    <div
+                        class="nav-group-title"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseGettingStarted"
+                        aria-expanded="true"
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="text-primary me-1"
+                        >
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path
+                                d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                            ></path>
+                        </svg>
+                        Getting Started
+                        <svg
+                            class="chevron"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div
+                        class="collapse show"
+                        id="collapseGettingStarted"
+                        data-bs-parent="#sidebarNavAccordion"
+                    >
+                        <a href="index.html" class="nav-sub-item active"
+                            >Overview</a
+                        >
+                    </div>
 
-                <div class="col-sm-6 col-md-4">
-                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.2s ease;">
-                        <a href="example-lms-courses.html" class="text-decoration-none">
-                            <div class="card-img-top bg-light d-flex align-items-center justify-content-center border-bottom" style="height: 180px; overflow: hidden;">
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 12px; width: 100%; height: 100%;">
-                                    <div style="background: var(--bs-primary-light); border-radius: 4px; height: 100%;"></div>
-                                    <div style="background: #e2e8f0; border-radius: 4px; height: 100%;"></div>
-                                    <div style="background: #e2e8f0; border-radius: 4px; height: 100%;"></div>
-                                    <div style="background: var(--bs-primary-light); border-radius: 4px; height: 100%;"></div>
+                    <!-- Foundations -->
+                    <div
+                        class="nav-group-title collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFoundations"
+                        aria-expanded="false"
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="text-primary me-1"
+                        >
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                            ></path>
+                        </svg>
+                        Foundations
+                        <svg
+                            class="chevron"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div
+                        class="collapse"
+                        id="collapseFoundations"
+                        data-bs-parent="#sidebarNavAccordion"
+                    >
+                        <a href="colors.html" class="nav-sub-item">Colors</a>
+                        <a href="typography.html" class="nav-sub-item"
+                            >Typography</a
+                        >
+                    </div>
+
+                    <!-- Layout -->
+                    <div
+                        class="nav-group-title collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseLayout"
+                        aria-expanded="false"
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="text-primary me-1"
+                        >
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <line x1="3" y1="9" x2="21" y2="9" />
+                            <line x1="3" y1="15" x2="21" y2="15" />
+                            <line x1="9" y1="9" x2="9" y2="21" />
+                        </svg>
+                        Layout
+                        <svg
+                            class="chevron"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div
+                        class="collapse"
+                        id="collapseLayout"
+                        data-bs-parent="#sidebarNavAccordion"
+                    >
+                        <a href="grid.html" class="nav-sub-item">Grid system</a>
+                        <a href="stacks.html" class="nav-sub-item">Stacks</a>
+                        <a href="ratio.html" class="nav-sub-item">Ratio</a>
+                    </div>
+
+                    <!-- Components -->
+                    <div
+                        class="nav-group-title collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseComponents"
+                        aria-expanded="false"
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="text-primary me-1"
+                        >
+                            <rect
+                                x="3"
+                                y="3"
+                                width="18"
+                                height="18"
+                                rx="2"
+                                ry="2"
+                            ></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                        Components
+                        <svg
+                            class="chevron"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div
+                        class="collapse"
+                        id="collapseComponents"
+                        data-bs-parent="#sidebarNavAccordion"
+                    >
+                        <!-- 23 Component Links -->
+                        <a href="accordion.html" class="nav-sub-item"
+                            >Accordion</a
+                        >
+                        <a href="alerts.html" class="nav-sub-item">Alerts</a>
+                        <a href="badges.html" class="nav-sub-item">Badge</a>
+                        <a href="breadcrumbs.html" class="nav-sub-item"
+                            >Breadcrumb</a
+                        >
+                        <a href="buttons.html" class="nav-sub-item">Buttons</a>
+                        <a href="button-group.html" class="nav-sub-item"
+                            >Button group</a
+                        >
+                        <a href="cards.html" class="nav-sub-item">Card</a>
+                        <a href="carousel.html" class="nav-sub-item"
+                            >Carousel</a
+                        >
+                        <a href="close-button.html" class="nav-sub-item"
+                            >Close button</a
+                        >
+                        <a href="collapse.html" class="nav-sub-item"
+                            >Collapse</a
+                        >
+                        <a href="dropdowns.html" class="nav-sub-item"
+                            >Dropdowns</a
+                        >
+                        <a href="list-group.html" class="nav-sub-item"
+                            >List group</a
+                        >
+                        <a href="modals.html" class="nav-sub-item">Modal</a>
+                        <a href="navbar.html" class="nav-sub-item">Navbar</a>
+                        <a href="navs-tabs.html" class="nav-sub-item"
+                            >Navs & tabs</a
+                        >
+                        <a href="offcanvas.html" class="nav-sub-item"
+                            >Offcanvas</a
+                        >
+                        <a href="pagination.html" class="nav-sub-item"
+                            >Pagination</a
+                        >
+                        <a href="placeholders.html" class="nav-sub-item"
+                            >Placeholders</a
+                        >
+                        <a href="popovers.html" class="nav-sub-item"
+                            >Popovers</a
+                        >
+                        <a href="progress.html" class="nav-sub-item"
+                            >Progress</a
+                        >
+                        <a href="scrollspy.html" class="nav-sub-item"
+                            >Scrollspy</a
+                        >
+                        <a href="spinners.html" class="nav-sub-item"
+                            >Spinners</a
+                        >
+                        <a href="tables.html" class="nav-sub-item">Tables</a>
+                        <a href="toasts.html" class="nav-sub-item">Toasts</a>
+                        <a href="tooltips.html" class="nav-sub-item"
+                            >Tooltips</a
+                        >
+                    </div>
+
+                    <!-- Forms -->
+                    <div
+                        class="nav-group-title collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseForms"
+                        aria-expanded="false"
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="text-primary me-1"
+                        >
+                            <polyline points="9 11 12 14 22 4"></polyline>
+                            <path
+                                d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+                            ></path>
+                        </svg>
+                        Forms
+                        <svg
+                            class="chevron"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div
+                        class="collapse"
+                        id="collapseForms"
+                        data-bs-parent="#sidebarNavAccordion"
+                    >
+                        <a href="forms.html" class="nav-sub-item">Forms</a>
+                    </div>
+
+                    <!-- Content -->
+                    <div
+                        class="nav-group-title collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseContent"
+                        aria-expanded="false"
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="text-primary me-1"
+                        >
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <circle cx="8.5" cy="8.5" r="1.5" />
+                            <polyline points="21 15 16 10 5 21" />
+                        </svg>
+                        Content
+                        <svg
+                            class="chevron"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div
+                        class="collapse"
+                        id="collapseContent"
+                        data-bs-parent="#sidebarNavAccordion"
+                    >
+                        <a href="images.html" class="nav-sub-item">Images</a>
+                        <a href="figures.html" class="nav-sub-item">Figures</a>
+                    </div>
+                    <!-- Utilities -->
+                    <div
+                        class="nav-group-title collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseUtilities"
+                        aria-expanded="false"
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="text-primary me-1"
+                        >
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"
+                            />
+                        </svg>
+                        Utilities
+                        <svg
+                            class="chevron"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div
+                        class="collapse"
+                        id="collapseUtilities"
+                        data-bs-parent="#sidebarNavAccordion"
+                    >
+                        <a href="utilities.html" class="nav-sub-item"
+                            >Utilities</a
+                        >
+                    </div>
+
+                    <!-- Examples -->
+                    <div
+                        class="nav-group-title collapsed mb-4"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseExamples"
+                        aria-expanded="false"
+                    >
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="text-primary me-1"
+                        >
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                            ></polygon>
+                        </svg>
+                        Examples
+                        <svg
+                            class="chevron"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div
+                        class="collapse"
+                        id="collapseExamples"
+                        data-bs-parent="#sidebarNavAccordion"
+                    >
+                        <a href="examples.html" class="nav-sub-item"
+                            >Overview</a
+                        >
+                        <a href="example-login.html" class="nav-sub-item"
+                            >Sign-in Page</a
+                        >
+                        <a href="example-login-v2.html" class="nav-sub-item"
+                            >Sign-in Page (V2)</a
+                        >
+                        <a href="example-lms-courses.html" class="nav-sub-item"
+                            >LMS Courses</a
+                        >
+                        <a
+                            href="example-lms-courses-v2.html"
+                            class="nav-sub-item"
+                            >LMS Courses (V2)</a
+                        >
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+
+            <main class="main-content">
+                <h1>Examples</h1>
+                <p class="text-lead mb-4">
+                    Quickly get a project started with any of our examples
+                    ranging from using parts of the framework to custom
+                    components and layouts.
+                </p>
+
+                <h2 class="h4 border-bottom pb-2 mb-4">Snippets</h2>
+
+                <div class="row g-4">
+                    <div class="col-sm-6 col-md-4">
+                        <div
+                            class="card h-100 shadow-sm border-0"
+                            style="transition: transform 0.2s ease"
+                        >
+                            <a
+                                href="example-login.html"
+                                class="text-decoration-none"
+                            >
+                                <div
+                                    class="card-img-top bg-light d-flex align-items-center justify-content-center border-bottom"
+                                    style="height: 180px"
+                                >
+                                    <svg
+                                        width="64"
+                                        height="64"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="var(--bs-primary)"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path
+                                            d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"
+                                        ></path>
+                                        <polyline
+                                            points="10 17 15 12 10 7"
+                                        ></polyline>
+                                        <line
+                                            x1="15"
+                                            y1="12"
+                                            x2="3"
+                                            y2="12"
+                                        ></line>
+                                    </svg>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title text-dark mb-1">LMS Course Grid</h5>
-                                <p class="card-text text-muted" style="font-size: 0.875rem;">A dashboard layout showing course cards with meta data and actions.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.2s ease;">
-                        <a href="example-lms-courses-v2.html" class="text-decoration-none">
-                            <div class="card-img-top bg-light d-flex align-items-center justify-content-center border-bottom" style="height: 180px; overflow: hidden; padding: 1.5rem;">
-                                <div style="width: 100%; display: flex; flex-direction: column; gap: 8px;">
-                                    <div style="width: 100%; height: 32px; background: white; border-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-left: 3px solid var(--bs-primary);"></div>
-                                    <div style="width: 100%; height: 32px; background: white; border-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-left: 3px solid #00A4EF;"></div>
-                                    <div style="width: 100%; height: 32px; background: white; border-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-left: 3px solid #f8b500;"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark mb-1">
+                                        Sign-in
+                                    </h5>
+                                    <p
+                                        class="card-text text-muted"
+                                        style="font-size: 0.875rem"
+                                    >
+                                        A simple, centered login form layout
+                                        built with ITATS components.
+                                    </p>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title text-dark mb-1">LMS Course List (V2)</h5>
-                                <p class="card-text text-muted" style="font-size: 0.875rem;">A modern horizontal list view with progress tracking and quick actions.</p>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div
+                            class="card h-100 shadow-sm border-0"
+                            style="transition: transform 0.2s ease"
+                        >
+                            <a
+                                href="example-login-v2.html"
+                                class="text-decoration-none"
+                            >
+                                <div
+                                    class="card-img-top bg-light d-flex align-items-center justify-content-center border-bottom"
+                                    style="height: 180px; overflow: hidden"
+                                >
+                                    <div
+                                        style="
+                                            display: flex;
+                                            width: 100%;
+                                            height: 100%;
+                                        "
+                                    >
+                                        <div
+                                            style="
+                                                flex: 1;
+                                                background: var(--bs-primary);
+                                                height: 100%;
+                                            "
+                                        ></div>
+                                        <div
+                                            style="
+                                                flex: 1;
+                                                background: white;
+                                                height: 100%;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                            "
+                                        >
+                                            <svg
+                                                width="32"
+                                                height="32"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="var(--bs-primary)"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path
+                                                    d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"
+                                                ></path>
+                                                <polyline
+                                                    points="10 17 15 12 10 7"
+                                                ></polyline>
+                                                <line
+                                                    x1="15"
+                                                    y1="12"
+                                                    x2="3"
+                                                    y2="12"
+                                                ></line>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark mb-1">
+                                        Sign-in (V2)
+                                    </h5>
+                                    <p
+                                        class="card-text text-muted"
+                                        style="font-size: 0.875rem"
+                                    >
+                                        A split-screen login layout with brand
+                                        information on the left.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div
+                            class="card h-100 shadow-sm border-0"
+                            style="transition: transform 0.2s ease"
+                        >
+                            <a
+                                href="example-lms-courses.html"
+                                class="text-decoration-none"
+                            >
+                                <div
+                                    class="card-img-top bg-light d-flex align-items-center justify-content-center border-bottom"
+                                    style="height: 180px; overflow: hidden"
+                                >
+                                    <div
+                                        style="
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                            gap: 4px;
+                                            padding: 12px;
+                                            width: 100%;
+                                            height: 100%;
+                                        "
+                                    >
+                                        <div
+                                            style="
+                                                background: var(
+                                                    --bs-primary-light
+                                                );
+                                                border-radius: 4px;
+                                                height: 100%;
+                                            "
+                                        ></div>
+                                        <div
+                                            style="
+                                                background: #e2e8f0;
+                                                border-radius: 4px;
+                                                height: 100%;
+                                            "
+                                        ></div>
+                                        <div
+                                            style="
+                                                background: #e2e8f0;
+                                                border-radius: 4px;
+                                                height: 100%;
+                                            "
+                                        ></div>
+                                        <div
+                                            style="
+                                                background: var(
+                                                    --bs-primary-light
+                                                );
+                                                border-radius: 4px;
+                                                height: 100%;
+                                            "
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark mb-1">
+                                        LMS Course Grid
+                                    </h5>
+                                    <p
+                                        class="card-text text-muted"
+                                        style="font-size: 0.875rem"
+                                    >
+                                        A dashboard layout showing course cards
+                                        with meta data and actions.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div
+                            class="card h-100 shadow-sm border-0"
+                            style="transition: transform 0.2s ease"
+                        >
+                            <a
+                                href="example-lms-courses-v2.html"
+                                class="text-decoration-none"
+                            >
+                                <div
+                                    class="card-img-top bg-light d-flex align-items-center justify-content-center border-bottom"
+                                    style="
+                                        height: 180px;
+                                        overflow: hidden;
+                                        padding: 1.5rem;
+                                    "
+                                >
+                                    <div
+                                        style="
+                                            width: 100%;
+                                            display: flex;
+                                            flex-direction: column;
+                                            gap: 8px;
+                                        "
+                                    >
+                                        <div
+                                            style="
+                                                width: 100%;
+                                                height: 32px;
+                                                background: white;
+                                                border-radius: 4px;
+                                                box-shadow: 0 1px 2px
+                                                    rgba(0, 0, 0, 0.05);
+                                                border-left: 3px solid
+                                                    var(--bs-primary);
+                                            "
+                                        ></div>
+                                        <div
+                                            style="
+                                                width: 100%;
+                                                height: 32px;
+                                                background: white;
+                                                border-radius: 4px;
+                                                box-shadow: 0 1px 2px
+                                                    rgba(0, 0, 0, 0.05);
+                                                border-left: 3px solid #00a4ef;
+                                            "
+                                        ></div>
+                                        <div
+                                            style="
+                                                width: 100%;
+                                                height: 32px;
+                                                background: white;
+                                                border-radius: 4px;
+                                                box-shadow: 0 1px 2px
+                                                    rgba(0, 0, 0, 0.05);
+                                                border-left: 3px solid #f8b500;
+                                            "
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark mb-1">
+                                        LMS Course List (V2)
+                                    </h5>
+                                    <p
+                                        class="card-text text-muted"
+                                        style="font-size: 0.875rem"
+                                    >
+                                        A modern horizontal list view with
+                                        progress tracking and quick actions.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card h-100 shadow-sm border-0" style="transition: transform 0.2s ease">
+                            <a href="example-data-table.html" class="text-decoration-none">
+                                <div class="card-img-top bg-light d-flex align-items-center justify-content-center border-bottom" style="height: 180px; overflow: hidden">
+                                    <div style="width: 80%; display: flex; flex-direction: column; gap: 4px;">
+                                        <div style="width: 100%; height: 16px; background: var(--bs-primary); border-radius: 2px;"></div>
+                                        <div style="width: 100%; height: 12px; background: #e2e8f0; border-radius: 2px;"></div>
+                                        <div style="width: 100%; height: 12px; background: white; border-radius: 2px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);"></div>
+                                        <div style="width: 100%; height: 12px; background: #e2e8f0; border-radius: 2px;"></div>
+                                        <div style="width: 100%; height: 12px; background: white; border-radius: 2px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);"></div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark mb-1">Data Table (8 Cols)</h5>
+                                    <p class="card-text text-muted" style="font-size: 0.875rem">A full-width data table layout with 8 columns, toolbar, and pagination.</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </main>
 
-        </main>
-    </div>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
 </html>
