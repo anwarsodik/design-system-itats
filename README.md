@@ -64,3 +64,25 @@ Explore the following HTML pages included in this repository to view our detaile
 - **CSS3 / Custom CSS Variables** (`css/style.css`)
 - **Bootstrap 5.3.3** (UI Framework Base)
 - **Vanilla JavaScript** (`js/script.js`)
+ elegance Table (8 Columns)](example-data-table.html)
+- [Admin Dashboard - Data Mahasiswa](admin.html)
+- [Courses Management](example-courses.html)
+- [Users Management](example-users.html)
+
+These examples include full layouts with navbars, sidebars, summary cards, and responsive tables.
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a Pull Request.
+
+Please ensure your code follows the project's style guidelines and includes tests if applicable.
+
+For issues or suggestions, open a GitHub issue.
+
+**License:** This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
