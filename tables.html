@@ -166,437 +166,163 @@
                 <h2 class="component-title" id="tables">Tables</h2>
                 <p class="component-desc">Styled data presentation tables.</p>
 
-                <div class="component-demo">
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-hover mb-0" style="font-size: 0.8125rem;">
-                            <thead class="table-light">
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Role</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>Administrator</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>Staff</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>Bird</td>
-                                    <td>Student</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="component-demo bg-light p-4 rounded-3">
+                    <div class="card border-0 shadow-sm">
+
+                        
+                        <!-- Table -->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover mb-0 align-middle" style="font-size: 0.875rem;">
+                                <thead class="bg-primary text-white">
+                                    <tr>
+                                        <th scope="col" class="bg-primary text-white fw-medium py-3 px-4 border-0">ID</th>
+                                        <th scope="col" class="bg-primary text-white fw-medium py-3 border-0">Name</th>
+                                        <th scope="col" class="bg-primary text-white fw-medium py-3 border-0">Status</th>
+                                        <th scope="col" class="bg-primary text-white fw-medium py-3 border-0 text-center">Invoices</th>
+                                        <th scope="col" class="bg-primary text-white fw-medium py-3 border-0">Invoice Amount</th>
+                                        <th scope="col" class="bg-primary text-white fw-medium py-3 border-0">Created At</th>
+                                        <th scope="col" class="bg-primary text-white fw-medium py-3 px-4 border-0 text-center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="border-top-0">
+                                    <tr>
+                                        <td class="px-4 py-3 text-secondary">1</td>
+                                        <td class="py-3 fw-medium text-dark">Brekke LLC</td>
+                                        <td class="py-3 text-dark">Active</td>
+                                        <td class="py-3 text-center text-dark">1</td>
+                                        <td class="py-3 text-dark">$ 253.22</td>
+                                        <td class="py-3 text-secondary">May 24, 2019 @ 10:00PM</td>
+                                        <td class="py-3 px-4 text-center">
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Aksi
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="font-size: 0.875rem;">
+                                                    <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                    <li><a class="dropdown-item" href="#">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li class="px-2 pb-1"><button class="btn btn-danger btn-sm w-100">Hapus</button></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3 text-secondary">2</td>
+                                        <td class="py-3 fw-medium text-dark">Paulo Trajano</td>
+                                        <td class="py-3 text-dark">Active</td>
+                                        <td class="py-3 text-center text-dark">4</td>
+                                        <td class="py-3 text-dark">$ 253.22</td>
+                                        <td class="py-3 text-secondary">May 24, 2019 @ 10:00PM</td>
+                                        <td class="py-3 px-4 text-center">
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Aksi
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="font-size: 0.875rem;">
+                                                    <li><a class="dropdown-item" href="#">Preview</a></li>
+                                                    <li><a class="dropdown-item" href="#">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li class="px-2 pb-1"><button class="btn btn-danger btn-sm w-100">Hapus</button></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3 text-secondary">3</td>
+                                        <td class="py-3 fw-medium text-dark">Prohaska, Halvorson</td>
+                                        <td class="py-3 text-dark">Active</td>
+                                        <td class="py-3 text-center text-dark">3</td>
+                                        <td class="py-3 text-dark">$ 253.22</td>
+                                        <td class="py-3 text-secondary">May 24, 2019 @ 10:00PM</td>
+                                        <td class="py-3 px-4 text-center">
+                                            <div class="dropdown">
+                                                <button class="btn btn-link text-secondary p-0 shadow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="font-size: 0.875rem;">
+                                                    <li><h6 class="dropdown-header">Aksi</h6></li>
+                                                    <li><a class="dropdown-item" href="#">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li><a class="dropdown-item text-danger" href="#">Hapus</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3 text-secondary">4</td>
+                                        <td class="py-3 fw-medium text-dark">Osinski PLC</td>
+                                        <td class="py-3 text-dark">Active</td>
+                                        <td class="py-3 text-center text-dark">0</td>
+                                        <td class="py-3 text-dark">$ 253.22</td>
+                                        <td class="py-3 text-secondary">May 24, 2019 @ 10:00PM</td>
+                                        <td class="py-3 px-4 text-center">
+                                            <div class="dropdown">
+                                                <button class="btn btn-link text-secondary p-0 shadow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="font-size: 0.875rem;">
+                                                    <li><h6 class="dropdown-header">Aksi</h6></li>
+                                                    <li><a class="dropdown-item" href="#">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li><a class="dropdown-item text-danger" href="#">Hapus</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 <div class="code-toggle" data-target="code-tables">Show Code</div>
-                <pre class="component-code" id="code-tables"><code>&lt;div class="table-responsive"&gt;
-  &lt;table class="table table-bordered table-hover"&gt;
-    &lt;thead class="table-light"&gt;
-      &lt;tr&gt;
-        &lt;th scope="col" class="fw-semibold text-secondary py-3 px-4"&gt;#&lt;/th&gt;
-        &lt;th scope="col" class="fw-semibold text-secondary py-3"&gt;First Name&lt;/th&gt;
-        &lt;th scope="col" class="fw-semibold text-secondary py-3"&gt;Last Name&lt;/th&gt;
-        &lt;th scope="col" class="fw-semibold text-secondary py-3"&gt;Role&lt;/th&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody class="table-group-divider bg-white"&gt;
-      &lt;tr&gt;
-        &lt;th scope="row" class="px-4 py-3 fw-medium text-secondary"&gt;1&lt;/th&gt;
-        &lt;td class="py-3"&gt;Mark&lt;/td&gt;
-        &lt;td class="py-3"&gt;Otto&lt;/td&gt;
-        &lt;td class="py-3"&gt;&lt;span class="badge bg-primary-subtle text-primary"&gt;Administrator&lt;/span&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</code></pre>
-                </section>
-
-                <section class="showcase-section">
-                    <h2 class="component-title" id="modern-data-table">
-                        Modern Data Table (Dashboard)
-                    </h2>
-                    <p class="component-desc">
-                        A feature-rich table component equipped with avatars,
-                        statuses, search header, action buttons, and pagination,
-                        making it ideal for admin interfaces.
-                    </p>
-
-                    <div class="component-demo bg-light p-4 rounded-3">
-                        <div class="card border-0 shadow-sm">
-                            <!-- Table Header / Toolbar -->
-                            <div
-                                class="card-header bg-white border-bottom py-3 d-flex flex-wrap gap-3 justify-content-between align-items-center"
-                            >
-                                <h5
-                                    class="mb-0 fw-semibold text-dark"
-                                    style="font-size: 1rem"
-                                >
-                                    Users Directory
-                                </h5>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <div class="position-relative">
-                                        <input
-                                            type="text"
-                                            class="form-control form-control-sm ps-4"
-                                            placeholder="Search users..."
-                                        />
-                                        <svg
-                                            width="14"
-                                            height="14"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            class="position-absolute text-muted"
-                                            style="
-                                                top: 50%;
-                                                left: 10px;
-                                                transform: translateY(-50%);
-                                            "
-                                        >
-                                            <circle
-                                                cx="11"
-                                                cy="11"
-                                                r="8"
-                                            ></circle>
-                                            <line
-                                                x1="21"
-                                                y1="21"
-                                                x2="16.65"
-                                                y2="16.65"
-                                            ></line>
-                                        </svg>
-                                    </div>
-                                    <button
-                                        class="btn btn-primary btn-sm d-flex align-items-center gap-1 fw-medium"
-                                    >
-                                        <svg
-                                            width="16"
-                                            height="16"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        >
-                                            <line
-                                                x1="12"
-                                                y1="5"
-                                                x2="12"
-                                                y2="19"
-                                            ></line>
-                                            <line
-                                                x1="5"
-                                                y1="12"
-                                                x2="19"
-                                                y2="12"
-                                            ></line>
-                                        </svg>
-                                        Add User
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Table Content -->
-                            <div class="table-responsive">
-                                <table
-                                    class="table table-hover mb-0 align-middle"
-                                    style="font-size: 0.875rem"
-                                >
-                                    <thead class="bg-primary text-white">
-                                        <tr>
-                                            <th
-                                                scope="col"
-                                                class="fw-semibold text-secondary py-3 px-4"
-                                                style="width: 40px"
-                                            >
-                                                <div class="form-check m-0">
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="checkbox"
-                                                        value=""
-                                                        id="checkAll"
-                                                    />
-                                                </div>
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="fw-semibold text-secondary py-3"
-                                            >
-                                                User
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="fw-semibold text-secondary py-3"
-                                            >
-                                                Department
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="fw-semibold text-secondary py-3"
-                                            >
-                                                Status
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="fw-semibold text-secondary py-3 text-end px-4"
-                                            >
-                                                Actions
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="table-group-divider bg-white">
-                                        <tr>
-                                            <td class="px-4 py-3">
-                                                <div class="form-check m-0">
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="checkbox"
-                                                        value=""
-                                                    />
-                                                </div>
-                                            </td>
-                                            <td class="py-3">
-                                                <div
-                                                    class="d-flex align-items-center gap-3"
-                                                >
-                                                    <div
-                                                        class="bg-primary-subtle text-primary rounded-circle d-flex justify-content-center align-items-center fw-bold shadow-sm"
-                                                        style="
-                                                            width: 36px;
-                                                            height: 36px;
-                                                        "
-                                                    >
-                                                        AS
-                                                    </div>
-                                                    <div>
-                                                        <div
-                                                            class="fw-semibold text-dark"
-                                                        >
-                                                            Anwar Sodik
-                                                        </div>
-                                                        <div
-                                                            class="text-muted"
-                                                            style="
-                                                                font-size: 0.75rem;
-                                                            "
-                                                        >
-                                                            anwar@itats.ac.id
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="py-3 text-secondary">
-                                                Sistem Informasi
-                                            </td>
-                                            <td class="py-3">
-                                                <span
-                                                    class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-2 py-1 d-inline-flex align-items-center gap-1"
-                                                >
-                                                    <span
-                                                        class="bg-success rounded-circle"
-                                                        style="
-                                                            width: 6px;
-                                                            height: 6px;
-                                                        "
-                                                    ></span>
-                                                    Active
-                                                </span>
-                                            </td>
-                                            <td class="py-3 px-4 text-end">
-                                                <button
-                                                    class="btn btn-light border btn-sm text-secondary px-2 py-1"
-                                                >
-                                                    Edit
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="px-4 py-3">
-                                                <div class="form-check m-0">
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="checkbox"
-                                                        value=""
-                                                    />
-                                                </div>
-                                            </td>
-                                            <td class="py-3">
-                                                <div
-                                                    class="d-flex align-items-center gap-3"
-                                                >
-                                                    <div
-                                                        class="bg-warning-subtle text-warning-emphasis rounded-circle d-flex justify-content-center align-items-center fw-bold shadow-sm"
-                                                        style="
-                                                            width: 36px;
-                                                            height: 36px;
-                                                        "
-                                                    >
-                                                        BS
-                                                    </div>
-                                                    <div>
-                                                        <div
-                                                            class="fw-semibold text-dark"
-                                                        >
-                                                            Budi Santoso
-                                                        </div>
-                                                        <div
-                                                            class="text-muted"
-                                                            style="
-                                                                font-size: 0.75rem;
-                                                            "
-                                                        >
-                                                            budi@itats.ac.id
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="py-3 text-secondary">
-                                                Teknik Informatika
-                                            </td>
-                                            <td class="py-3">
-                                                <span
-                                                    class="badge bg-secondary-subtle text-secondary border border-secondary-subtle rounded-pill px-2 py-1 d-inline-flex align-items-center gap-1"
-                                                >
-                                                    <span
-                                                        class="bg-secondary rounded-circle"
-                                                        style="
-                                                            width: 6px;
-                                                            height: 6px;
-                                                        "
-                                                    ></span>
-                                                    Offline
-                                                </span>
-                                            </td>
-                                            <td class="py-3 px-4 text-end">
-                                                <button
-                                                    class="btn btn-light border btn-sm text-secondary px-2 py-1"
-                                                >
-                                                    Edit
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!-- Table Footer / Pagination -->
-                            <div
-                                class="card-footer bg-white border-top py-3 d-flex flex-wrap align-items-center justify-content-between gap-3"
-                            >
-                                <div
-                                    class="text-muted"
-                                    style="font-size: 0.8125rem"
-                                >
-                                    Showing
-                                    <span class="fw-medium text-dark">1</span>
-                                    to
-                                    <span class="fw-medium text-dark">2</span>
-                                    of
-                                    <span class="fw-medium text-dark">12</span>
-                                    entries
-                                </div>
-                                <nav aria-label="Table pagination">
-                                    <ul class="pagination pagination-sm mb-0">
-                                        <li class="page-item disabled">
-                                            <a
-                                                class="page-link text-muted"
-                                                href="#"
-                                                tabindex="-1"
-                                                aria-disabled="true"
-                                                >Previous</a
-                                            >
-                                        </li>
-                                        <li
-                                            class="page-item active"
-                                            aria-current="page"
-                                        >
-                                            <a class="page-link" href="#">1</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a
-                                                class="page-link text-secondary"
-                                                href="#"
-                                                >2</a
-                                            >
-                                        </li>
-                                        <li class="page-item">
-                                            <a
-                                                class="page-link text-secondary"
-                                                href="#"
-                                                >3</a
-                                            >
-                                        </li>
-                                        <li class="page-item">
-                                            <a
-                                                class="page-link text-secondary"
-                                                href="#"
-                                                >Next</a
-                                            >
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="code-toggle" data-target="code-tables-modern">
-                        Show Code
-                    </div>
-                    <pre
-                        class="component-code"
-                        id="code-tables-modern"
-                    ><code>&lt;div class="card border-0 shadow-sm"&gt;
-  &lt;div class="card-header bg-white border-bottom py-3 d-flex justify-content-between align-items-center"&gt;
-    &lt;h5 class="mb-0 fw-semibold"&gt;Users Directory&lt;/h5&gt;
-    &lt;div class="d-flex gap-2"&gt;
-      &lt;input type="text" class="form-control form-control-sm" placeholder="Search..."&gt;
-      &lt;button class="btn btn-primary btn-sm"&gt;Add User&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+                <pre class="component-code" id="code-tables"><code>&lt;div class="card border-0 shadow-sm"&gt;
 
   &lt;div class="table-responsive"&gt;
-    &lt;table class="table table-hover mb-0 align-middle"&gt;
+    &lt;table class="table table-striped mb-0 align-middle"&gt;
       &lt;thead class="bg-primary text-white"&gt;
         &lt;tr&gt;
-          &lt;th&gt;User&lt;/th&gt;
-          &lt;th&gt;Status&lt;/th&gt;
-          &lt;th class="text-end"&gt;Actions&lt;/th&gt;
+          &lt;th class="border-0"&gt;ID&lt;/th&gt;
+          &lt;th class="border-0"&gt;Name&lt;/th&gt;
+          &lt;th class="border-0"&gt;Status&lt;/th&gt;
+          &lt;th class="border-0"&gt;Invoices&lt;/th&gt;
+          &lt;th class="border-0"&gt;Amount&lt;/th&gt;
+          &lt;th class="border-0"&gt;Created At&lt;/th&gt;
+          &lt;th class="border-0"&gt;Actions&lt;/th&gt;
         &lt;/tr&gt;
       &lt;/thead&gt;
-      &lt;tbody class="table-group-divider bg-white"&gt;
+      &lt;tbody&gt;
         &lt;tr&gt;
-          &lt;td&gt;Anwar Sodik&lt;/td&gt;
-          &lt;td&gt;&lt;span class="badge bg-success-subtle text-success"&gt;Active&lt;/span&gt;&lt;/td&gt;
-          &lt;td class="text-end"&gt;&lt;button class="btn btn-light btn-sm"&gt;Edit&lt;/button&gt;&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;Brekke LLC&lt;/td&gt;
+          &lt;td&gt;Active&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;$ 253.22&lt;/td&gt;
+          &lt;td&gt;May 24, 2019 @ 10:00PM&lt;/td&gt;
+          &lt;td&gt;
+            &lt;div class="dropdown"&gt;
+              &lt;button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                Aksi
+              &lt;/button&gt;
+              &lt;ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" style="font-size: 0.875rem;"&gt;
+                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Preview&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Detail&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Edit&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+                &lt;li class="px-2 pb-1"&gt;&lt;button class="btn btn-danger btn-sm w-100"&gt;Hapus&lt;/button&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
         &lt;/tr&gt;
       &lt;/tbody&gt;
     &lt;/table&gt;
   &lt;/div&gt;
-
-  &lt;div class="card-footer bg-white border-top py-3 d-flex justify-content-between"&gt;
-    &lt;div class="text-muted small"&gt;Showing 1 to 2 of 12 entries&lt;/div&gt;
-    &lt;ul class="pagination pagination-sm mb-0"&gt;
-      &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 </section>
+
             </main>
         </div>
 
