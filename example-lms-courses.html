@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LMS Dosen - Daftar Mata Kuliah</title>
-    <link rel="icon" type="image/x-icon" href="https://portal.itats.ac.id/wp-content/uploads/2023/07/cropped-Logo-Lengkap-150x150.png">
+    <title>LMS Dosen - Dashboard</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://portal.itats.ac.id/wp-content/uploads/2023/07/cropped-Logo-Lengkap-150x150.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?v=3">
     <style>
@@ -42,6 +43,32 @@
         .lms-logo {
             height: 32px;
             width: auto;
+        }
+
+        .lms-nav-links {
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            .lms-nav-links {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+            }
+
+            .lms-nav-links a {
+                color: var(--bs-text-secondary);
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.8125rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                transition: color 0.2s;
+            }
+
+            .lms-nav-links a:hover {
+                color: var(--bs-primary);
+            }
         }
 
         .lms-user {
@@ -98,12 +125,6 @@
             }
         }
 
-        @media (min-width: 1400px) {
-            .course-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
         /* Course Card */
         .course-card {
             background: var(--bs-surface);
@@ -143,7 +164,7 @@
             border-radius: 20px;
             font-size: 0.75rem;
             font-weight: 600;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .course-body {
@@ -164,7 +185,16 @@
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            height: 3.15rem; /* Fixed height for 2 lines to align buttons */
+            height: 3.15rem;
+            /* Fixed height for 2 lines to align buttons */
+        }
+
+        .course-code {
+            color: var(--bs-primary);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            margin-top: -0.5rem;
+            margin-bottom: -0.25rem;
         }
 
         .course-meta-row {
@@ -183,6 +213,10 @@
             font-size: 0.7rem;
             font-weight: 600;
             display: inline-block;
+        }
+
+        .badge-mk.pengganti {
+            background-color: var(--bs-accent);
         }
 
         .badge-kelas {
@@ -212,32 +246,139 @@
     <!-- Navbar -->
     <nav class="lms-navbar">
         <a href="examples.html" class="lms-brand">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
             <img src="img/logo-itats.png" alt="ITATS" class="lms-logo">
             <span>LMS Dosen</span>
         </a>
+        <div class="lms-nav-links">
+            <a href="#">Home</a>
+            <a href="#">Capaian Pembelajaran</a>
+            <a href="#">Mata Kuliah</a>
+            <a href="#">Perkuliahan</a>
+            <a href="#">Materi</a>
+        </div>
         <div class="lms-user">
-            <span class="d-none d-md-inline" style="font-size: 0.875rem; font-weight: 500;">Dr. Budi Santoso</span>
-            <div class="lms-avatar">BS</div>
+            <span class="d-none d-md-inline" style="font-size: 0.875rem; font-weight: 500;">Anwar Sodik</span>
+            <div class="lms-avatar">AS</div>
         </div>
     </nav>
 
     <!-- Content -->
     <main class="lms-content">
-        <div class="page-header">
-            <div>
-                <h1 class="h3 fw-bold mb-1">Daftar Mata Kuliah</h1>
-                <p class="text-muted mb-0" style="font-size: 0.875rem;">Semester Ganjil 2023/2024</p>
+        <!-- Hero Section -->
+        <!-- Profile Section -->
+        <div class="card border-0 shadow-sm mb-5 overflow-hidden" style="border-radius: 12px;">
+            <!-- Cover Photo -->
+            <div
+                style="height: 160px; background: linear-gradient(135deg, var(--bs-primary), #4facfe); position: relative;">
+                <img src="https://images.unsplash.com/photo-1557683316-973673baf926?w=1200&q=80" alt="Cover"
+                    style="width: 100%; height: 100%; object-fit: cover; opacity: 0.4;">
             </div>
-            <div>
-                <select class="form-select" style="min-width: 200px;">
-                    <option>Semua Program Studi</option>
-                    <option>Teknik Informatika</option>
-                    <option>Sistem Informasi</option>
-                </select>
+
+            <div class="card-body px-4 pb-4 pt-0 position-relative">
+                <div
+                    class="d-flex flex-column flex-md-row align-items-center align-items-md-end justify-content-between mb-4">
+                    <!-- Avatar & Info -->
+                    <div class="d-flex flex-column flex-md-row align-items-center align-items-md-end text-center text-md-start gap-3"
+                        style="margin-top: -50px;">
+                        <div class="position-relative">
+                            <div class="bg-white p-1 rounded-circle shadow-sm">
+                                <div class="rounded-circle d-flex align-items-center justify-content-center fw-bold fs-2 text-primary"
+                                    style="width: 100px; height: 100px; background-color: var(--bs-primary-light); border: 3px solid white;">
+                                    AS
+                                </div>
+                            </div>
+                            <div class="position-absolute bottom-0 end-0 bg-success border border-2 border-white rounded-circle"
+                                style="width: 20px; height: 20px; margin-bottom: 5px; margin-right: 5px;"
+                                title="Online"></div>
+                        </div>
+                        <div class="mt-3 mt-md-0 mb-md-2">
+                            <h2 class="fw-bold mb-0 text-dark fs-3">Anwar Sodik</h2>
+                            <p class="text-muted mb-0" style="font-size: 0.9rem;">Dosen Tetap • Teknik Informatika</p>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="mt-3 mt-md-0 mb-md-2">
+                        <button
+                            class="btn btn-outline-primary btn-sm px-4 fw-semibold rounded-pill d-flex align-items-center gap-2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                            </svg>
+                            Edit Profil
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Profile Stats -->
+                <div class="row g-0 border-top pt-3">
+                    <div class="col-6 col-md-3 text-center border-end mb-3 mb-md-0">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div class="fw-bold text-dark fs-4 lh-1 mb-1">7</div>
+                            <div class="text-muted text-uppercase fw-bold"
+                                style="font-size: 0.65rem; letter-spacing: 0.5px;">Kelas Aktif</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 text-center border-end mb-3 mb-md-0">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div class="fw-bold text-dark fs-4 lh-1 mb-1">176</div>
+                            <div class="text-muted text-uppercase fw-bold"
+                                style="font-size: 0.65rem; letter-spacing: 0.5px;">Mahasiswa</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 text-center border-end mb-3 mb-md-0">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div class="fw-bold text-dark fs-4 lh-1 mb-1">13</div>
+                            <div class="text-muted text-uppercase fw-bold"
+                                style="font-size: 0.65rem; letter-spacing: 0.5px;">Total SKS</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 text-center mb-3 mb-md-0">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div class="fw-bold text-dark fs-4 lh-1 mb-1">6/10</div>
+                            <div class="text-muted text-uppercase fw-bold"
+                                style="font-size: 0.65rem; letter-spacing: 0.5px;">Tugas Aktif</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Left Column: Courses -->
+            <div class="col-xl-9">
+                <!-- Filter Data -->
+                <div class="card border-0 shadow-sm mb-4" style="border-radius: 12px;">
+            <div class="card-header bg-surface border-bottom py-3 d-flex align-items-center gap-2 fw-bold text-primary"
+                style="background-color: var(--bs-surface); border-radius: 12px 12px 0 0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+                Filter Data
+            </div>
+            <div class="card-body">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <label class="form-label text-muted fw-semibold" style="font-size: 0.75rem;">TAHUN
+                            AJARAN</label>
+                        <select class="form-select">
+                            <option>Pilih Tahun Ajaran</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label text-muted fw-semibold" style="font-size: 0.75rem;">PROGRAM
+                            STUDI</label>
+                        <select class="form-select">
+                            <option>Semua Program Studi</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -245,24 +386,41 @@
             <!-- Card 1 -->
             <div class="course-card">
                 <div class="course-cover">
-                    <img src="img/course-1.png" alt="Cover">
+                    <img src="img/course-1.png" alt="Cover"
+                        onerror="this.src='https://images.unsplash.com/photo-1546410531-bea4d4001cbe?w=400&q=80'">
                     <div class="sks-badge">2 SKS</div>
                 </div>
                 <div class="course-body">
                     <h3 class="course-title">Interaksi Manusia dan Komputer</h3>
-                    
-                    <div class="course-meta-row">
-                        <span class="badge-mk">MK Utama</span>
-                    </div>
+                    <div class="course-code">2502002</div>
+                    <div><span class="badge-mk">MK Utama</span></div>
 
-                    <div class="course-meta-row">
-                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                    <div class="course-meta-row mt-1">
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
                         Teknik Informatika
                     </div>
+                    <div class="course-meta-row">
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Senin
+                    </div>
 
-                    <div class="course-meta-row justify-content-between mt-1">
+                    <div class="course-meta-row justify-content-between mt-2 pt-3 border-top">
                         <div class="d-flex align-items-center gap-1">
-                            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
                             <span>31 Mhs</span>
                         </div>
                         <span class="badge-kelas">Kelas P</span>
@@ -271,7 +429,11 @@
                     <div class="course-footer">
                         <button class="btn btn-primary w-100 d-flex justify-content-center align-items-center gap-2">
                             Pergi Ke Kelas
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
                         </button>
                     </div>
                 </div>
@@ -280,24 +442,41 @@
             <!-- Card 2 -->
             <div class="course-card">
                 <div class="course-cover">
-                    <img src="img/course-2.png" alt="Cover">
+                    <img src="img/course-2.png" alt="Cover"
+                        onerror="this.src='https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&q=80'">
                     <div class="sks-badge">2 SKS</div>
                 </div>
                 <div class="course-body">
                     <h3 class="course-title">Interaksi Manusia dan Komputer</h3>
-                    
-                    <div class="course-meta-row">
-                        <span class="badge-mk">MK Utama</span>
-                    </div>
+                    <div class="course-code">2502002</div>
+                    <div><span class="badge-mk">MK Utama</span></div>
 
-                    <div class="course-meta-row">
-                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                    <div class="course-meta-row mt-1">
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
                         Teknik Informatika
                     </div>
+                    <div class="course-meta-row">
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Kamis
+                    </div>
 
-                    <div class="course-meta-row justify-content-between mt-1">
+                    <div class="course-meta-row justify-content-between mt-2 pt-3 border-top">
                         <div class="d-flex align-items-center gap-1">
-                            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
                             <span>26 Mhs</span>
                         </div>
                         <span class="badge-kelas">Kelas Q</span>
@@ -306,7 +485,11 @@
                     <div class="course-footer">
                         <button class="btn btn-primary w-100 d-flex justify-content-center align-items-center gap-2">
                             Pergi Ke Kelas
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
                         </button>
                     </div>
                 </div>
@@ -315,24 +498,41 @@
             <!-- Card 3 -->
             <div class="course-card">
                 <div class="course-cover">
-                    <img src="img/course-3.png" alt="Cover">
+                    <img src="img/course-3.png" alt="Cover"
+                        onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&q=80'">
                     <div class="sks-badge">3 SKS</div>
                 </div>
                 <div class="course-body">
                     <h3 class="course-title">Interaksi Manusia dan Komputer</h3>
-                    
-                    <div class="course-meta-row">
-                        <span class="badge-mk">MK Utama</span>
-                    </div>
+                    <div class="course-code">25132007</div>
+                    <div><span class="badge-mk">MK Utama</span></div>
 
-                    <div class="course-meta-row">
-                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                    <div class="course-meta-row mt-1">
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
                         Sistem Informasi
                     </div>
+                    <div class="course-meta-row">
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Rabu
+                    </div>
 
-                    <div class="course-meta-row justify-content-between mt-1">
+                    <div class="course-meta-row justify-content-between mt-2 pt-3 border-top">
                         <div class="d-flex align-items-center gap-1">
-                            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
                             <span>17 Mhs</span>
                         </div>
                         <span class="badge-kelas">Kelas V</span>
@@ -341,7 +541,11 @@
                     <div class="course-footer">
                         <button class="btn btn-primary w-100 d-flex justify-content-center align-items-center gap-2">
                             Pergi Ke Kelas
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
                         </button>
                     </div>
                 </div>
@@ -350,33 +554,54 @@
             <!-- Card 4 -->
             <div class="course-card">
                 <div class="course-cover">
-                    <img src="img/course-2.png" alt="Cover">
-                    <div class="sks-badge">3 SKS</div>
+                    <img src="img/course-4.png" alt="Cover"
+                        onerror="this.src='https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&q=80'">
+                    <div class="sks-badge">2 SKS</div>
                 </div>
                 <div class="course-body">
-                    <h3 class="course-title">Manajemen Proses Bisnis</h3>
-                    
+                    <h3 class="course-title">Kewirausahaan Berbasis Teknologi</h3>
+                    <div class="course-code">25030026</div>
+                    <div><span class="badge-mk pengganti">MK Dosen Pengganti</span></div>
+
+                    <div class="course-meta-row mt-1">
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                        Common Support
+                    </div>
                     <div class="course-meta-row">
-                        <span class="badge-mk">MK Utama</span>
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Rabu
                     </div>
 
-                    <div class="course-meta-row">
-                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-                        Sistem Informasi
-                    </div>
-
-                    <div class="course-meta-row justify-content-between mt-1">
+                    <div class="course-meta-row justify-content-between mt-2 pt-3 border-top">
                         <div class="d-flex align-items-center gap-1">
-                            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                            <span>11 Mhs</span>
+                            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span>30 Mhs</span>
                         </div>
-                        <span class="badge-kelas">Kelas V</span>
+                        <span class="badge-kelas">Kelas P1</span>
                     </div>
 
                     <div class="course-footer">
                         <button class="btn btn-primary w-100 d-flex justify-content-center align-items-center gap-2">
                             Pergi Ke Kelas
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
                         </button>
                     </div>
                 </div>
@@ -385,41 +610,390 @@
             <!-- Card 5 -->
             <div class="course-card">
                 <div class="course-cover">
-                    <img src="img/course-1.png" alt="Cover">
+                    <img src="img/course-2.png" alt="Cover"
+                        onerror="this.src='https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&q=80'">
                     <div class="sks-badge">3 SKS</div>
                 </div>
                 <div class="course-body">
-                    <h3 class="course-title">Rintisan Bisnis Digital</h3>
-                    
-                    <div class="course-meta-row">
-                        <span class="badge-mk">MK Utama</span>
-                    </div>
+                    <h3 class="course-title">Manajemen Proses Bisnis</h3>
+                    <div class="course-code">25132004</div>
+                    <div><span class="badge-mk">MK Utama</span></div>
 
-                    <div class="course-meta-row">
-                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                    <div class="course-meta-row mt-1">
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
                         Sistem Informasi
                     </div>
+                    <div class="course-meta-row">
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Senin
+                    </div>
 
-                    <div class="course-meta-row justify-content-between mt-1">
+                    <div class="course-meta-row justify-content-between mt-2 pt-3 border-top">
                         <div class="d-flex align-items-center gap-1">
-                            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                            <span>21 Mhs</span>
+                            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span>11 Mhs</span>
                         </div>
-                        <span class="badge-kelas">Kelas A</span>
+                        <span class="badge-kelas">Kelas V</span>
                     </div>
 
                     <div class="course-footer">
                         <button class="btn btn-primary w-100 d-flex justify-content-center align-items-center gap-2">
                             Pergi Ke Kelas
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
                         </button>
                     </div>
                 </div>
             </div>
 
+            <!-- Card 6 -->
+            <div class="course-card">
+                <div class="course-cover">
+                    <img src="img/course-1.png" alt="Cover"
+                        onerror="this.src='https://images.unsplash.com/photo-1546410531-bea4d4001cbe?w=400&q=80'">
+                    <div class="sks-badge">3 SKS</div>
+                </div>
+                <div class="course-body">
+                    <h3 class="course-title">Rintisan Bisnis Digital</h3>
+                    <div class="course-code">25134119</div>
+                    <div><span class="badge-mk">MK Utama</span></div>
+
+                    <div class="course-meta-row mt-1">
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                        Sistem Informasi
+                    </div>
+                    <div class="course-meta-row">
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Rabu
+                    </div>
+
+                    <div class="course-meta-row justify-content-between mt-2 pt-3 border-top">
+                        <div class="d-flex align-items-center gap-1">
+                            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span>22 Mhs</span>
+                        </div>
+                        <span class="badge-kelas">Kelas Q</span>
+                    </div>
+
+                    <div class="course-footer">
+                        <button class="btn btn-primary w-100 d-flex justify-content-center align-items-center gap-2">
+                            Pergi Ke Kelas
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="course-card">
+                <div class="course-cover">
+                    <img src="img/course-3.png" alt="Cover"
+                        onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&q=80'">
+                    <div class="sks-badge">3 SKS</div>
+                </div>
+                <div class="course-body">
+                    <h3 class="course-title">Rintisan Bisnis Digital</h3>
+                    <div class="course-code">25134119</div>
+                    <div><span class="badge-mk">MK Utama</span></div>
+
+                    <div class="course-meta-row mt-1">
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                        Sistem Informasi
+                    </div>
+                    <div class="course-meta-row">
+                        <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Kamis
+                    </div>
+
+                    <div class="course-meta-row justify-content-between mt-2 pt-3 border-top">
+                        <div class="d-flex align-items-center gap-1">
+                            <svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span>23 Mhs</span>
+                        </div>
+                        <span class="badge-kelas">Kelas V</span>
+                    </div>
+
+                    <div class="course-footer">
+                        <button class="btn btn-primary w-100 d-flex justify-content-center align-items-center gap-2">
+                            Pergi Ke Kelas
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            </div>
+            
+            <!-- Right Column: Active Tasks -->
+            <div class="col-xl-3">
+                <div style="position: sticky; top: 90px;">
+                    <div class="card border-0 shadow-sm" style="border-radius: 12px;">
+                        <div class="card-header bg-surface border-bottom py-3 d-flex align-items-center justify-content-between" style="border-radius: 12px 12px 0 0;">
+                        <div class="d-flex align-items-center gap-2 fw-bold text-dark">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bs-primary)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            Tugas Aktif
+                        </div>
+                        <span class="badge bg-primary rounded-pill">6</span>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="list-group list-group-flush" style="border-radius: 0 0 12px 12px;">
+                            <!-- Task Item -->
+                            <a href="#" class="list-group-item list-group-item-action p-3 border-bottom">
+                                <div class="d-flex w-100 justify-content-between align-items-start mb-1">
+                                    <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.9rem;">Tugas 3: Prototype UI</h6>
+                                    <small class="text-danger fw-bold" style="font-size: 0.7rem;">Hari ini</small>
+                                </div>
+                                <p class="mb-1 text-muted" style="font-size: 0.8rem;">Interaksi Manusia dan Komputer • Kelas P</p>
+                                <div class="d-flex align-items-center gap-2 mt-2">
+                                    <div class="progress flex-grow-1" style="height: 6px;">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <small class="text-muted" style="font-size: 0.7rem;">26/31 Kumpul</small>
+                                </div>
+                            </a>
+                            <!-- Task Item -->
+                            <a href="#" class="list-group-item list-group-item-action p-3 border-bottom">
+                                <div class="d-flex w-100 justify-content-between align-items-start mb-1">
+                                    <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.9rem;">Tugas Besar 1</h6>
+                                    <small class="text-warning fw-bold" style="font-size: 0.7rem;">Besok</small>
+                                </div>
+                                <p class="mb-1 text-muted" style="font-size: 0.8rem;">Sistem Informasi • Kelas V</p>
+                                <div class="d-flex align-items-center gap-2 mt-2">
+                                    <div class="progress flex-grow-1" style="height: 6px;">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <small class="text-muted" style="font-size: 0.7rem;">10/23 Kumpul</small>
+                                </div>
+                            </a>
+                            <!-- Task Item -->
+                            <a href="#" class="list-group-item list-group-item-action p-3">
+                                <div class="d-flex w-100 justify-content-between align-items-start mb-1">
+                                    <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.9rem;">Review Jurnal Internasional</h6>
+                                    <small class="text-muted fw-bold" style="font-size: 0.7rem;">3 Hari lagi</small>
+                                </div>
+                                <p class="mb-1 text-muted" style="font-size: 0.8rem;">Rintisan Bisnis Digital • Kelas Q</p>
+                                <div class="d-flex align-items-center gap-2 mt-2">
+                                    <div class="progress flex-grow-1" style="height: 6px;">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <small class="text-muted" style="font-size: 0.7rem;">3/22 Kumpul</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white border-top p-2 text-center" style="border-radius: 0 0 12px 12px;">
+                        <a href="#" class="btn btn-link btn-sm text-decoration-none fw-semibold">Lihat Semua Tugas</a>
+                    </div>
+                </div>
+
+                <!-- Presensi Terendah Carousel -->
+                <div class="card border-0 shadow-sm mt-4" style="border-radius: 12px;">
+                    <div class="card-header bg-surface border-bottom py-3 d-flex align-items-center justify-content-between" style="border-radius: 12px 12px 0 0;">
+                        <div class="d-flex align-items-center gap-2 fw-bold text-danger">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                            Presensi Terendah
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div id="presensiCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- Slide 1: Kelas P -->
+                                <div class="carousel-item active">
+                                    <div class="p-2 bg-light border-bottom text-center">
+                                        <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.8rem;">IMK • Kelas P</h6>
+                                    </div>
+                                    <div class="list-group list-group-flush" style="border-radius: 0 0 12px 12px;">
+                                        <div class="list-group-item px-3 py-2 d-flex justify-content-between align-items-center">
+                                            <div class="lh-sm"><span class="fw-bold text-dark" style="font-size: 0.8rem;">Ahmad Reza</span><br><small class="text-muted" style="font-size: 0.7rem;">06.2021.1.0001</small></div>
+                                            <span class="badge bg-danger-subtle text-danger rounded-pill">40%</span>
+                                        </div>
+                                        <div class="list-group-item px-3 py-2 d-flex justify-content-between align-items-center">
+                                            <div class="lh-sm"><span class="fw-bold text-dark" style="font-size: 0.8rem;">Budi Santoso</span><br><small class="text-muted" style="font-size: 0.7rem;">06.2021.1.0012</small></div>
+                                            <span class="badge bg-danger-subtle text-danger rounded-pill">45%</span>
+                                        </div>
+                                        <div class="list-group-item px-3 py-2 d-flex justify-content-between align-items-center">
+                                            <div class="lh-sm"><span class="fw-bold text-dark" style="font-size: 0.8rem;">Citra Kirana</span><br><small class="text-muted" style="font-size: 0.7rem;">06.2021.1.0025</small></div>
+                                            <span class="badge bg-danger-subtle text-danger rounded-pill">50%</span>
+                                        </div>
+                                        <div class="list-group-item px-3 py-2 d-flex justify-content-between align-items-center">
+                                            <div class="lh-sm"><span class="fw-bold text-dark" style="font-size: 0.8rem;">Deni Pratama</span><br><small class="text-muted" style="font-size: 0.7rem;">06.2021.1.0033</small></div>
+                                            <span class="badge bg-warning-subtle text-warning rounded-pill">60%</span>
+                                        </div>
+                                        <div class="list-group-item px-3 py-2 d-flex justify-content-between align-items-center">
+                                            <div class="lh-sm"><span class="fw-bold text-dark" style="font-size: 0.8rem;">Eka Sari</span><br><small class="text-muted" style="font-size: 0.7rem;">06.2021.1.0041</small></div>
+                                            <span class="badge bg-warning-subtle text-warning rounded-pill">65%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 2: Kelas V -->
+                                <div class="carousel-item">
+                                    <div class="p-2 bg-light border-bottom text-center">
+                                        <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.8rem;">Sisfo • Kelas V</h6>
+                                    </div>
+                                    <div class="list-group list-group-flush" style="border-radius: 0 0 12px 12px;">
+                                        <div class="list-group-item px-3 py-2 d-flex justify-content-between align-items-center">
+                                            <div class="lh-sm"><span class="fw-bold text-dark" style="font-size: 0.8rem;">Fajar Nugroho</span><br><small class="text-muted" style="font-size: 0.7rem;">06.2022.1.0005</small></div>
+                                            <span class="badge bg-danger-subtle text-danger rounded-pill">30%</span>
+                                        </div>
+                                        <div class="list-group-item px-3 py-2 d-flex justify-content-between align-items-center">
+                                            <div class="lh-sm"><span class="fw-bold text-dark" style="font-size: 0.8rem;">Gita Gutawa</span><br><small class="text-muted" style="font-size: 0.7rem;">06.2022.1.0018</small></div>
+                                            <span class="badge bg-danger-subtle text-danger rounded-pill">35%</span>
+                                        </div>
+                                        <div class="list-group-item px-3 py-2 d-flex justify-content-between align-items-center">
+                                            <div class="lh-sm"><span class="fw-bold text-dark" style="font-size: 0.8rem;">Hadi Kusuma</span><br><small class="text-muted" style="font-size: 0.7rem;">06.2022.1.0022</small></div>
+                                            <span class="badge bg-danger-subtle text-danger rounded-pill">40%</span>
+                                        </div>
+                                        <div class="list-group-item px-3 py-2 d-flex justify-content-between align-items-center">
+                                            <div class="lh-sm"><span class="fw-bold text-dark" style="font-size: 0.8rem;">Ika Putri</span><br><small class="text-muted" style="font-size: 0.7rem;">06.2022.1.0039</small></div>
+                                            <span class="badge bg-warning-subtle text-warning rounded-pill">55%</span>
+                                        </div>
+                                        <div class="list-group-item px-3 py-2 d-flex justify-content-between align-items-center">
+                                            <div class="lh-sm"><span class="fw-bold text-dark" style="font-size: 0.8rem;">Joko Anwar</span><br><small class="text-muted" style="font-size: 0.7rem;">06.2022.1.0044</small></div>
+                                            <span class="badge bg-warning-subtle text-warning rounded-pill">60%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Controls -->
+                            <div class="d-flex justify-content-between align-items-center p-2 border-top bg-white" style="border-radius: 0 0 12px 12px;">
+                                <button class="btn btn-sm btn-light border-0 py-0 px-2" type="button" data-bs-target="#presensiCarousel" data-bs-slide="prev">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                                </button>
+                                <div class="carousel-indicators position-static m-0 d-flex align-items-center" style="gap: 4px;">
+                                    <button type="button" data-bs-target="#presensiCarousel" data-bs-slide-to="0" class="active bg-primary m-0" style="width: 6px; height: 6px; border-radius: 50%; border: none;" aria-current="true"></button>
+                                    <button type="button" data-bs-target="#presensiCarousel" data-bs-slide-to="1" class="bg-primary m-0" style="width: 6px; height: 6px; border-radius: 50%; border: none; opacity: 0.5;"></button>
+                                </div>
+                                <button class="btn btn-sm btn-light border-0 py-0 px-2" type="button" data-bs-target="#presensiCarousel" data-bs-slide="next">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
     </main>
 
+    <!-- Footer -->
+    <footer class="mt-5 py-5 bg-primary text-white border-top border-primary">
+        <div class="container-fluid" style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="bg-white text-primary fw-bold px-2 py-1 rounded d-inline-block mb-3"
+                        style="font-size: 0.75rem;">F. TEKNOLOGI INDUSTRI</div>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Teknik Mesin</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Teknik Industri</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Teknik Kimia</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Teknik Pertambangan</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Teknik Perkapalan</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-white text-primary fw-bold px-2 py-1 rounded d-inline-block mb-3"
+                        style="font-size: 0.75rem;">F. TEKNIK SIPIL & PERENCANAAN</div>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Teknik Sipil</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Arsitektur</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Teknik Lingkungan</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Desain Produk</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-white text-primary fw-bold px-2 py-1 rounded d-inline-block mb-3"
+                        style="font-size: 0.75rem;">F. TEKNIK ELEKTRO & INFORMASI</div>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Teknik Elektro</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Teknik Informatika</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Sistem Informasi</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <div class="bg-white text-primary fw-bold px-2 py-1 rounded d-inline-block mb-3"
+                        style="font-size: 0.75rem;">PASCASARJANA</div>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Magister Teknik Industri</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"
+                                style="font-size: 0.8125rem; opacity: 0.8;">Magister Teknik Lingkungan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4 pt-4 border-top border-light text-center text-white"
+                style="font-size: 0.75rem; opacity: 0.7;">
+                &copy; 2023 ITATS All rights reserved | Developed By PSI ITATS
+            </div>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
