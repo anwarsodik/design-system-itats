@@ -57,7 +57,15 @@ Explore the following HTML pages included in this repository to view our detaile
 - **[Developer Guide (developer-guide.html)](developer-guide.html):** Panduan penggunaan manual dan agentic untuk developer.
 - **[Colors (colors.html)](colors.html):** Our primary and secondary brand colors (ITATS Blue `#06469e` & Yellow `#f8b500`), along with neutral palettes and status indicators.
 - **[Typography (typography.html)](typography.html):** Typography guidelines powered by the **Inter** font family.
-- **[Components (components.html)](components.html):** Interactive building blocks (Alerts, Buttons, Cards, Modals, Navbars, Forms, etc.) perfectly styled to match the ITATS brand identity.
+- **Components:** Interactive building blocks such as Alerts, Buttons, Cards, Modals, Navbars, Forms, Tables, Toasts, Tooltips, and more are documented as individual HTML pages.
+- **Dashboard Patterns:** Production-oriented dashboard references for admin/LMS products.
+  - **[Dashboard Shell](dashboard-shell.html):** Topbar, sidebar, page header, action area, and responsive content shell.
+  - **[Advanced Data Table](data-table.html):** Toolbar, search, bulk selection, sticky header, compact density, row actions, and pagination.
+  - **[KPI Stats](stats.html):** Metric cards, deltas, progress, and status variants.
+  - **[Charts](charts.html):** Chart card patterns and token-aligned visualization placeholders.
+  - **[Filters](filters.html):** Search, select filters, date/month input, active filter chips, reset/apply actions.
+  - **[Empty States](empty-states.html):** No data and no result states with clear recovery actions.
+  - **[Skeletons](skeletons.html):** Dashboard, card, and content loading placeholders.
 
 ## 💻 Powered by
 
@@ -65,10 +73,8 @@ Explore the following HTML pages included in this repository to view our detaile
 - **CSS3 / Custom CSS Variables** (`css/style.css`)
 - **Bootstrap 5.3.3** (UI Framework Base)
 - **Vanilla JavaScript** (`js/script.js`)
- elegance Table (8 Columns)](example-data-table.html)
 - [Admin Dashboard - Data Mahasiswa](admin.html)
 - [Courses Management](example-courses.html)
-- [Users Management](example-users.html)
 
 These examples include full layouts with navbars, sidebars, summary cards, and responsive tables.
 

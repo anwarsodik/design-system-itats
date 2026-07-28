@@ -22,8 +22,59 @@ document.addEventListener('DOMContentLoaded', () => {
         gettingStartedNav.appendChild(developerGuideLink);
     }
 
+    const sidebarNav = document.getElementById('sidebarNavAccordion');
+    if (sidebarNav && !sidebarNav.querySelector('a[href="dashboard-shell.html"]')) {
+        const dashboardGroup = document.createElement('div');
+        dashboardGroup.className = 'nav-group-title collapsed';
+        dashboardGroup.setAttribute('data-bs-toggle', 'collapse');
+        dashboardGroup.setAttribute('data-bs-target', '#collapseDashboardPatterns');
+        dashboardGroup.setAttribute('aria-expanded', 'false');
+        dashboardGroup.innerHTML = 'Dashboard Patterns <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+
+        const dashboardCollapse = document.createElement('div');
+        dashboardCollapse.className = 'collapse';
+        dashboardCollapse.id = 'collapseDashboardPatterns';
+        dashboardCollapse.setAttribute('data-bs-parent', '#sidebarNavAccordion');
+
+        const dashboardLinks = [
+            ['dashboard-shell.html', 'Dashboard Shell'],
+            ['data-table.html', 'Data Table'],
+            ['stats.html', 'KPI Stats'],
+            ['charts.html', 'Charts'],
+            ['filters.html', 'Filters'],
+            ['empty-states.html', 'Empty States'],
+            ['skeletons.html', 'Skeletons'],
+            ['admin.html', 'Admin Example']
+        ];
+
+        const currentPage = window.location.pathname.split('/').pop();
+        dashboardLinks.forEach(([href, label]) => {
+            const link = document.createElement('a');
+            link.href = href;
+            link.className = `nav-sub-item${currentPage === href ? ' active' : ''}`;
+            link.textContent = label;
+            dashboardCollapse.appendChild(link);
+            if (currentPage === href) {
+                dashboardGroup.classList.remove('collapsed');
+                dashboardGroup.setAttribute('aria-expanded', 'true');
+                dashboardCollapse.classList.add('show');
+            }
+        });
+
+        const examplesGroup = sidebarNav.querySelector('[data-bs-target="#collapseExamples"]');
+        if (examplesGroup) {
+            sidebarNav.insertBefore(dashboardGroup, examplesGroup);
+            sidebarNav.insertBefore(dashboardCollapse, examplesGroup);
+        } else {
+            sidebarNav.appendChild(dashboardGroup);
+            sidebarNav.appendChild(dashboardCollapse);
+        }
+    }
+
     toggleBtn.addEventListener('click', () => {
-        sidebar.classList.toggle('open');
+        if (sidebar) {
+            sidebar.classList.toggle('open');
+        }
     });
 
     // Close sidebar when clicking outside on mobile
