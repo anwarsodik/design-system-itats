@@ -1,0 +1,252 @@
+{
+  "js/script.js": {
+    "mtime": 1775447203.68,
+    "ast_hash": "a1974e17a6221c182d5a71c12d2043bc",
+    "semantic_hash": "a1974e17a6221c182d5a71c12d2043bc"
+  },
+  "package.json": {
+    "mtime": 1785137892.2397356,
+    "ast_hash": "26bcbeec40a1a22dcf82338700ad7217",
+    "semantic_hash": "26bcbeec40a1a22dcf82338700ad7217"
+  },
+  "replace_all_icons.js": {
+    "mtime": 1778476632.3799999,
+    "ast_hash": "aa165bb981143a4812d2822a4d019a8c",
+    "semantic_hash": "aa165bb981143a4812d2822a4d019a8c"
+  },
+  "replace_icons.js": {
+    "mtime": 1778476331.28,
+    "ast_hash": "90cd04848b44c9791ce26eaa8ac31f87",
+    "semantic_hash": "90cd04848b44c9791ce26eaa8ac31f87"
+  },
+  "README.md": {
+    "mtime": 1777261421.52,
+    "ast_hash": "6322470a48e731b08dbf11c3cf606e0c",
+    "semantic_hash": "6322470a48e731b08dbf11c3cf606e0c"
+  },
+  "accordion.html": {
+    "mtime": 1785139509.2601469,
+    "ast_hash": "24367abc8b8f88357bb1cadb42b03d68",
+    "semantic_hash": "24367abc8b8f88357bb1cadb42b03d68"
+  },
+  "admin.html": {
+    "mtime": 1785139509.260816,
+    "ast_hash": "abb7016a8902ca74fcce42a22dd6d6f7",
+    "semantic_hash": "abb7016a8902ca74fcce42a22dd6d6f7"
+  },
+  "alerts.html": {
+    "mtime": 1785139509.2616951,
+    "ast_hash": "faeccf952ffb0a2384e77812661619ac",
+    "semantic_hash": "faeccf952ffb0a2384e77812661619ac"
+  },
+  "badges.html": {
+    "mtime": 1785139509.2626324,
+    "ast_hash": "e06e3f3fc0e654258eb56111dda82c67",
+    "semantic_hash": "e06e3f3fc0e654258eb56111dda82c67"
+  },
+  "breadcrumbs.html": {
+    "mtime": 1785139509.263259,
+    "ast_hash": "f6e10565af2bf8124afa0484ddec5f61",
+    "semantic_hash": "f6e10565af2bf8124afa0484ddec5f61"
+  },
+  "button-group.html": {
+    "mtime": 1785139509.2646244,
+    "ast_hash": "2cc57778daf5d0eee21f14d23649efeb",
+    "semantic_hash": "2cc57778daf5d0eee21f14d23649efeb"
+  },
+  "buttons.html": {
+    "mtime": 1785139509.2651415,
+    "ast_hash": "da17d287b17d713028a80a5ff07e6f87",
+    "semantic_hash": "da17d287b17d713028a80a5ff07e6f87"
+  },
+  "cards.html": {
+    "mtime": 1785139509.2657979,
+    "ast_hash": "f3cdde6663a913a918848e984dfe4f45",
+    "semantic_hash": "f3cdde6663a913a918848e984dfe4f45"
+  },
+  "carousel.html": {
+    "mtime": 1785139509.2662468,
+    "ast_hash": "05998383b7f5c2eda33a60a12b557e57",
+    "semantic_hash": "05998383b7f5c2eda33a60a12b557e57"
+  },
+  "close-button.html": {
+    "mtime": 1785139509.2666736,
+    "ast_hash": "67152bd369106d7c2ad4a01daf9d0695",
+    "semantic_hash": "67152bd369106d7c2ad4a01daf9d0695"
+  },
+  "collapse.html": {
+    "mtime": 1785139509.267223,
+    "ast_hash": "27da0beed4abfe7cb43003b309506492",
+    "semantic_hash": "27da0beed4abfe7cb43003b309506492"
+  },
+  "colors.html": {
+    "mtime": 1785139509.2677133,
+    "ast_hash": "5f331e4a601130539e1aad57a699c0d6",
+    "semantic_hash": "5f331e4a601130539e1aad57a699c0d6"
+  },
+  "dropdowns.html": {
+    "mtime": 1785139509.2680795,
+    "ast_hash": "85d37d19e9a455fd44223a8a8be91e36",
+    "semantic_hash": "85d37d19e9a455fd44223a8a8be91e36"
+  },
+  "example-courses.html": {
+    "mtime": 1785139509.2686377,
+    "ast_hash": "1ecd194f316c79da71e86f6353017449",
+    "semantic_hash": "1ecd194f316c79da71e86f6353017449"
+  },
+  "example-lms-courses.html": {
+    "mtime": 1785139509.2699811,
+    "ast_hash": "0ea3f0e371c016e38ed9449415853baf",
+    "semantic_hash": "0ea3f0e371c016e38ed9449415853baf"
+  },
+  "example-login-classroom.html": {
+    "mtime": 1785139770.2207687,
+    "ast_hash": "23bd93460c8cdf394e4e8b4725eae5e9",
+    "semantic_hash": "23bd93460c8cdf394e4e8b4725eae5e9"
+  },
+  "example-login.html": {
+    "mtime": 1785139509.271161,
+    "ast_hash": "4687b80115c8ca29e636053fdb6af4fd",
+    "semantic_hash": "4687b80115c8ca29e636053fdb6af4fd"
+  },
+  "examples.html": {
+    "mtime": 1785139509.2715394,
+    "ast_hash": "11eaa5555f6353eb9cba4fb4468f402f",
+    "semantic_hash": "11eaa5555f6353eb9cba4fb4468f402f"
+  },
+  "figures.html": {
+    "mtime": 1785139509.2723649,
+    "ast_hash": "f0d1ec4a6746420d5743e3e1c00e9ff9",
+    "semantic_hash": "f0d1ec4a6746420d5743e3e1c00e9ff9"
+  },
+  "forms.html": {
+    "mtime": 1785139509.2741766,
+    "ast_hash": "31b08f9febb4d88d45623b7e3f25d190",
+    "semantic_hash": "31b08f9febb4d88d45623b7e3f25d190"
+  },
+  "grid.html": {
+    "mtime": 1785139509.27578,
+    "ast_hash": "1d6095650414f7acb84a2e323903cc91",
+    "semantic_hash": "1d6095650414f7acb84a2e323903cc91"
+  },
+  "images.html": {
+    "mtime": 1785139509.2763946,
+    "ast_hash": "0c551336e77497b89c667777cd665c12",
+    "semantic_hash": "0c551336e77497b89c667777cd665c12"
+  },
+  "index.html": {
+    "mtime": 1785139509.2769146,
+    "ast_hash": "a1b6e0fcc4378af7d278705e4bd3c930",
+    "semantic_hash": "a1b6e0fcc4378af7d278705e4bd3c930"
+  },
+  "list-group.html": {
+    "mtime": 1785139509.2773895,
+    "ast_hash": "f0bed2d442c7b4d1bf50e1e254b6c7a4",
+    "semantic_hash": "f0bed2d442c7b4d1bf50e1e254b6c7a4"
+  },
+  "modals.html": {
+    "mtime": 1785139509.278429,
+    "ast_hash": "fc940b6e04c20db9255ec01ab70a755c",
+    "semantic_hash": "fc940b6e04c20db9255ec01ab70a755c"
+  },
+  "navbar.html": {
+    "mtime": 1785139509.2794693,
+    "ast_hash": "9eb116b0822a71fa77c418e7ec6b9ed3",
+    "semantic_hash": "9eb116b0822a71fa77c418e7ec6b9ed3"
+  },
+  "navs-tabs.html": {
+    "mtime": 1785139509.2798998,
+    "ast_hash": "e4356b10edd9ce1e91c44cbd8eb94a0e",
+    "semantic_hash": "e4356b10edd9ce1e91c44cbd8eb94a0e"
+  },
+  "offcanvas.html": {
+    "mtime": 1785139509.2803166,
+    "ast_hash": "e9eabea659c0917f974aef15f4e013c5",
+    "semantic_hash": "e9eabea659c0917f974aef15f4e013c5"
+  },
+  "pagination.html": {
+    "mtime": 1785139509.2807672,
+    "ast_hash": "daeb995c8175c0f3ccd0930af0af33d8",
+    "semantic_hash": "daeb995c8175c0f3ccd0930af0af33d8"
+  },
+  "placeholders.html": {
+    "mtime": 1785139509.2820082,
+    "ast_hash": "745ec321ec50848cd92d04aa354e235f",
+    "semantic_hash": "745ec321ec50848cd92d04aa354e235f"
+  },
+  "popovers.html": {
+    "mtime": 1785139509.2824416,
+    "ast_hash": "a8e3ebd4151b54f3cdd055d58235d675",
+    "semantic_hash": "a8e3ebd4151b54f3cdd055d58235d675"
+  },
+  "progress.html": {
+    "mtime": 1785139509.283305,
+    "ast_hash": "1550e023dfd8555f6bbc1774eeb46fd7",
+    "semantic_hash": "1550e023dfd8555f6bbc1774eeb46fd7"
+  },
+  "ratio.html": {
+    "mtime": 1785139509.2859812,
+    "ast_hash": "53800104286ea35d4ea375cade7a67de",
+    "semantic_hash": "53800104286ea35d4ea375cade7a67de"
+  },
+  "scrollspy.html": {
+    "mtime": 1785139509.2864633,
+    "ast_hash": "f1c2cc1d11819b2b98572bdd1425cc14",
+    "semantic_hash": "f1c2cc1d11819b2b98572bdd1425cc14"
+  },
+  "spinners.html": {
+    "mtime": 1785139509.2885482,
+    "ast_hash": "368667631c39d564bf7df404b86848a5",
+    "semantic_hash": "368667631c39d564bf7df404b86848a5"
+  },
+  "stacks.html": {
+    "mtime": 1785139509.2918706,
+    "ast_hash": "a859023aca52807b7787f57b815b2b2a",
+    "semantic_hash": "a859023aca52807b7787f57b815b2b2a"
+  },
+  "tables.html": {
+    "mtime": 1785139509.2926078,
+    "ast_hash": "c52b92226a6d77a9a87bd3a5a0e0f33c",
+    "semantic_hash": "c52b92226a6d77a9a87bd3a5a0e0f33c"
+  },
+  "toasts.html": {
+    "mtime": 1785139509.2930832,
+    "ast_hash": "1541069d3d6b21cb856e59d7728e269f",
+    "semantic_hash": "1541069d3d6b21cb856e59d7728e269f"
+  },
+  "tooltips.html": {
+    "mtime": 1785139509.293482,
+    "ast_hash": "dc357a300c009e17f1905fa0512e15f1",
+    "semantic_hash": "dc357a300c009e17f1905fa0512e15f1"
+  },
+  "typography.html": {
+    "mtime": 1785139509.2938766,
+    "ast_hash": "7b542a5326263e28b27b1e1dac41f0b3",
+    "semantic_hash": "7b542a5326263e28b27b1e1dac41f0b3"
+  },
+  "utilities.html": {
+    "mtime": 1785139509.2946332,
+    "ast_hash": "93699d34de16afc57145ea2efafcbf35",
+    "semantic_hash": "93699d34de16afc57145ea2efafcbf35"
+  },
+  "img/course-1.png": {
+    "mtime": 1776938902.25,
+    "ast_hash": "0ea9805d65959e68ef63423f077663e4",
+    "semantic_hash": "0ea9805d65959e68ef63423f077663e4"
+  },
+  "img/course-2.png": {
+    "mtime": 1776938902.25,
+    "ast_hash": "1956ae67410e2fc2df189f677629daee",
+    "semantic_hash": "1956ae67410e2fc2df189f677629daee"
+  },
+  "img/course-3.png": {
+    "mtime": 1776938902.25,
+    "ast_hash": "6ac0aba31f0977cca2421498a790929a",
+    "semantic_hash": "6ac0aba31f0977cca2421498a790929a"
+  },
+  "img/logo-itats.png": {
+    "mtime": 1774998167.2,
+    "ast_hash": "4622be90be14f283fe6530c3323b760c",
+    "semantic_hash": "4622be90be14f283fe6530c3323b760c"
+  }
+}

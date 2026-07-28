@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom ITATS Login - ITATS Design System</title>
+    <link rel="icon" type="image/x-icon" href="https://portal.itats.ac.id/wp-content/uploads/2023/07/cropped-Logo-Lengkap-150x150.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background:
+                radial-gradient(circle at top left, rgba(6, 70, 158, 0.12), transparent 34rem),
+                linear-gradient(135deg, #f7fafc 0%, #eef5ff 48%, #ffffff 100%);
+        }
+
+        .classroom-shell {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: minmax(0, 1.12fr) minmax(420px, 0.88fr);
+        }
+
+        .classroom-hero {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            padding: 2rem clamp(2rem, 5vw, 5rem);
+            background:
+                linear-gradient(135deg, rgba(6, 70, 158, 0.96), rgba(3, 43, 97, 0.98)),
+                radial-gradient(circle at 76% 24%, rgba(248, 181, 0, 0.28), transparent 18rem);
+            color: #fff;
+        }
+
+        .classroom-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+            background-size: 36px 36px;
+            mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 80%);
+        }
+
+        .classroom-hero::after {
+            content: "";
+            position: absolute;
+            right: -10rem;
+            bottom: -10rem;
+            width: 28rem;
+            height: 28rem;
+            border-radius: 999px;
+            background: rgba(248, 181, 0, 0.18);
+        }
+
+        .hero-top,
+        .hero-content,
+        .hero-footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .product-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding: 0.375rem 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: var(--bs-border-radius-pill);
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.8125rem;
+            font-weight: 600;
+        }
+
+        .product-kicker::before {
+            content: "";
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 999px;
+            background: var(--bs-accent);
+            box-shadow: 0 0 0 4px rgba(248, 181, 0, 0.16);
+        }
+
+        .classroom-logo-text {
+            margin: 0;
+            color: #fff;
+            font-size: clamp(2.25rem, 5vw, 4.4rem);
+            font-weight: 800;
+            letter-spacing: -0.07em;
+            line-height: 0.95;
+        }
+
+        .classroom-logo-text span {
+            display: block;
+            color: var(--bs-accent);
+        }
+
+        .hero-description {
+            max-width: 36rem;
+            margin-top: 1.25rem;
+            color: rgba(255, 255, 255, 0.76);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .time-pill {
+            min-width: 11rem;
+            padding: 0.875rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: var(--bs-border-radius-lg);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+            backdrop-filter: blur(14px);
+            text-align: right;
+        }
+
+        .time-pill strong {
+            display: block;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .time-pill span {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .campus-card {
+            position: relative;
+            max-width: 45rem;
+            margin-top: 3rem;
+            padding: 1.25rem;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 1.25rem;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+            backdrop-filter: blur(18px);
+        }
+
+        .campus-visual {
+            position: relative;
+            min-height: 315px;
+            overflow: hidden;
+            border-radius: 1rem;
+            background:
+                radial-gradient(circle at 24% 22%, rgba(248, 181, 0, 0.75), transparent 0.5rem),
+                radial-gradient(circle at 72% 18%, rgba(255, 255, 255, 0.55), transparent 0.16rem),
+                linear-gradient(180deg, #0d2350 0 42%, #e7eef8 42% 43%, #4f9460 43% 100%);
+        }
+
+        .campus-visual::before {
+            content: "";
+            position: absolute;
+            inset: 42% -4rem 0;
+            background-image:
+                linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+                linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+            background-size: 42px 42px;
+            transform: perspective(460px) rotateX(58deg);
+            transform-origin: top center;
+        }
+
+        .building {
+            position: absolute;
+            left: 50%;
+            bottom: 4.25rem;
+            width: 15rem;
+            height: 9rem;
+            transform: translateX(-50%);
+            border-radius: 0.75rem 0.75rem 0.35rem 0.35rem;
+            background: #f8fafc;
+            box-shadow: 0 20px 40px rgba(8, 21, 48, 0.36);
+        }
+
+        .building::before {
+            content: "";
+            position: absolute;
+            left: 1rem;
+            right: 1rem;
+            top: -2.4rem;
+            height: 2.65rem;
+            border-radius: 0.8rem 0.8rem 0.25rem 0.25rem;
+            background: #0d3474;
+        }
+
+        .building::after {
+            content: "";
+            position: absolute;
+            inset: 1.2rem;
+            background-image: linear-gradient(90deg, rgba(6, 70, 158, 0.22) 1rem, transparent 1rem);
+            background-size: 2.3rem 1rem;
+        }
+
+        .campus-path {
+            position: absolute;
+            left: 37%;
+            right: 37%;
+            bottom: 0;
+            height: 6.5rem;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(226, 232, 240, 0.95));
+            clip-path: polygon(42% 0, 58% 0, 100% 100%, 0 100%);
+        }
+
+        .campus-tree {
+            position: absolute;
+            bottom: 3.4rem;
+            width: 2.5rem;
+            height: 5rem;
+        }
+
+        .campus-tree::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0.5rem;
+            height: 2.25rem;
+            transform: translateX(-50%);
+            border-radius: 999px;
+            background: #7a4d2d;
+        }
+
+        .campus-tree::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 3.5rem;
+            height: 4rem;
+            transform: translateX(-50%);
+            border-radius: 50% 50% 42% 42%;
+            background: #6fb06a;
+            box-shadow: inset -10px -12px 0 rgba(0, 0, 0, 0.08);
+        }
+
+        .tree-a { left: 13%; }
+        .tree-b { left: 24%; bottom: 5.6rem; }
+        .tree-c { right: 18%; }
+        .tree-d { right: 9%; bottom: 6rem; }
+
+        .floating-module {
+            position: absolute;
+            width: 3.5rem;
+            height: 2.25rem;
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 14px 28px rgba(4, 18, 44, 0.28);
+        }
+
+        .module-a { top: 18%; left: 18%; }
+        .module-b { top: 30%; right: 17%; background: var(--bs-accent); }
+        .module-c { top: 23%; right: 34%; background: #76d2bd; }
+
+        .game-status {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 1rem;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 0.8125rem;
+            font-weight: 600;
+        }
+
+        .game-status .btn {
+            border-color: rgba(255, 255, 255, 0.28);
+            color: #fff;
+        }
+
+        .hero-footer {
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8125rem;
+            font-weight: 500;
+        }
+
+        .login-panel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .login-card {
+            width: min(100%, 28rem);
+            padding: clamp(1.5rem, 3vw, 2.5rem);
+            border: 1px solid rgba(203, 213, 225, 0.8);
+            border-radius: 1rem;
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 24px 70px rgba(6, 70, 158, 0.12);
+            backdrop-filter: blur(18px);
+        }
+
+        .login-logo {
+            width: 7.5rem;
+            height: 4.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            border: 1px solid var(--bs-border-color-dark);
+            border-radius: var(--bs-border-radius-lg);
+            background: #fff;
+            box-shadow: var(--bs-box-shadow-sm);
+        }
+
+        .login-logo img {
+            width: 5.5rem;
+            height: auto;
+        }
+
+        .login-title {
+            margin-bottom: 0.4rem;
+            color: var(--bs-text-primary);
+            font-size: 1.75rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            text-align: center;
+        }
+
+        .login-subtitle {
+            margin-bottom: 1.5rem;
+            color: var(--bs-text-secondary);
+            text-align: center;
+        }
+
+        .start-card {
+            margin-bottom: 1.5rem;
+            padding: 0.75rem;
+            border: 1px solid var(--bs-primary-light);
+            border-radius: var(--bs-border-radius-lg);
+            background: linear-gradient(135deg, var(--bs-primary-light), #fff8df);
+        }
+
+        .start-card small {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--bs-text-secondary);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .mini-game {
+            position: relative;
+            min-height: 6.25rem;
+            overflow: hidden;
+            border-radius: var(--bs-border-radius);
+            background:
+                radial-gradient(circle at 22% 24%, rgba(255, 255, 255, 0.8) 1px, transparent 2px),
+                linear-gradient(180deg, #12336e 0 72%, #4f8f4c 72% 100%);
+            background-size: 30px 30px, auto;
+        }
+
+        .mini-game strong {
+            position: absolute;
+            top: 1.3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 0.875rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .mini-runner {
+            position: absolute;
+            left: 2rem;
+            bottom: 1.35rem;
+            width: 0.9rem;
+            height: 1.8rem;
+            border-radius: 0.3rem 0.3rem 0 0;
+            background: var(--bs-accent);
+        }
+
+        .mini-runner::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -0.65rem;
+            width: 0.7rem;
+            height: 0.7rem;
+            transform: translateX(-50%);
+            border-radius: 999px;
+            background: #f6d6ad;
+        }
+
+        .form-icon-group {
+            position: relative;
+        }
+
+        .form-icon-group svg {
+            position: absolute;
+            left: 0.875rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--bs-text-tertiary);
+            pointer-events: none;
+        }
+
+        .form-icon-group .form-control {
+            padding-left: 2.75rem;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(-50%);
+            border: 0;
+            border-radius: var(--bs-border-radius);
+            background: transparent;
+            color: var(--bs-text-tertiary);
+        }
+
+        .password-toggle:hover {
+            background: var(--bs-primary-light);
+            color: var(--bs-primary);
+        }
+
+        .password-field .form-control {
+            padding-right: 3rem;
+        }
+
+        .back-link {
+            position: fixed;
+            left: 1rem;
+            top: 1rem;
+            z-index: 20;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.45rem 0.7rem;
+            border: 1px solid rgba(203, 213, 225, 0.8);
+            border-radius: var(--bs-border-radius);
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--bs-text-secondary);
+            font-size: 0.8125rem;
+            font-weight: 600;
+            box-shadow: var(--bs-box-shadow-sm);
+            backdrop-filter: blur(12px);
+        }
+
+        .back-link:hover {
+            color: var(--bs-primary);
+        }
+
+        @media (max-width: 1100px) {
+            .classroom-shell {
+                grid-template-columns: 1fr;
+            }
+
+            .classroom-hero {
+                min-height: auto;
+                padding-top: 4.5rem;
+            }
+
+            .campus-card {
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-top {
+                flex-direction: column;
+            }
+
+            .time-pill {
+                width: 100%;
+                text-align: left;
+            }
+
+            .classroom-hero,
+            .login-panel {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .campus-visual {
+                min-height: 240px;
+            }
+
+            .game-status {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="examples.html" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to Examples
+    </a>
+
+    <main class="classroom-shell">
+        <section class="classroom-hero" aria-label="Classroom ITATS overview">
+            <div class="hero-top">
+                <div>
+                    <div class="product-kicker">Platform Pembelajaran Digital</div>
+                    <h1 class="classroom-logo-text">Classroom <span>ITATS</span></h1>
+                    <p class="hero-description">
+                        Ruang belajar digital untuk mahasiswa dan dosen ITATS, dirancang untuk akses materi,
+                        aktivitas kelas, dan pengalaman pembelajaran yang lebih terarah.
+                    </p>
+                </div>
+                <div class="time-pill">
+                    <strong>15:00:30</strong>
+                    <span>Senin, 27 Jul 2026</span>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <div class="campus-card">
+                    <div class="campus-visual" aria-hidden="true">
+                        <div class="floating-module module-a"></div>
+                        <div class="floating-module module-b"></div>
+                        <div class="floating-module module-c"></div>
+                        <div class="building"></div>
+                        <div class="campus-path"></div>
+                        <div class="campus-tree tree-a"></div>
+                        <div class="campus-tree tree-b"></div>
+                        <div class="campus-tree tree-c"></div>
+                        <div class="campus-tree tree-d"></div>
+                    </div>
+                    <div class="game-status">
+                        <span>Mode interaktif tersedia untuk memulai sesi belajar.</span>
+                        <button class="btn btn-outline-light btn-sm" type="button">Tangkap Motor!</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-footer">© 2026 Institut Teknologi Adhi Tama Surabaya</div>
+        </section>
+
+        <section class="login-panel" aria-label="Classroom ITATS login form">
+            <div class="login-card">
+                <div class="login-logo">
+                    <img src="img/logo-itats.png" alt="ITATS Logo">
+                </div>
+
+                <h2 class="login-title">Selamat Datang</h2>
+                <p class="login-subtitle">Silakan masuk untuk melanjutkan</p>
+
+                <div class="start-card">
+                    <small>Tekan <strong>SPACE</strong> atau <strong>Klik</strong> untuk mulai</small>
+                    <div class="mini-game" aria-hidden="true">
+                        <strong>SPACE / Klik untuk mulai!</strong>
+                        <span class="mini-runner"></span>
+                    </div>
+                </div>
+
+                <form>
+                    <div class="mb-3">
+                        <label for="identity" class="form-label">NPM / NIP / Email</label>
+                        <div class="form-icon-group">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z" />
+                            </svg>
+                            <input type="text" class="form-control" id="identity" placeholder="NPM / NIP / Email" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="form-icon-group password-field">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M17 8h-1V6c0-2.76-2.24-5-5-5S6 3.24 6 6v2H5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2ZM8 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H8V6Z" />
+                            </svg>
+                            <input type="password" class="form-control" id="password" placeholder="Masukkan password Anda" required>
+                            <button class="password-toggle" type="button" aria-label="Show password">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12Z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                        <label class="form-check-label text-secondary" for="rememberMe">Ingat Saya</label>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg w-100" type="submit">Masuk Sekarang →</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
