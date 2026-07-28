@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITATS Design System - Developer Guide</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://portal.itats.ac.id/wp-content/uploads/2023/07/cropped-Logo-Lengkap-150x150.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                    ITATS Design
+                </div>
+            </div>
+            <nav class="sidebar-nav" id="sidebarNavAccordion">
+                <!-- Getting Started -->
+                <div class="nav-group-title" data-bs-toggle="collapse" data-bs-target="#collapseGettingStarted" aria-expanded="true">
+                    Getting Started
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse show" id="collapseGettingStarted" data-bs-parent="#sidebarNavAccordion">
+                    <a href="index.html" class="nav-sub-item">Overview</a>
+                    <a href="developer-guide.html" class="nav-sub-item active">Developer Guide</a>
+                </div>
+
+                <!-- Foundations -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFoundations" aria-expanded="false">
+                    Foundations
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseFoundations" data-bs-parent="#sidebarNavAccordion">
+                    <a href="colors.html" class="nav-sub-item">Colors</a>
+                    <a href="typography.html" class="nav-sub-item">Typography</a>
+                </div>
+
+                <!-- Layout -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseLayout" aria-expanded="false">
+                    Layout
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseLayout" data-bs-parent="#sidebarNavAccordion">
+                    <a href="grid.html" class="nav-sub-item">Grid system</a>
+                    <a href="stacks.html" class="nav-sub-item">Stacks</a>
+                    <a href="ratio.html" class="nav-sub-item">Ratio</a>
+                </div>
+
+                <!-- Components -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseComponents" aria-expanded="false">
+                    Components
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseComponents" data-bs-parent="#sidebarNavAccordion">
+                    <a href="accordion.html" class="nav-sub-item">Accordion</a>
+                    <a href="alerts.html" class="nav-sub-item">Alerts</a>
+                    <a href="badges.html" class="nav-sub-item">Badge</a>
+                    <a href="breadcrumbs.html" class="nav-sub-item">Breadcrumb</a>
+                    <a href="buttons.html" class="nav-sub-item">Buttons</a>
+                    <a href="button-group.html" class="nav-sub-item">Button group</a>
+                    <a href="cards.html" class="nav-sub-item">Card</a>
+                    <a href="carousel.html" class="nav-sub-item">Carousel</a>
+                    <a href="close-button.html" class="nav-sub-item">Close button</a>
+                    <a href="collapse.html" class="nav-sub-item">Collapse</a>
+                    <a href="dropdowns.html" class="nav-sub-item">Dropdowns</a>
+                    <a href="list-group.html" class="nav-sub-item">List group</a>
+                    <a href="modals.html" class="nav-sub-item">Modal</a>
+                    <a href="navbar.html" class="nav-sub-item">Navbar</a>
+                    <a href="navs-tabs.html" class="nav-sub-item">Navs & tabs</a>
+                    <a href="offcanvas.html" class="nav-sub-item">Offcanvas</a>
+                    <a href="pagination.html" class="nav-sub-item">Pagination</a>
+                    <a href="placeholders.html" class="nav-sub-item">Placeholders</a>
+                    <a href="popovers.html" class="nav-sub-item">Popovers</a>
+                    <a href="progress.html" class="nav-sub-item">Progress</a>
+                    <a href="scrollspy.html" class="nav-sub-item">Scrollspy</a>
+                    <a href="spinners.html" class="nav-sub-item">Spinners</a>
+                    <a href="tables.html" class="nav-sub-item">Tables</a>
+                    <a href="toasts.html" class="nav-sub-item">Toasts</a>
+                    <a href="tooltips.html" class="nav-sub-item">Tooltips</a>
+                </div>
+
+                <!-- Forms -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false">
+                    Forms
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseForms" data-bs-parent="#sidebarNavAccordion">
+                    <a href="forms.html" class="nav-sub-item">Forms</a>
+                </div>
+
+                <!-- Content -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseContent" aria-expanded="false">
+                    Content
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseContent" data-bs-parent="#sidebarNavAccordion">
+                    <a href="images.html" class="nav-sub-item">Images</a>
+                    <a href="figures.html" class="nav-sub-item">Figures</a>
+                </div>
+
+                <!-- Utilities -->
+                <div class="nav-group-title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseUtilities" aria-expanded="false">
+                    Utilities
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseUtilities" data-bs-parent="#sidebarNavAccordion">
+                    <a href="utilities.html" class="nav-sub-item">Utilities</a>
+                </div>
+
+                <!-- Examples -->
+                <div class="nav-group-title collapsed mb-4" data-bs-toggle="collapse" data-bs-target="#collapseExamples" aria-expanded="false">
+                    Examples
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="collapse" id="collapseExamples" data-bs-parent="#sidebarNavAccordion">
+                    <a href="examples.html" class="nav-sub-item">Overview</a>
+                    <a href="example-login.html" class="nav-sub-item">Sign-in Page</a>
+                    <a href="example-lms-courses.html" class="nav-sub-item">LMS Courses</a>
+                    <a href="example-login-classroom.html" class="nav-sub-item">Classroom Login</a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Developer Guide</h1>
+            <p class="text-lead">
+                Panduan praktis untuk memakai ITATS Design System di aplikasi web, baik dikerjakan manual oleh developer
+                maupun didelegasikan ke AI agent.
+            </p>
+
+            <section class="showcase-section">
+                <h2>Prinsip Pemakaian</h2>
+                <div class="row g-3">
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Mulai dari Bootstrap</h3>
+                                <p class="card-text text-secondary mb-0">Gunakan class Bootstrap 5 sebagai fondasi, lalu biarkan <code>css/style.css</code> memberi identitas ITATS.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Pakai Token Sistem</h3>
+                                <p class="card-text text-secondary mb-0">Prioritaskan <code>--bs-primary</code>, <code>--bs-accent</code>, radius, shadow, dan skala typography yang sudah tersedia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Tetap Ringkas</h3>
+                                <p class="card-text text-secondary mb-0">Komponen dibuat compact. Hindari padding besar, heading terlalu berat, dan custom style yang memutus konsistensi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="showcase-section">
+                <h2>Quick Start Manual</h2>
+                <p class="component-desc">Tambahkan Bootstrap lebih dulu, lalu stylesheet dan script ITATS.</p>
+
+                <div class="code-toggle" data-target="code-cdn-start">Show Code</div>
+                <pre class="component-code" id="code-cdn-start"><code>&lt;!-- Head --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/anwarsodik/design-system-itats@main/css/style.css"&gt;
+
+&lt;!-- Before closing body --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/anwarsodik/design-system-itats@main/js/script.js"&gt;&lt;/script&gt;</code></pre>
+
+                <div class="component-demo mt-3">
+                    <h3 class="h6 mb-3">Alur Kerja</h3>
+                    <ol class="mb-0 text-secondary" style="line-height:1.8">
+                        <li>Tentukan kebutuhan UI: halaman auth, dashboard, tabel data, form, atau LMS.</li>
+                        <li>Buka halaman dokumentasi komponen terkait dari sidebar.</li>
+                        <li>Salin markup dari blok code dan sesuaikan data, label, serta state.</li>
+                        <li>Gunakan utilities Bootstrap untuk layout, spacing, responsive grid, dan alignment.</li>
+                        <li>Uji desktop dan mobile, termasuk komponen interaktif seperti dropdown, modal, toast, tooltip, dan collapse.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="showcase-section">
+                <h2>Pola Implementasi Umum</h2>
+                <div class="table-responsive">
+                    <table class="table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Kebutuhan</th>
+                                <th>Halaman Referensi</th>
+                                <th>Komponen Utama</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dashboard admin</td>
+                                <td><a href="admin.html">admin.html</a></td>
+                                <td>Navbar, sidebar, summary cards, table, badge</td>
+                            </tr>
+                            <tr>
+                                <td>Login aplikasi</td>
+                                <td><a href="example-login.html">example-login.html</a></td>
+                                <td>Forms, buttons, card, brand panel</td>
+                            </tr>
+                            <tr>
+                                <td>Daftar course/LMS</td>
+                                <td><a href="example-lms-courses.html">example-lms-courses.html</a></td>
+                                <td>Grid, cards, badges, filters</td>
+                            </tr>
+                            <tr>
+                                <td>Manajemen data</td>
+                                <td><a href="tables.html">tables.html</a></td>
+                                <td>Table, pagination, dropdown actions, form controls</td>
+                            </tr>
+                            <tr>
+                                <td>Form input kompleks</td>
+                                <td><a href="forms.html">forms.html</a></td>
+                                <td>Input, select, checkbox, validation, helper text</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="showcase-section">
+                <h2>Agentic Usage</h2>
+                <p class="component-desc">Gunakan brief yang spesifik agar AI agent menghasilkan UI yang konsisten dengan design system ini.</p>
+
+                <div class="code-toggle" data-target="code-agent-brief">Show Code</div>
+                <pre class="component-code" id="code-agent-brief"><code>Buat halaman [nama halaman] menggunakan ITATS Design System.
+
+Konteks:
+- Stack: HTML, Bootstrap 5.3.3, css/style.css, js/script.js.
+- Visual: compact, professional, ITATS Blue #06469e dan Yellow #f8b500.
+- Gunakan class Bootstrap dan token CSS yang sudah ada. Jangan tambah framework.
+
+Kebutuhan halaman:
+- Tujuan: [jelaskan tujuan halaman]
+- Konten utama: [section, data, tabel, form, atau card]
+- State yang wajib ada: [empty, loading, error, success, disabled]
+- Responsive: harus nyaman di desktop dan mobile.
+
+Referensi:
+- Lihat [nama-file.html] untuk pola layout.
+- Lihat [komponen.html] untuk komponen yang digunakan.
+
+Output:
+- Edit file HTML/CSS/JS yang relevan.
+- Pertahankan sidebar, Bootstrap bundle, dan js/script.js.
+- Verifikasi tampilan desktop dan mobile.</code></pre>
+
+                <div class="component-demo mt-3">
+                    <h3 class="h6 mb-3">Guardrail untuk Agent</h3>
+                    <div class="row g-3">
+                        <div class="col-12 col-lg-6">
+                            <ul class="mb-0 text-secondary" style="line-height:1.8">
+                                <li>Jangan mengganti Bootstrap dengan framework lain.</li>
+                                <li>Jangan hardcode warna baru jika token sudah tersedia.</li>
+                                <li>Jangan membuat komponen besar tanpa melihat halaman referensi.</li>
+                                <li>Jangan menghapus script Bootstrap atau <code>js/script.js</code> dari halaman dokumentasi.</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <ul class="mb-0 text-secondary" style="line-height:1.8">
+                                <li>Gunakan markup semantic: heading berurutan, label form jelas, dan alt text pada gambar.</li>
+                                <li>Pastikan aksi utama memakai <code>btn-primary</code> atau <code>btn-accent</code> secara konsisten.</li>
+                                <li>Gunakan <code>table-responsive</code> untuk tabel yang melebar.</li>
+                                <li>Uji elemen interaktif setelah perubahan HTML.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="showcase-section">
+                <h2>Checklist Review</h2>
+                <div class="component-demo">
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <h3 class="h6 mb-2">UI dan Brand</h3>
+                            <ul class="mb-0 text-secondary" style="line-height:1.8">
+                                <li>Warna utama memakai ITATS Blue dan Yellow.</li>
+                                <li>Typography tetap compact dan mudah dibaca.</li>
+                                <li>Spacing konsisten dengan Bootstrap utilities.</li>
+                                <li>Komponen terlihat selaras dengan halaman dokumentasi lain.</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h3 class="h6 mb-2">Teknis</h3>
+                            <ul class="mb-0 text-secondary" style="line-height:1.8">
+                                <li>Bootstrap CSS dimuat sebelum <code>css/style.css</code>.</li>
+                                <li>Bootstrap bundle dan <code>js/script.js</code> dimuat sebelum <code>&lt;/body&gt;</code>.</li>
+                                <li>Mobile layout tidak overflow horizontal.</li>
+                                <li>Form memiliki label, helper, dan validation feedback bila diperlukan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

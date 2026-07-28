@@ -16,6 +16,7 @@ Core principles dari project:
 
 - `README.md`: overview project, cara pakai via CDN/local, daftar dokumentasi.
 - `index.html`: halaman overview design system, prinsip desain, identitas ITATS, getting started.
+- `developer-guide.html`: panduan developer untuk memakai design system secara manual dan agentic.
 - `css/style.css`: sumber utama token CSS, Bootstrap override, typography, warna brand, komponen, layout, responsive behavior.
 - `js/script.js`: interaksi global seperti mobile sidebar, copy color hex, code toggle, copy code block, popover, dan toast.
 - `img/logo-itats.png`: aset logo/identitas ITATS.
@@ -26,6 +27,7 @@ Core principles dari project:
 
 Halaman HTML root adalah dokumentasi live untuk komponen dan contoh implementasi.
 
+- Getting Started: `index.html`, `developer-guide.html`.
 - Foundation: `colors.html`, `typography.html`, `grid.html`, `utilities.html`.
 - Components: `accordion.html`, `alerts.html`, `badges.html`, `breadcrumbs.html`, `button-group.html`, `buttons.html`, `cards.html`, `carousel.html`, `close-button.html`, `collapse.html`, `dropdowns.html`, `figures.html`, `forms.html`, `images.html`, `list-group.html`, `modals.html`, `navbar.html`, `navs-tabs.html`, `offcanvas.html`, `pagination.html`, `placeholders.html`, `popovers.html`, `progress.html`, `ratio.html`, `scrollspy.html`, `spinners.html`, `stacks.html`, `tables.html`, `toasts.html`, `tooltips.html`.
 - Example pages: `examples.html`, `admin.html`, `example-courses.html`, `example-lms-courses.html`, `example-login.html`, `example-login-classroom.html`.

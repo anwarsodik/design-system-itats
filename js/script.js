@@ -13,6 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const sidebar = document.querySelector('.sidebar');
 
+    const gettingStartedNav = document.getElementById('collapseGettingStarted');
+    if (gettingStartedNav && !gettingStartedNav.querySelector('a[href="developer-guide.html"]')) {
+        const developerGuideLink = document.createElement('a');
+        developerGuideLink.href = 'developer-guide.html';
+        developerGuideLink.className = 'nav-sub-item';
+        developerGuideLink.textContent = 'Developer Guide';
+        gettingStartedNav.appendChild(developerGuideLink);
+    }
+
     toggleBtn.addEventListener('click', () => {
         sidebar.classList.toggle('open');
     });

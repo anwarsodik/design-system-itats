@@ -54,6 +54,7 @@ If you have downloaded the files locally, host them in your project structure:
 Explore the following HTML pages included in this repository to view our detailed design guidelines and component live demos:
 
 - **[Overview (index.html)](index.html):** Introduction and core principles.
+- **[Developer Guide (developer-guide.html)](developer-guide.html):** Panduan penggunaan manual dan agentic untuk developer.
 - **[Colors (colors.html)](colors.html):** Our primary and secondary brand colors (ITATS Blue `#06469e` & Yellow `#f8b500`), along with neutral palettes and status indicators.
 - **[Typography (typography.html)](typography.html):** Typography guidelines powered by the **Inter** font family.
 - **[Components (components.html)](components.html):** Interactive building blocks (Alerts, Buttons, Cards, Modals, Navbars, Forms, etc.) perfectly styled to match the ITATS brand identity.
