@@ -1007,6 +1007,22 @@ h3,
         padding-bottom: var(--itats-space-3);
     }
 
+    .dashboard-topbar-start {
+        flex: 1 1 auto;
+        max-width: calc(100% - 112px);
+    }
+
+    .dashboard-brand {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .dashboard-topbar-end {
+        flex: 0 0 auto;
+        margin-left: auto;
+    }
+
     .dashboard-global-search {
         order: 3;
         width: 100%;

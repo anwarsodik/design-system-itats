@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Mobile Sidebar Toggle ---
+    const sidebar = document.querySelector('.sidebar');
     const toggleBtn = document.createElement('button');
     toggleBtn.className = 'mobile-toggle';
     toggleBtn.innerHTML = `
@@ -9,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
       <line x1="3" y1="18" x2="21" y2="18"></line>
     </svg>
   `;
-    document.body.appendChild(toggleBtn);
-
-    const sidebar = document.querySelector('.sidebar');
+    if (sidebar) {
+        document.body.appendChild(toggleBtn);
+    }
 
     const gettingStartedNav = document.getElementById('collapseGettingStarted');
     if (gettingStartedNav && !gettingStartedNav.querySelector('a[href="developer-guide.html"]')) {
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ['filters.html', 'Filters'],
             ['empty-states.html', 'Empty States'],
             ['skeletons.html', 'Skeletons'],
+            ['example-user-profile-header.html', 'User Profile Header'],
             ['admin.html', 'Admin Example']
         ];
 
@@ -71,11 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    toggleBtn.addEventListener('click', () => {
-        if (sidebar) {
+    if (sidebar) {
+        toggleBtn.addEventListener('click', () => {
             sidebar.classList.toggle('open');
-        }
-    });
+        });
+    }
 
     // Close sidebar when clicking outside on mobile
     document.addEventListener('click', (e) => {
