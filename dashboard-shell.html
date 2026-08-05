@@ -38,20 +38,25 @@
                 <div class="component-demo bg-light">
                     <div class="dashboard-shell border rounded overflow-hidden" style="min-height: 560px;">
                         <header class="dashboard-topbar position-static">
-                            <div class="d-flex align-items-center gap-2 fw-bold text-primary">
-                                <img src="img/logo-itats.png" alt="ITATS" width="28" height="28"> SIM Akademik
+                            <div class="dashboard-topbar-start">
+                                <div class="dashboard-brand">
+                                    <img src="img/logo-itats.png" alt="ITATS" width="28" height="28"> SIM Akademik
+                                </div>
                             </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn btn-light border btn-sm">Command</button>
-                                <button class="btn btn-outline-primary btn-sm">AS</button>
+                            <div class="dashboard-global-search">
+                                <input class="form-control" type="search" placeholder="Cari mahasiswa, kelas, laporan">
+                            </div>
+                            <div class="dashboard-topbar-end">
+                                <button class="dashboard-icon-button" type="button" aria-label="Buka menu">&equiv;</button>
+                                <button class="dashboard-user-button" type="button">AS</button>
                             </div>
                         </header>
                         <div class="d-flex">
-                            <aside class="dashboard-sidebar">
-                                <a href="#" class="dashboard-nav-link active">Overview</a>
-                                <a href="#" class="dashboard-nav-link">Mahasiswa</a>
-                                <a href="#" class="dashboard-nav-link">Perkuliahan</a>
-                                <a href="#" class="dashboard-nav-link">Laporan</a>
+                            <aside class="dashboard-sidebar is-compact">
+                                <a href="#" class="dashboard-nav-link active"><span class="dashboard-nav-label">Overview</span></a>
+                                <a href="#" class="dashboard-nav-link"><span class="dashboard-nav-label">Mahasiswa</span></a>
+                                <a href="#" class="dashboard-nav-link"><span class="dashboard-nav-label">Perkuliahan</span></a>
+                                <a href="#" class="dashboard-nav-link"><span class="dashboard-nav-label">Laporan</span></a>
                             </aside>
                             <div class="dashboard-main">
                                 <div class="dashboard-page-header">
@@ -74,7 +79,7 @@
                 <pre class="component-code" id="code-shell"><code>&lt;div class="dashboard-shell"&gt;
   &lt;header class="dashboard-topbar"&gt;...&lt;/header&gt;
   &lt;div class="d-flex"&gt;
-    &lt;aside class="dashboard-sidebar"&gt;...&lt;/aside&gt;
+    &lt;aside class="dashboard-sidebar is-compact"&gt;...&lt;/aside&gt;
     &lt;main class="dashboard-main"&gt;
       &lt;div class="dashboard-page-header"&gt;...&lt;/div&gt;
     &lt;/main&gt;

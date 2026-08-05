@@ -156,24 +156,24 @@
             </p>
 <section class="showcase-section">
                 <h2 class="component-title" id="tables">Tables</h2>
-                <p class="component-desc">Styled data presentation tables.</p>
+                <p class="component-desc">Styled data presentation tables. Default table surfaces should stay white or light gray, with subtle striping for long rows and horizontal scanning.</p>
 
-                <div class="component-demo bg-light p-4 rounded-3">
-                    <div class="card border-0 shadow-sm">
+                <div class="component-demo bg-surface-muted p-4 rounded-3">
+                    <div class="card border-0 shadow-sm table-soft-bordered">
 
                         
                         <!-- Table -->
                         <div class="table-responsive">
                             <table class="table table-striped table-hover mb-0 align-middle" style="font-size: 0.875rem;">
-                                <thead class="bg-primary text-white">
+                                <thead>
                                     <tr>
-                                        <th scope="col" class="bg-primary text-white fw-medium py-3 px-4 border-0">ID</th>
-                                        <th scope="col" class="bg-primary text-white fw-medium py-3 border-0">Name</th>
-                                        <th scope="col" class="bg-primary text-white fw-medium py-3 border-0">Status</th>
-                                        <th scope="col" class="bg-primary text-white fw-medium py-3 border-0 text-center">Invoices</th>
-                                        <th scope="col" class="bg-primary text-white fw-medium py-3 border-0">Invoice Amount</th>
-                                        <th scope="col" class="bg-primary text-white fw-medium py-3 border-0">Created At</th>
-                                        <th scope="col" class="bg-primary text-white fw-medium py-3 px-4 border-0 text-center">Actions</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col" class="text-center">Invoices</th>
+                                        <th scope="col">Invoice Amount</th>
+                                        <th scope="col">Created At</th>
+                                        <th scope="col" class="text-center">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody class="border-top-0">
@@ -271,19 +271,19 @@
                     </div>
                 </div>
                 <div class="code-toggle" data-target="code-tables">Show Code</div>
-                <pre class="component-code" id="code-tables"><code>&lt;div class="card border-0 shadow-sm"&gt;
+                <pre class="component-code" id="code-tables"><code>&lt;div class="card border-0 shadow-sm table-soft-bordered"&gt;
 
   &lt;div class="table-responsive"&gt;
     &lt;table class="table table-striped mb-0 align-middle"&gt;
-      &lt;thead class="bg-primary text-white"&gt;
+      &lt;thead&gt;
         &lt;tr&gt;
-          &lt;th class="border-0"&gt;ID&lt;/th&gt;
-          &lt;th class="border-0"&gt;Name&lt;/th&gt;
-          &lt;th class="border-0"&gt;Status&lt;/th&gt;
-          &lt;th class="border-0"&gt;Invoices&lt;/th&gt;
-          &lt;th class="border-0"&gt;Amount&lt;/th&gt;
-          &lt;th class="border-0"&gt;Created At&lt;/th&gt;
-          &lt;th class="border-0"&gt;Actions&lt;/th&gt;
+          &lt;th&gt;ID&lt;/th&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+          &lt;th&gt;Status&lt;/th&gt;
+          &lt;th&gt;Invoices&lt;/th&gt;
+          &lt;th&gt;Amount&lt;/th&gt;
+          &lt;th&gt;Created At&lt;/th&gt;
+          &lt;th&gt;Actions&lt;/th&gt;
         &lt;/tr&gt;
       &lt;/thead&gt;
       &lt;tbody&gt;
