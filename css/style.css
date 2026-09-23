@@ -33,8 +33,8 @@
     --itats-surface-raised: #FFFFFF;
     --itats-surface-muted: #F8FAFC;
     --itats-surface-subtle: #F1F5F9;
-    --itats-table-header-bg: #F8FAFC;
-    --itats-table-stripe-bg: #F8FAFC;
+    --itats-table-header-bg: #F1F5F9;
+    --itats-table-stripe-bg: #FBFCFE;
     --itats-table-hover-bg: #EEF4FB;
     --itats-focus-ring: rgba(6, 70, 158, 0.16);
 
@@ -108,6 +108,10 @@
     --itats-brand-simlppm-secondary: #6cb314;
     --itats-brand-adminclassroom: #333333;
     --itats-brand-adminclassroom-secondary: #666666;
+}
+
+img {
+    max-width: 100%;
 }
 
 body {
@@ -1020,6 +1024,18 @@ h3,
         display: block;
     }
 
+    body.dashboard-menu-open {
+        overflow: hidden;
+    }
+
+    body.dashboard-menu-open .dashboard-shell::after {
+        content: "";
+        position: fixed;
+        inset: 112px 0 0;
+        z-index: 105;
+        background: rgba(15, 23, 42, 0.18);
+    }
+
     .dashboard-page-header {
         flex-direction: column;
     }
@@ -1110,7 +1126,7 @@ h3,
 
     .dashboard-sidebar {
         top: 112px;
-        width: min(250px, 82vw);
+        width: min(280px, 78vw);
     }
 
     .dashboard-global-search .form-control {
@@ -1119,7 +1135,7 @@ h3,
     }
 
     .dashboard-main {
-        padding: var(--itats-space-4);
+        padding: var(--itats-space-3);
     }
 
     .dashboard-page-header {

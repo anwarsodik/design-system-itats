@@ -88,18 +88,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (dashboardSidebar && dashboardMenuToggle) {
         dashboardMenuToggle.addEventListener('click', () => {
             const isOpen = dashboardSidebar.classList.toggle('is-open');
+            document.body.classList.toggle('dashboard-menu-open', isOpen);
             dashboardMenuToggle.setAttribute('aria-expanded', String(isOpen));
         });
     }
 
     // Close sidebar when clicking outside on mobile
     document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 992) {
             if (sidebar && !sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
                 sidebar.classList.remove('open');
             }
             if (dashboardSidebar && dashboardMenuToggle && !dashboardSidebar.contains(e.target) && !dashboardMenuToggle.contains(e.target)) {
                 dashboardSidebar.classList.remove('is-open');
+                document.body.classList.remove('dashboard-menu-open');
                 dashboardMenuToggle.setAttribute('aria-expanded', 'false');
             }
         }
